@@ -1,1 +1,7 @@
 *.env
+
+# Ignore gui-checklist-executor Agent Skill artifacts
+Report_*_checklist.md
+checklist_master.json
+diff_*.json
+screen_results/
