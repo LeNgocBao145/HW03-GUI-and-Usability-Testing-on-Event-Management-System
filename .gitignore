@@ -5,3 +5,4 @@ Report_*_checklist.md
 checklist_master.json
 diff_*.json
 screen_results/
+bug_channel_field_mappings.json
