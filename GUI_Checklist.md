@@ -1,7 +1,9 @@
 # GUI Testing Checklist
 
 **GUI ID:** 01
+
 **GUI Name:** Comprehensive GUI Testing Checklist
+
 **GUI Detail:** Comprehensive User Interface testing checklist covering 4 key aspects: General UI Standards, Forms & Inputs, Navigation & Layout, and Feedback & State
 
 ---
@@ -55,6 +57,8 @@
 | 3.12 | Do tabs switch content correctly, clearly indicate the active tab, and preserve unsaved state when possible? | | | |
 | 3.13 | Does drag-and-drop reordering (lists, Kanban cards, etc.) work smoothly and persist the new order after page refresh? | | | |
 | 3.14 | Do deep links (direct URLs to a specific page/tab/filter) load the correct state, and is that state preserved on page reload? | | | |
+| 3.15 | Are table/list filter controls consolidated in a visible and immediately accessible location (e.g., a filter bar or panel above the table), rather than being scattered across scrollable column headers that require horizontal scrolling to discover? | | | |
+| 3.16 | Do data table column headers support click-to-sort (ascending/descending) with a visible sort indicator (e.g., ▲▼ arrows), and does the sorted state persist during pagination? | | | |
 | **4.00** | **IA-04: FEEDBACK & STATE** | | | |
 | 4.01 | Do hover states on buttons, links, and cards provide clear visual feedback? | | | |
 | 4.02 | Does keyboard focus state (Tab key) show a distinct focus ring/outline on active elements? | | | |
@@ -71,3 +75,28 @@
 | 4.13 | Are status colors (e.g., green = success, red = error, yellow = warning) used consistently and meaningfully system-wide? | | | |
 | 4.14 | Do real-time updates (WebSocket/polling) reflect on screen without requiring a manual page refresh? | | | |
 | 4.15 | Is an "Undo" option available for a short grace period after reversible destructive actions (Shneiderman: easy reversal of actions)? | | | |
+
+## References
+
+1. Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design. Nielsen Norman Group.
+
+    - Link: https://www.nngroup.com/articles/ten-usability-heuristics/
+
+2. Norman, D. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.
+
+    - Link: https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/
+
+3. Shneiderman, B., Plaisant, C., Cohen, M., Jacobs, S., Elmqvist, N., & Diakopoulos, N. (2016). Designing the User Interface: Strategies for Effective Human-Computer Interaction (6th Edition). Pearson.
+
+    - Link: https://www.cs.umd.edu/users/ben/goldenrules.html
+
+4. HCMUS Faculty of Information Technology. S13_GUI Testing & Usability Testing.pdf (CSC13003 Software Testing).  
+    - Slide Reference Details:
+
+        - Slide 11–14: Common GUI Bugs (Validation, Mandatory fields, Focus order, Data Currency, Synchronization).
+
+        - Slide 16: Low Level - Checklist Testing (Layout, Alignment, Typography, Colors, Labels).
+
+        - Slide 17–18: Navigation Testing (Menus, Breadcrumbs, Links, Form Navigation).
+
+        - Slide 26: Challenges in GUI Testing (Localization & Internationalization).  
