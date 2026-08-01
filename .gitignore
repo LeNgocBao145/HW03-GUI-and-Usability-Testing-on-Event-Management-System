@@ -6,3 +6,4 @@ checklist_master.json
 diff_*.json
 screen_results/
 bug_channel_field_mappings.json
+bug_submission_log.md
