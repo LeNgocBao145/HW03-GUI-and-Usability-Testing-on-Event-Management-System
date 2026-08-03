@@ -8,35 +8,9 @@ The user discovers an event, reviews its details and completes registration.
 
 ### B1 - Home / Events Listing
 
-- featured-event carousel
-- category browsing
-- search
-- filters
-- event cards
-- loading state
-- empty state
-
 ### B2 - Event Detail
 
-- event banner
-- title
-- description
-- date and time
-- location
-- registration status
-- register button
-- waitlist notice
-- navigation back to listing
-
 ### B3 - Registration Form
-
-- role selection
-- additional role
-- required fields
-- validation messages
-- confirmation
-- submission state
-- success or failure feedback
 
 ## Selection Rationale
 
@@ -52,6 +26,8 @@ B1-B3 together cover discovery, navigation, information comprehension, decision-
 - do not share the account across group members
 - do not commit passwords
 
-## No-Duplication Verification
+## SUT for New Test Executions
 
-TODO: confirm that the selected B1-B3 screen set has been checked against other group members' selections.
+- Current EMS endpoint: `https://prod-dev.ems-fitus.cloud/`
+- All test evidence must record the exact SUT URL used at the time of execution.
+- Do not claim this endpoint is operational unless it has been manually verified.
