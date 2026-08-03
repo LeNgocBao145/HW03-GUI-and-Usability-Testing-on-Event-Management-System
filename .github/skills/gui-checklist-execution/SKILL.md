@@ -2,108 +2,521 @@
 
 ## Purpose
 
-Apply the approved shared GUI checklist from `gui_checklist.md` to one selected EMS screen in Scenario B without fabricating results.
+Execute the approved shared GUI checklist against exactly one selected EMS screen in Scenario B using real observations only.
 
-## When to use
+The skill coordinates checklist execution, evidence tracking, tester notes, execution summaries, and finding candidates while ensuring that no GUI test result is fabricated.
 
-- When evaluating B1, B2, or B3 against the shared GUI checklist
-- When preparing proposed updates for one screen's `checklist_execution.md`
-- When the tester has real observations, notes, and evidence references ready
+---
 
-## When not to use
+# Responsibilities
 
-- When the shared checklist itself needs to be authored or revised
-- When no real screen observations exist yet
-- When trying to update multiple screens in one pass
-- When evidence is missing and someone expects invented Pass/Fail results
+This skill is responsible for:
 
-## Required inputs
+- determining which checklist items apply to the selected screen
+- guiding GUI checklist execution
+- preparing updates for screen-level execution documents
+- tracking missing evidence
+- identifying potential findings
+- maintaining execution summaries
 
-- selected screen ID: `B1`, `B2`, or `B3`
-- `gui_checklist.md`
-- the selected screen description file
-- real screen observations
-- screenshot references when available
+This skill is NOT responsible for:
+
+- deciding final bug severity
+- generating bug reports
+- modifying the shared GUI checklist
+- inventing observations
+- inventing screenshots
+- inventing Pass/Fail results
+
+---
+
+# When to use
+
+Use this skill when executing GUI checklist testing for exactly one screen.
+
+Supported screens:
+
+- B1 Home Events Listing
+- B2 Event Detail
+- B3 Registration Form
+
+Typical workflow:
+
+Screen Description
+
+↓
+
+GUI Checklist Coverage Matrix
+
+↓
+
+GUI Checklist Execution
+
+↓
+
+Human Observation
+
+↓
+
+Execution Documents
+
+↓
+
+Finding Validation
+
+---
+
+# When NOT to use
+
+Do not use this skill when:
+
+- creating or editing gui_checklist.md
+- updating checklist_coverage_matrix.md
+- performing usability analysis
+- validating compatibility testing
+- creating final bug reports
+- multiple screens are requested simultaneously
+
+---
+
+# Required Inputs
+
+The following inputs are required.
+
+## Mandatory
+
+- selected screen ID
+
+One of:
+
+- B1
+- B2
+- B3
+
+- gui_checklist.md
+
+- docs/checklist_coverage_matrix.md
+
+- screen_description.md of the selected screen
+
+- tester observations
+
 - tester notes
-- the exact SUT URL used during the observed execution
 
-## Source files
+- exact SUT URL
 
-- `gui_checklist.md`
-- `scenario_b/b1_home_events_listing/screen_description.md`
-- `scenario_b/b1_home_events_listing/checklist_execution.md`
-- `scenario_b/b2_event_detail/screen_description.md`
-- `scenario_b/b2_event_detail/checklist_execution.md`
-- `scenario_b/b3_registration_form/screen_description.md`
-- `scenario_b/b3_registration_form/checklist_execution.md`
-- optional supporting notes in the matching `test_notes.md`
+## Optional
 
-## Step-by-step workflow
+- screenshot references
 
-1. Read `gui_checklist.md`.
-2. Verify that each checklist item being considered exists in the shared checklist.
-3. Read the selected screen's description file.
-4. Determine whether each checklist item is applicable to the selected screen.
-5. Request or review real observations for applicable items.
-6. For each applicable item, propose one result only:
-   - `Passed`
-   - `Failed`
-   - `N/A`
-   - `Not executed`
-7. For every proposed `Failed` result, include:
-   - a concrete failure explanation
-   - an evidence reference
-   - a finding ID
-8. Prepare an applicability summary and missing-evidence list.
-9. Ask for human confirmation before writing to the selected `checklist_execution.md`.
-10. Update only the chosen screen's execution file after confirmation.
-11. Never modify the shared checklist while executing it.
+- screen recordings
 
-## Validation rules
+- browser version
 
-- Never mark `Passed` merely because no issue was mentioned.
-- Never mark `Failed` without a concrete observation.
-- Use `N/A` only when the item genuinely does not apply to the selected screen.
-- Use `Not executed` when evidence is incomplete or the check was not actually performed.
-- Verify that the checklist item exists before proposing an update.
+- operating system
 
-## Evidence rules
+- device information
 
-- Treat placeholder files as incomplete evidence.
-- Failed items require screenshot references or another concrete evidence reference.
-- Distinguish direct observation from tester inference.
-- If evidence is missing, list the gap instead of guessing the outcome.
-- All test evidence must record the exact SUT URL used at the time of execution.
+---
 
-## Prohibited behavior
+# Source Files
 
-- Never fabricate test executions.
-- Never fabricate Pass or Fail results.
-- Never fabricate screenshots.
-- Never fabricate bugs or usability findings.
-- Never update a screen execution file without human confirmation.
+Shared
 
-## Expected output
+- gui_checklist.md
+- docs/checklist_coverage_matrix.md
 
-- applicability summary
-- proposed checklist updates
-- missing evidence list
-- findings that must be logged
-- human-confirmation request
+B1
 
-## Human-confirmation checkpoint
+- scenario_b/b1_home_events_listing/screen_description.md
+- scenario_b/b1_home_events_listing/checklist_execution.md
+- scenario_b/b1_home_events_listing/test_notes.md
+- scenario_b/b1_home_events_listing/execution_summary.md
 
-Pause before editing the target `checklist_execution.md` and ask the human reviewer to confirm the proposed row updates.
+B2
 
-## Example invocation
+- scenario_b/b2_event_detail/screen_description.md
+- scenario_b/b2_event_detail/checklist_execution.md
+- scenario_b/b2_event_detail/test_notes.md
+- scenario_b/b2_event_detail/execution_summary.md
 
-Placeholder example:
+B3
 
-`Run gui-checklist-execution for B2 using the shared checklist, the B2 screen description, my tester notes, and screenshot refs TODO.`
+- scenario_b/b3_registration_form/screen_description.md
+- scenario_b/b3_registration_form/checklist_execution.md
+- scenario_b/b3_registration_form/test_notes.md
+- scenario_b/b3_registration_form/execution_summary.md
 
-## Failure and missing-data handling
+---
 
-- If the selected screen ID is invalid, stop and request a valid one.
-- If the checklist file is missing, report that the skill cannot proceed.
-- If observations are incomplete, return `Not executed` proposals and a missing-data list.
-- If a failed item has no evidence reference, flag it for manual completion instead of writing it.
+# Execution Workflow
+
+## Phase 1
+
+Preparation
+
+1. Verify selected screen.
+2. Verify required files exist.
+3. Load GUI checklist.
+4. Load coverage matrix.
+5. Load screen description.
+
+---
+
+## Phase 2
+
+Applicability Analysis
+
+For every GUI checkpoint:
+
+Determine:
+
+- Applicable
+- N/A
+
+Never invent applicability.
+
+Use only:
+
+- coverage matrix
+- screen description
+
+---
+
+## Phase 3
+
+Execution
+
+For every applicable checkpoint:
+
+Review:
+
+- tester observation
+- screenshot
+- notes
+
+Then propose exactly one result.
+
+Allowed values:
+
+- Passed
+- Failed
+- Not Executed
+
+Never infer Passed because no issue was mentioned.
+
+---
+
+## Phase 4
+
+Evidence Validation
+
+For every Failed item verify:
+
+- screenshot reference
+- observation
+- tester note
+
+If evidence is incomplete
+
+↓
+
+mark
+
+Missing Evidence
+
+instead of confirming Failure.
+
+---
+
+## Phase 5
+
+Finding Candidate Detection
+
+Every confirmed Failed item becomes
+
+Finding Candidate
+
+Include:
+
+- checkpoint
+- description
+- evidence
+- suggested finding ID
+
+Do NOT classify as bug.
+
+---
+
+## Phase 6
+
+Execution Summary
+
+Generate statistics.
+
+Example
+
+Applicable
+
+31
+
+Passed
+
+27
+
+Failed
+
+3
+
+Not Executed
+
+1
+
+N/A
+
+14
+
+Finding Candidates
+
+GUI-001
+
+GUI-002
+
+---
+
+# Validation Rules
+
+Never
+
+- invent observations
+- invent screenshots
+- invent URLs
+- invent Pass
+- invent Fail
+
+Passed requires
+
+real observation.
+
+Failed requires
+
+real observation
++
+evidence.
+
+N/A requires
+
+coverage matrix supports it.
+
+Not Executed requires
+
+missing execution
+or
+missing evidence.
+
+---
+
+# Output Files
+
+## 1
+
+Draft
+
+checklist_execution.md
+
+Update only applicable rows.
+
+---
+
+## 2
+
+Draft
+
+test_notes.md
+
+Append:
+
+- observations
+- unresolved questions
+- evidence references
+
+---
+
+## 3
+
+Draft
+
+execution_summary.md
+
+Include
+
+- statistics
+- finding candidates
+- missing evidence
+- deferred verification
+
+---
+
+## 4
+
+Missing Evidence Report
+
+List
+
+checkpoint
+
+↓
+
+missing evidence
+
+↓
+
+recommended action
+
+---
+
+## 5
+
+Finding Candidate Report
+
+List
+
+checkpoint
+
+↓
+
+description
+
+↓
+
+evidence
+
+↓
+
+suggested finding ID
+
+---
+
+# Human Confirmation
+
+Pause.
+
+Display:
+
+Files to update
+
+Example
+
+- checklist_execution.md
+- test_notes.md
+- execution_summary.md
+
+Ask
+
+Do you want to apply these updates?
+
+Never update files before confirmation.
+
+---
+
+# Expected Output
+
+Return
+
+1.
+
+Applicability Summary
+
+2.
+
+Draft checklist_execution.md
+
+3.
+
+Draft test_notes.md
+
+4.
+
+Draft execution_summary.md
+
+5.
+
+Missing Evidence Report
+
+6.
+
+Finding Candidate Report
+
+7.
+
+Human Confirmation Request
+
+---
+
+# Failure Handling
+
+Invalid Screen
+
+↓
+
+Request B1/B2/B3
+
+Missing Checklist
+
+↓
+
+Stop
+
+Missing Coverage Matrix
+
+↓
+
+Stop
+
+Missing Screen Description
+
+↓
+
+Stop
+
+Missing Observation
+
+↓
+
+Return
+
+Not Executed
+
+Missing Screenshot
+
+↓
+
+Return
+
+Missing Evidence
+
+Never convert it into Failed.
+
+---
+
+# Example Invocation
+
+Run gui-checklist-execution
+
+Screen:
+
+B1
+
+Inputs:
+
+- gui_checklist.md
+- checklist_coverage_matrix.md
+- screen_description.md
+- tester observations
+- tester notes
+- screenshot references
+- SUT URL
+
+Prepare draft updates only.
+
+Wait for confirmation before modifying any file.

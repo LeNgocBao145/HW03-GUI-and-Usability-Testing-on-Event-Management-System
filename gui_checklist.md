@@ -99,4 +99,4 @@
 
         - Slide 17–18: Navigation Testing (Menus, Breadcrumbs, Links, Form Navigation).
 
-        - Slide 26: Challenges in GUI Testing (Localization & Internationalization).  
+        - Slide 26: Challenges in GUI Testing (Localization & Internationalization).
