@@ -4,6 +4,12 @@
 
 Evaluate the usability of Scenario B across B1-B3 for event discovery, detail review, and registration completion.
 
+## SUT Environment
+
+- Current EMS endpoint for new test executions: `https://prod-dev.ems-fitus.cloud/`
+- All test evidence must record the exact SUT URL used at the time of execution.
+- Do not state that this endpoint is operational unless the session runner manually verifies it.
+
 ## Selected Screens B1-B3
 
 - B1 - Home / Events Listing

@@ -1,5 +1,11 @@
 # Compatibility Test Plan
 
+Current EMS endpoint for new compatibility runs: `https://prod-dev.ems-fitus.cloud/`
+
+All test evidence must record the exact SUT URL used at the time of execution.
+
+Do not state that this endpoint is operational unless it has been manually verified in the target environment.
+
 Each of B1, B2, and B3 must cover:
 
 - 3 operating systems

@@ -1,133 +1,102 @@
-# Shared GUI Checklist
+# GUI Testing Checklist
 
-## 1. Document Information
+**GUI ID:** 01
 
-- Assignment:
-- Group:
-- Group Members:
-- Prepared By:
-- Last Updated:
-- Checklist Status:
-  - Draft
-  - Human Reviewed
-  - Group Approved
+**GUI Name:** Comprehensive GUI Testing Checklist
 
-## 2. Scope
+**GUI Detail:** Comprehensive User Interface testing checklist covering 4 key aspects: General UI Standards, Forms & Inputs, Navigation & Layout, and Feedback & State
 
-This checklist:
+---
 
-- is one shared checklist for the whole group
-- is reusable across EMS scenarios and screens
-- covers all four interface aspects:
-  - IA-01 General UI standards
-  - IA-02 Forms
-  - IA-03 Navigation
-  - IA-04 Feedback / state
+| GUI No | Checkpoints | Passed | Failed | Notes |
+| :--- | :--- | :---: | :---: | :--- |
+| **1.00** | **IA-01: GENERAL UI STANDARDS** | | | |
+| 1.01 | Do primary colors and color schemes comply with the Design System / Brand Guidelines? | | | |
+| 1.02 | Are font families, font sizes, and font weights consistent across the typography hierarchy (Heading, Subtitle, Body)? | | | |
+| 1.03 | Does color contrast between text and background meet accessibility standards (WCAG AA - minimum 4.5:1)? | | | |
+| 1.04 | Are margins, padding, and spacing between elements/components consistent throughout the interface? | | | |
+| 1.05 | Do icons share a consistent style (outline/filled), size, and visual meaning? | | | |
+| 1.06 | Is the system logo placed in the standard position (top-left corner) and linked back to the homepage? | | | |
+| 1.07 | Are spelling, grammar, and terminology accurate and consistent across the UI? | | | |
+| 1.08 | Does capitalization (title case, sentence case, button labels) follow the design specifications? | | | |
+| 1.09 | Are images and banners sharp, properly proportioned, and free from distortion or stretching across various screen resolutions? | | | |
+| 1.10 | Is the UI layout responsive and clean across standard screen sizes (Desktop, Tablet, Mobile) without broken layout? | | | |
+| 1.11 | Are buttons of the same type (Primary, Secondary, Danger, Disabled) visually and styled consistently? | | | |
+| 1.12 | Does Light/Dark Mode (if applicable) transition smoothly and display the correct color palette? | | | |
+| 1.13 | Does the interface support switching between English and Vietnamese (i18n) without breaking layout (text truncation, overflow, wrapping)? | | | |
+| 1.14 | Do interactive elements have proper ARIA labels / semantic roles and are correctly announced by screen readers? | | | |
+| 1.15 | Are tooltips, contextual help, or documentation links available for complex or unfamiliar features (Nielsen: Help & Documentation)? | | | |
+| **2.00** | **IA-02: FORMS & INPUTS** | | | |
+| 2.01 | Does every input field have a clear, legible, and properly aligned label? | | | |
+| 2.02 | Are required fields clearly marked (e.g., red asterisk *)? | | | |
+| 2.03 | Does the password mask function correctly, and is a show/hide password toggle available? | | | |
+| 2.04 | Does the email field validate correct email format (regex check) on blur or submit? | | | |
+| 2.05 | Do phone number / currency / age fields restrict input to numeric values and enforce length limits? | | | |
+| 2.06 | Do data fields validate minimum and maximum length limits (Min/Max length)? | | | |
+| 2.07 | Do text fields automatically trim leading and trailing whitespace? | | | |
+| 2.08 | Does the form sanitize/block malicious special characters (XSS/SQL injection) or display appropriate validation errors? | | | |
+| 2.09 | Are default values and placeholders in input fields/dropdowns meaningful and helpful? | | | |
+| 2.10 | Do dropdown select boxes display all options clearly and support search filtering for long lists? | | | |
+| 2.11 | Do checkboxes and radio buttons have a sufficiently large clickable area (including the label)? | | | |
+| 2.12 | Does the Tab key navigate through fields in a logical top-to-bottom, left-to-right order (Tab order)? | | | |
+| 2.13 | Does the file upload control validate file type and size limits, support drag-and-drop, and show upload progress? | | | |
+| 2.14 | Does the rich-text editor toolbar (bold, italic, list, link, image) work correctly and sanitize pasted content? | | | |
+| 2.15 | Are validation error messages placed directly next to/below the related field (not only in a toast or summary block)? | | | |
+| **3.00** | **IA-03: NAVIGATION & LAYOUT** | | | |
+| 3.01 | Is the navigation bar / header / sidebar displayed consistently across all pages? | | | |
+| 3.02 | Is the active menu item clearly highlighted so users know their current location? | | | |
+| 3.03 | Does the breadcrumb navigation accurately display hierarchy and allow clicking back to parent pages? | | | |
+| 3.04 | Does the scrollbar appear only when content exceeds screen dimensions and scroll smoothly? | | | |
+| 3.05 | Does a 'Back to top' button appear when scrolling down and function correctly? | | | |
+| 3.06 | Does pagination or infinite scroll correctly display page numbers, total records, and navigate smoothly? | | | |
+| 3.07 | Are hyperlinks clearly identifiable (color change/underline on hover) and pointing to correct URLs? | | | |
+| 3.08 | Do external links open in a new tab (`target="_blank"`) to avoid interrupting the user flow? | | | |
+| 3.09 | Is the search bar easily accessible, supporting autosuggestion and a clear-search button? | | | |
+| 3.10 | Do browser Back/Forward buttons work as expected and preserve relevant page state? | | | |
+| 3.11 | Do pop-up modals / dialogs feature a close button (X), close on Esc key, or close on clicking the overlay? | | | |
+| 3.12 | Do tabs switch content correctly, clearly indicate the active tab, and preserve unsaved state when possible? | | | |
+| 3.13 | Does drag-and-drop reordering (lists, Kanban cards, etc.) work smoothly and persist the new order after page refresh? | | | |
+| 3.14 | Do deep links (direct URLs to a specific page/tab/filter) load the correct state, and is that state preserved on page reload? | | | |
+| 3.15 | Are table/list filter controls consolidated in a visible and immediately accessible location (e.g., a filter bar or panel above the table), rather than being scattered across scrollable column headers that require horizontal scrolling to discover? | | | |
+| 3.16 | Do data table column headers support click-to-sort (ascending/descending) with a visible sort indicator (e.g., ▲▼ arrows), and does the sorted state persist during pagination? | | | |
+| **4.00** | **IA-04: FEEDBACK & STATE** | | | |
+| 4.01 | Do hover states on buttons, links, and cards provide clear visual feedback? | | | |
+| 4.02 | Does keyboard focus state (Tab key) show a distinct focus ring/outline on active elements? | | | |
+| 4.03 | Is the disabled state for buttons and inputs visually distinct (greyed out) and non-interactive? | | | |
+| 4.04 | Are loading indicators (spinners / skeleton screens) displayed immediately during data fetching or background tasks? | | | |
+| 4.05 | Are success toast notifications/alerts concise, clear, and automatically dismissed after 3-5 seconds? | | | |
+| 4.06 | Do error messages provide clear context, explain the cause, and guide the user on how to fix the issue? | | | |
+| 4.07 | Does an empty state (e.g., empty cart, no search results) show helpful graphics and a clear Call to Action (CTA)? | | | |
+| 4.08 | Does an offline / network error state display a friendly message with a 'Retry' option? | | | |
+| 4.09 | Is a confirmation modal displayed prior to executing destructive/critical actions (Delete, Cancel Order, Log out)? | | | |
+| 4.10 | Do submit buttons prevent double-clicking / debouncing to avoid sending duplicate requests? | | | |
+| 4.11 | Does a progress bar display an accurate percentage for long-running operations (file uploads, import/export)? | | | |
+| 4.12 | Do badges/counters (notifications, cart count, unread items) update accurately and promptly? | | | |
+| 4.13 | Are status colors (e.g., green = success, red = error, yellow = warning) used consistently and meaningfully system-wide? | | | |
+| 4.14 | Do real-time updates (WebSocket/polling) reflect on screen without requiring a manual page refresh? | | | |
+| 4.15 | Is an "Undo" option available for a short grace period after reversible destructive actions (Shneiderman: easy reversal of actions)? | | | |
 
-## 3. Checklist
+## References
 
-| ID | Interface Aspect | Checklist Item | Reference ID | Origin | Review Status | Rationale |
-|---|---|---|---|---|---|---|
-| IA-01-001 | IA-01 General UI standards | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-002 | IA-01 General UI standards | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-003 | IA-01 General UI standards | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-004 | IA-01 General UI standards | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-005 | IA-01 General UI standards | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-006 | IA-01 General UI standards | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-007 | IA-01 General UI standards | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-008 | IA-01 General UI standards | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-009 | IA-01 General UI standards | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-010 | IA-01 General UI standards | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-011 | IA-01 General UI standards | TODO placeholder item | SRC-06 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-012 | IA-01 General UI standards | TODO placeholder item | SRC-06 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-013 | IA-01 General UI standards | TODO placeholder item | SRC-07 | AI Generated | Draft | Placeholder only until human review. |
-| IA-01-014 | IA-01 General UI standards | TODO placeholder item | SRC-07 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-001 | IA-02 Forms | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-002 | IA-02 Forms | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-003 | IA-02 Forms | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-004 | IA-02 Forms | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-005 | IA-02 Forms | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-006 | IA-02 Forms | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-007 | IA-02 Forms | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-008 | IA-02 Forms | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-009 | IA-02 Forms | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-010 | IA-02 Forms | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-02-011 | IA-02 Forms | TODO placeholder item | SRC-06 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-001 | IA-03 Navigation | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-002 | IA-03 Navigation | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-003 | IA-03 Navigation | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-004 | IA-03 Navigation | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-005 | IA-03 Navigation | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-006 | IA-03 Navigation | TODO placeholder item | SRC-06 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-007 | IA-03 Navigation | TODO placeholder item | SRC-07 | AI Generated | Draft | Placeholder only until human review. |
-| IA-03-008 | IA-03 Navigation | TODO placeholder item | SRC-08 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-001 | IA-04 Feedback / state | TODO placeholder item | SRC-01 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-002 | IA-04 Feedback / state | TODO placeholder item | SRC-02 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-003 | IA-04 Feedback / state | TODO placeholder item | SRC-03 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-004 | IA-04 Feedback / state | TODO placeholder item | SRC-04 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-005 | IA-04 Feedback / state | TODO placeholder item | SRC-05 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-006 | IA-04 Feedback / state | TODO placeholder item | SRC-06 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-007 | IA-04 Feedback / state | TODO placeholder item | SRC-07 | AI Generated | Draft | Placeholder only until human review. |
-| IA-04-008 | IA-04 Feedback / state | TODO placeholder item | SRC-08 | AI Generated | Draft | Placeholder only until human review. |
+1. Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design. Nielsen Norman Group.
 
-## 4. Reference Sources
+    - Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 
-| Source ID | Author / Organisation | Title | Type | Link / File | Used For | Notes |
-|---|---|---|---|---|---|---|
-| SRC-01 | Nielsen Norman Group | Nielsen's 10 Usability Heuristics | Web article | TODO | General UI and heuristic references | Placeholder until citation is confirmed. |
-| SRC-02 | Don Norman / publisher | Norman's design principles | Book / reference | TODO | Design principles and affordance review | Placeholder until citation is confirmed. |
-| SRC-03 | Ben Shneiderman / publisher | Shneiderman's Eight Golden Rules | Book / reference | TODO | Navigation, control, and feedback rules | Placeholder until citation is confirmed. |
-| SRC-04 | Course teaching team | Course lecture slides | Slides | `req/` | Course-aligned GUI expectations | Use the supplied course files. |
-| SRC-05 | ISTQB | ISTQB materials | Reference | TODO | Testing terminology and checklist framing | Placeholder until citation is confirmed. |
-| SRC-06 | BrowserStack or LambdaTest | Compatibility testing documentation | Vendor documentation | TODO | Cross-browser evidence expectations | Add exact tool reference later if used. |
-| SRC-07 | HW03 assignment specification | HW03 assignment specification | Assignment document | `req/2026.HW03.GUI Usability EMS_En.md` | Source-of-truth requirements | Prefer detailed specification over slides. |
-| SRC-08 | EMS background materials | HW03 EMS introduction slides / EMS E2E flow documents | Course / project material | `req/` | EMS-specific context only | Do not infer unsupported user-side behavior. |
+2. Norman, D. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.
 
-## 5. AI Prompts Used to Generate and Refine the Checklist
+    - Link: https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/
 
-| Prompt ID | Date | Time | AI Tool | Purpose | Prompt | Output Summary | Human Review | Changes Made | Related Checklist IDs |
-|---|---|---|---|---|---|---|---|---|---|
-| TODO | | | | Add only real prompt records. | | | Pending | | |
+3. Shneiderman, B., Plaisant, C., Cohen, M., Jacobs, S., Elmqvist, N., & Diakopoulos, N. (2016). Designing the User Interface: Strategies for Effective Human-Computer Interaction (6th Edition). Pearson.
 
-## 6. Human-Added Items and AI Gaps
+    - Link: https://www.cs.umd.edu/users/ben/goldenrules.html
 
-| Checklist ID | Human-Added Item | Why It Matters | Why AI May Have Missed It | EMS-Specific Context | Evidence / Reference |
-|---|---|---|---|---|---|
-| TODO | Accessibility review prompt | Important for inclusive access and grading quality. | Generic AI outputs often under-specify accessibility checks. | Check across B1-B3 after real review. | TODO |
-| TODO | Keyboard navigation review prompt | Needed for tab order and non-pointer usage. | AI may prioritize visual checks over interaction flow. | Relevant to search, filters, buttons, and form fields. | TODO |
-| TODO | Screen-reader compatibility review prompt | Supports semantic structure and announcements. | Requires domain-specific accessibility focus. | Relevant to event cards, detail content, and validation. | TODO |
-| TODO | Visible focus review prompt | Ensures keyboard users can track position. | Easily omitted in generic checklists. | Relevant across interactive elements in B1-B3. | TODO |
-| TODO | EN/VI internationalisation review prompt | Prevents overflow and translation inconsistency. | AI may not know the course expects bilingual checks. | EMS may switch language or display mixed labels. | TODO |
-| TODO | Responsive layout review prompt | Supports desktop, tablet, and phone coverage. | AI may separate it from GUI checklist or matrix work. | Relevant to carousel, cards, and multi-field form layout. | TODO |
-| TODO | Dark mode review prompt | Important if the interface exposes theme variants. | AI may assume it is out of scope or unavailable. | Verify only if present in the actual EMS UI. | TODO |
-| TODO | Loading state review prompt | Helps users understand wait states. | AI often focuses on static screens. | Relevant to event listing and form submission. | TODO |
-| TODO | Empty state review prompt | Prevents confusion when no data matches. | AI may omit less common but critical states. | Relevant to search/filter results on B1. | TODO |
-| TODO | Error recovery review prompt | Helps users recover from invalid actions. | AI may list errors without recovery guidance. | Relevant to registration validation and failures. | TODO |
-| TODO | Colour-only status communication review prompt | Avoids inaccessible state communication. | Requires accessibility-specific attention. | Check badges, status labels, and validation states. | TODO |
-| TODO | Form validation placement review prompt | Users need field-level guidance close to the error. | Generic AI can overuse toast-only validation advice. | Relevant to B3 required fields and additional role. | TODO |
-| TODO | Carousel usability review prompt | Carousels often hide content or reduce discoverability. | AI may mention it only superficially. | Relevant to B1 featured-event carousel. | TODO |
-| TODO | Search and filter discoverability review prompt | Supports efficient event discovery. | AI may not emphasize findability issues. | Relevant to B1 search and filtering controls. | TODO |
+4. HCMUS Faculty of Information Technology. S13_GUI Testing & Usability Testing.pdf (CSC13003 Software Testing).  
+    - Slide Reference Details:
 
-## 7. Checklist Review Summary
+        - Slide 11–14: Common GUI Bugs (Validation, Mandatory fields, Focus order, Data Currency, Synchronization).
 
-| Metric | Value |
-|---|---:|
-| Total checklist items | TODO |
-| AI-generated items | TODO |
-| Human-added items | TODO |
-| AI-refined items | TODO |
-| Human-reviewed items | TODO |
-| Group-approved items | TODO |
-| IA-01 items | TODO |
-| IA-02 items | TODO |
-| IA-03 items | TODO |
-| IA-04 items | TODO |
+        - Slide 16: Low Level - Checklist Testing (Layout, Alignment, Typography, Colors, Labels).
 
-## 8. Approval
+        - Slide 17–18: Navigation Testing (Menus, Breadcrumbs, Links, Form Navigation).
 
-| Member | Role | Review Status | Date |
-|---|---|---|---|
-| Member 1 | | Pending | |
-| Member 2 | | Pending | |
-| Member 3 | | Pending | |
-| Member 4 | | Pending | |
+        - Slide 26: Challenges in GUI Testing (Localization & Internationalization).  

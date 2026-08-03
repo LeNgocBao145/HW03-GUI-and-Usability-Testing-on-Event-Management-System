@@ -26,6 +26,17 @@
 - Credentials must not be committed to Git.
 - The shared Admin account must not be used for B1-B3 user-side testing.
 
+## SUT Environment History
+
+| Environment | URL | Status | Notes |
+|---|---|---|---|
+| Previous ngrok endpoint | https://promoter-starboard-prude.ngrok-free.dev/ | Offline | Returned ERR_NGROK_3200 |
+| Current EMS endpoint | https://prod-dev.ems-fitus.cloud/ | Current | Use for all new test executions |
+
+All test evidence must record the exact SUT URL used at the time of execution.
+
+The current EMS endpoint has been updated for repository guidance, but it must not be treated as operational until manually verified during real testing.
+
 ## Repository Structure
 
 - `docs/`: main report, AI documentation, prompt log, self-assessment notes, and commit log placeholder.

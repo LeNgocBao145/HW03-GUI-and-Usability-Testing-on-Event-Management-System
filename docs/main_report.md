@@ -24,6 +24,9 @@ Reference [scope_and_screen_selection.md](../scenario_b/scope_and_screen_selecti
 - Do not share the account across group members.
 - Do not commit passwords or credentials.
 - Do not use the shared Admin account for B1-B3 user-side testing.
+- Current SUT for new test executions: `https://prod-dev.ems-fitus.cloud/`
+- All test evidence must record the exact SUT URL used at the time of execution.
+- Do not claim the current SUT is operational unless it has been manually verified.
 
 # Task 1A - Shared GUI Checklist
 
