@@ -26,6 +26,7 @@
 | 1.13 | Does the interface support switching between English and Vietnamese (i18n) without breaking layout (text truncation, overflow, wrapping)? | | | |
 | 1.14 | Do interactive elements have proper ARIA labels / semantic roles and are correctly announced by screen readers? | | | |
 | 1.15 | Are tooltips, contextual help, or documentation links available for complex or unfamiliar features (Nielsen: Help & Documentation)? | | | |
+| 1.16 | Are global controls (e.g., Language Toggle, Help, Profile) prominently placed and easily discoverable without requiring users to hunt for them? | | | |
 | **2.00** | **IA-02: FORMS & INPUTS** | | | |
 | 2.01 | Does every input field have a clear, legible, and properly aligned label? | | | |
 | 2.02 | Are required fields clearly marked (e.g., red asterisk *)? | | | |
@@ -42,6 +43,7 @@
 | 2.13 | Does the file upload control validate file type and size limits, support drag-and-drop, and show upload progress? | | | |
 | 2.14 | Does the rich-text editor toolbar (bold, italic, list, link, image) work correctly and sanitize pasted content? | | | |
 | 2.15 | Are validation error messages placed directly next to/below the related field (not only in a toast or summary block)? | | | |
+| 2.16 | Do complex input controls (like Date/Time pickers) offer an alternative manual keyboard entry method to prevent interaction fatigue? | | | |
 | **3.00** | **IA-03: NAVIGATION & LAYOUT** | | | |
 | 3.01 | Is the navigation bar / header / sidebar displayed consistently across all pages? | | | |
 | 3.02 | Is the active menu item clearly highlighted so users know their current location? | | | |
@@ -59,6 +61,7 @@
 | 3.14 | Do deep links (direct URLs to a specific page/tab/filter) load the correct state, and is that state preserved on page reload? | | | |
 | 3.15 | Are table/list filter controls consolidated in a visible and immediately accessible location (e.g., a filter bar or panel above the table), rather than being scattered across scrollable column headers that require horizontal scrolling to discover? | | | |
 | 3.16 | Do data table column headers support click-to-sort (ascending/descending) with a visible sort indicator (e.g., ▲▼ arrows), and does the sorted state persist during pagination? | | | |
+| 3.17 | Do data tables maximize the clickable area (e.g., making the entire row clickable) for primary actions rather than relying solely on small icon buttons? | | | |
 | **4.00** | **IA-04: FEEDBACK & STATE** | | | |
 | 4.01 | Do hover states on buttons, links, and cards provide clear visual feedback? | | | |
 | 4.02 | Does keyboard focus state (Tab key) show a distinct focus ring/outline on active elements? | | | |
