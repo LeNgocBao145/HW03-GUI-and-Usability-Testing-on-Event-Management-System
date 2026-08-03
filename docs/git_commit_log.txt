@@ -1,0 +1,3 @@
+Record real Git commits here if and when they are created.
+
+Do not fabricate commit hashes or timestamps.
