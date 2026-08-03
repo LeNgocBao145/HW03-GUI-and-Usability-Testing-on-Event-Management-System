@@ -41,6 +41,7 @@ Approve or Reject an applicant, then comment on the status color display of the 
 | P6 | 25.0 | D/F (Poor) | 2, 5, 2, 4, 3, 4, 1, 4, 3, 4 |
 
 ## Per-Session Observation Notes
+**Screen recordings of all participants**: https://app.maze.co/report/64c107d4-7c26-4a7b-b8c8-0c1e3d2e679b?anonymousToken=e0d08ad2-5fda-495e-a04c-8c7fa679ad3d
 
 **H.D.T**
 - The date/time scroll wheel when creating an event is difficult and annoying to use; the user prefers manual input.
