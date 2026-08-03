@@ -112,6 +112,12 @@ Screenshots
 - ScreenB3_not_registered.png
 - ScreenB3_registered.png
 - ScreenB3_cancel_dialog.png
+- `screenshots/ScreenB3/evidences/ScreenB3_live_12_role_selected_before_submit.png`
+- `screenshots/ScreenB3/evidences/ScreenB3_live_13_registration_pending_after_double_click.png`
+- `screenshots/ScreenB3/evidences/ScreenB3_live_14_cancel_confirmation_dialog.png`
+- `screenshots/ScreenB3/evidences/ScreenB3_live_16_dialog_closed_by_escape.png`
+- `screenshots/ScreenB3/evidences/ScreenB3_live_17_cancellation_processing.png`
+- `screenshots/ScreenB3/evidences/ScreenB3_live_18_cancellation_completed_no_undo.png`
 
 Environment
 
@@ -153,14 +159,25 @@ Observed:
   - Cancel Registration button
   - Close (X) button
 
-# Not Yet Observed or Verified
+## Follow-up Live Verification
 
-- Registration cancellation success message
+Observed on 2026-08-04:
+
+- Selecting a role enables Register and updates the selected-role counter.
+- A deliberate Register double-click creates one Pending registration and increments the registration counters only once.
+- No success toast or equivalent notification appears after registration.
+- Selecting Cancel registration opens the confirmation dialog before cancellation.
+- Escape closes the confirmation dialog after its closing animation completes.
+- Confirming cancellation restores the unregistered form and resets the counters.
+- No Undo action appears after cancellation.
+- Desktop, tablet, and mobile layouts display without horizontal document overflow.
+- A loading spinner appears while registration data is fetched after reload.
+- Keyboard focus is visible, but repeated Tab input does not advance beyond the role checkbox.
+- Human Review confirmed Design System alignment, contrast, capitalization, offline behavior, and real-time update behavior.
+
+# Remaining Unobserved States
+
 - Registration cancellation failure
 - Pending review approval flow
 - Waitlist transition
-- Loading state
-- Error state
-- Responsive behaviour
-- Keyboard accessibility
-- Screen-reader behaviour
+- Screen-reader announcement output beyond DOM semantics
