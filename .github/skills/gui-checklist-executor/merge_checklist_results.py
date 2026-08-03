@@ -17,6 +17,15 @@ from datetime import datetime
 from pathlib import Path
 
 
+def normalize_agent_artifact_path(path_str: str, skill_dir: str) -> str:
+    path = Path(path_str)
+    if path.is_absolute():
+        return str(path)
+    if path.parent == Path("."):
+        return str(Path("agent_artifacts") / skill_dir / path)
+    return str(path)
+
+
 def parse_markdown_table(md_text: str):
     """Parses various Markdown pipe table formats for checklist items."""
     COLUMN_ALIASES = {
@@ -83,6 +92,7 @@ def parse_markdown_table(md_text: str):
 
 
 def cmd_init(args):
+    args.out = normalize_agent_artifact_path(args.out, "gui-checklist-executor")
     md_text = Path(args.checklist).read_text(encoding="utf-8")
     items = parse_markdown_table(md_text)
     out = {"source": args.checklist, "count": len(items), "items": items}
@@ -92,6 +102,7 @@ def cmd_init(args):
 
 
 def cmd_apply(args):
+    args.out = normalize_agent_artifact_path(args.out, "gui-checklist-executor")
     master = json.loads(Path(args.checklist).read_text(encoding="utf-8"))
     diff = json.loads(Path(args.diff).read_text(encoding="utf-8"))
 
@@ -137,6 +148,7 @@ def cmd_apply(args):
 
 
 def cmd_render(args):
+    args.out = normalize_agent_artifact_path(args.out, "gui-checklist-executor")
     data = json.loads(Path(args.results).read_text(encoding="utf-8"))
     lines = [
         f"## Checklist Execution — {data.get('screen', '(unnamed screen)')}",
@@ -216,7 +228,7 @@ def main():
 
     # Append Bug
     p_bug = sub.add_parser("append-bug", help="Append finding to Section 7 Bug Log")
-    p_bug.add_argument("--log-file", default="bug_and_usability_findings_log.md")
+    p_bug.add_argument("--log-file", default="agent_artifacts/bug-channel-submitter/bug_and_usability_findings_log.md")
     p_bug.add_argument("--bug-id", required=True)
     p_bug.add_argument("--screen", required=True)
     p_bug.add_argument("--type", choices=["Bug", "Usability"], required=True)

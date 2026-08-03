@@ -20,28 +20,24 @@ def find_workspace_root():
     return os.getcwd()
 
 def find_required_files(workspace_root):
-    """Automatically find prompt_logs.md and AI_Audit_Report.md in the workspace."""
+    """Automatically find prompt_logs.md and the report output path."""
     log_file_path = None
-    report_file_path = None
+    existing_report_path = None
     
-    # Search for prompt_logs.md and AI_Audit_Report.md
+    # Search for prompt_logs.md and any existing report file
     for root, dirs, files in os.walk(workspace_root):
         if "prompt_logs.md" in files and not log_file_path:
             log_file_path = os.path.join(root, "prompt_logs.md")
-        if "AI_Audit_Report.md" in files and not report_file_path:
-            report_file_path = os.path.join(root, "AI_Audit_Report.md")
+        if "AI_Audit_Report.md" in files and not existing_report_path:
+            existing_report_path = os.path.join(root, "AI_Audit_Report.md")
     
-    # If prompt_logs.md not found, use workspace root
     if not log_file_path:
         log_file_path = os.path.join(workspace_root, "prompt_logs.md")
-    
-    # If AI_Audit_Report.md not found, default to workspace root
-    if not report_file_path:
-        report_file_path = os.path.join(workspace_root, "AI_Audit_Report.md")
-    
-    return log_file_path, report_file_path
 
-def append_new_audit_logs(log_file_path, report_file_path):
+    report_file_path = os.path.join(workspace_root, "agent_artifacts", "ai-audit-report", "AI_Audit_Report.md")
+    return log_file_path, report_file_path, existing_report_path
+
+def append_new_audit_logs(log_file_path, report_file_path, existing_report_path=None):
     # 1. Check if the source log file exists
     if not os.path.exists(log_file_path):
         print(f"File {log_file_path} not found!")
@@ -60,13 +56,21 @@ def append_new_audit_logs(log_file_path, report_file_path):
 
     # 2. Read existing report content and preserve header and footer
     current_interactions = 0
+    output_dir = os.path.dirname(report_file_path)
+    os.makedirs(output_dir, exist_ok=True)
+
     file_exists = os.path.exists(report_file_path)
+    read_report_path = report_file_path
+    if not file_exists and existing_report_path and os.path.exists(existing_report_path):
+        read_report_path = existing_report_path
+        file_exists = True
+
     header_content = ""
     existing_interactions_content = ""
     footer_content = ""
     
     if file_exists:
-        with open(report_file_path, "r", encoding="utf-8") as f:
+        with open(read_report_path, "r", encoding="utf-8") as f:
             report_content = f.read()
             
             # Find the position where interactions start
@@ -178,10 +182,10 @@ def append_new_audit_logs(log_file_path, report_file_path):
 if __name__ == "__main__":
     # Auto-detect workspace root and required files
     workspace_root = find_workspace_root()
-    log_file_path, report_file_path = find_required_files(workspace_root)
+    log_file_path, report_file_path, existing_report_path = find_required_files(workspace_root)
     
     print(f"Workspace root: {workspace_root}")
     print(f"Log file: {log_file_path}")
     print(f"Report file: {report_file_path}")
     
-    append_new_audit_logs(log_file_path, report_file_path)
+    append_new_audit_logs(log_file_path, report_file_path, existing_report_path)

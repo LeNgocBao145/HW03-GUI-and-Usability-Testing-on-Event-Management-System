@@ -10,10 +10,10 @@ description: Execute a GUI/Usability markdown checklist against EMS screen scree
 | Parameter | Flag | Default |
 |-----------|------|---------|
 | Checklist File | `--checklist` | `GUI_Checklist.md` or user-provided |
-| Master JSON | `--master` | `checklist_master.json` |
+| Master JSON | `--master` | `agent_artifacts/gui-checklist-executor/checklist_master.json` |
 | Screens Dir | `--screens-dir` | `screens/` |
 | Evidence Dir | `--evidence-dir` | `failed_gui_checklist_screenshots/` |
-| Bug Log File | `--log-file` | `bug_and_usability_findings_log.md` |
+| Bug Log File | `--log-file` | `agent_artifacts/bug-channel-submitter/bug_and_usability_findings_log.md` |
 
 # Execution Logic
 
@@ -21,7 +21,7 @@ description: Execute a GUI/Usability markdown checklist against EMS screen scree
 1. Read `Report.md` or `README.md` to identify the active scenario and its required target screens (e.g., `ScreenA1`, `ScreenA3`). If unclear, ask the user.
 2. Verify that reference target images exist under `<SCREENS_DIR>/<ScreenID>.png`. These images serve as your visual destination maps.
 3. Initialize or verify `checklist_master.json`:
-   `python scripts/merge_checklist_results.py init --checklist <CHECKLIST_FILE> --out <MASTER_JSON>`
+   `python scripts/merge_checklist_results.py init --checklist <CHECKLIST_FILE> --out agent_artifacts/gui-checklist-executor/checklist_master.json`
 
 ## Step 1 — Live Navigation, Step-Tracking & Evidence Gathering
 For each target screen in the scenario:

@@ -25,7 +25,7 @@ The provided Python script (`scripts/generate_report.py`) automatically detects 
 # Navigate to the project root or any subdirectory containing .github folder
 cd /path/to/workspace
 
-# Run the script (it will auto-detect all paths)
+# Run the script (it will auto-detect all paths and write the report into agent_artifacts)
 python .github/skills/ai-audit-report/scripts/generate_report.py
 ```
 
@@ -33,7 +33,7 @@ python .github/skills/ai-audit-report/scripts/generate_report.py
 The script will display:
 - The detected workspace root path
 - The full path to the `prompt_logs.md` file being processed
-- The full path to the `AI_Audit_Report.md` file being created/updated
+- The full path to the `agent_artifacts/ai-audit-report/AI_Audit_Report.md` file being created/updated
 - A success message with the number of new interactions added
 
 ### What the Script Does:

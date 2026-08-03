@@ -6,11 +6,11 @@ description: Decoupled bug reporting tool that submits findings from a local log
 # Universal Bug Channel Submitter
 
 ## Parameters & Defaults
-- Log File: `--log-file` (Default: `bug_and_usability_findings_log.md`)
+- Log File: `--log-file` (Default: `agent_artifacts/bug-channel-submitter/bug_and_usability_findings_log.md`)
 - Channel Type: `--channel-type` (Options: `web_form` | `jira` | `slack` | `github_issues`)
 - Channel Target: `--channel-target` (URL or Project Key or Channel ID)
 - Allow Duplicate: `--allow-duplicate` (Default: `false`)
-- Mapping Cache File: `--mapping-cache-file` (Default: `bug_channel_field_mappings.json`)
+- Mapping Cache File: `--mapping-cache-file` (Default: `agent_artifacts/bug-channel-submitter/bug_channel_field_mappings.json`)
 
 ---
 
