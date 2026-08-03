@@ -62,8 +62,15 @@ Evidence files are stored under `screenshots/ScreenB2/evidences/`. Dynamic check
 - The tester re-verified Design System alignment, WCAG AA contrast, and capitalization as PASS through human review.
 - Browser Back/Forward behavior was re-verified as working through tester interaction.
 - A visible loading spinner appeared while Event Detail content was pending in `LIVE-B2-12`.
-- Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
-- The tester observed that event updates appeared only after a manual reload rather than updating automatically.
+- Offline behavior was re-executed using Chrome DevTools Offline mode. The browser displayed its generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
+- The tester previously observed that event updates appeared only after a manual reload rather than updating automatically.
+
+## Candidate Review Re-execution
+
+- GUI-B2-FC-003 was re-executed. The tester confirmed the keyboard-navigation observation and completed human review without requiring another repository evidence file.
+- GUI-B2-FC-006 was re-executed using Chrome DevTools Offline mode. The observed browser error state and exact simulation method are recorded in these notes.
+- GUI-B2-FC-007 was re-executed, but no reliable real-time update could be triggered. The human reviewer explicitly approved promotion without additional evidence.
+- GUI-B2-FC-004 and GUI-B2-FC-005 remain separate candidates because they cover different component groups and checkpoints.
 
 ## Re-verification Status
 
@@ -72,4 +79,4 @@ Evidence files are stored under `screenshots/ScreenB2/evidences/`. Dynamic check
 - All screenshot filenames referenced by the B2 execution documents are present.
 - No missing screenshot file was used to support a FAIL result.
 
-No bugs or severity classifications were created. Seven observations are recorded only as Finding Candidates.
+All seven B2 candidates received explicit human approval for promotion to the findings log. Type and severity remain unassigned pending human classification, and no Google Form metadata has been created.

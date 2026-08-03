@@ -161,12 +161,13 @@ Observed navigation includes:
 Screenshots
 
 - ScreenB2_event_detail.png
+- `screenshots/ScreenB2/evidences/`
 
 Environment
 
 - Windows 11
 - Google Chrome
-- https://prod-dev.ems-fitus.cloud/events/:id
+- https://prod-dev.ems-fitus.cloud/events/104
 
 Observation Date
 
@@ -214,12 +215,19 @@ Separate information cards display:
 - A Share event button is displayed.
 - The page footer contains contact information and useful links.
 
-# Not Yet Observed or Verified
+# Live Verification Status
+
+## Verified
+
+- Loading state displayed a visible spinner while Event Detail content was pending.
+- Responsive behavior was checked at desktop, tablet, and mobile viewports without horizontal document overflow.
+- Keyboard navigation and focus behavior were exercised; the language switcher retained focus during the recorded Tab sequence.
+- Offline behavior was exercised with Chrome DevTools Offline mode and fell back to the browser's generic error page.
+- English and Vietnamese layouts were observed.
+
+## Not Yet Observed or Verified
 
 - Save event confirmation
-- Share event behaviour
-- Loading state
-- Error state
-- Responsive behaviour
-- Keyboard accessibility
-- Screen-reader behaviour
+- Share event behavior
+- Screen-reader announcement behavior
+- Reliable real-time update behavior

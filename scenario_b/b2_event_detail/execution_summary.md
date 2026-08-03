@@ -29,7 +29,7 @@
 | Not Executed | 0 |
 | Total checkpoints | 61 |
 
-The seven FAIL rows describe seven Finding Candidates. They are not bug reports and have no severity classification.
+The seven FAIL rows received explicit human approval for promotion to the findings log. Type and severity remain pending human review.
 
 ## Live Verification Summary
 
@@ -40,7 +40,8 @@ The seven FAIL rows describe seven Finding Candidates. They are not bug reports 
 - A direct reload preserved event `104`, its page title, and its event heading.
 - The previously deferred design, contrast, capitalization, browser-navigation, loading, offline, and real-time-update checks were re-verified by the tester.
 - A loading spinner was captured while Event Detail content was pending.
-- Offline behavior and real-time refresh behavior produced two additional Finding Candidates.
+- Offline behavior was re-executed using Chrome DevTools Offline mode.
+- A reliable real-time update could not be triggered during candidate re-execution; the human reviewer explicitly approved GUI-B2-FC-007 for promotion without additional evidence.
 - No applicable B2 checkpoint remains Not Executed.
 - Live evidence screenshots are persisted under `screenshots/ScreenB2/evidences/` and indexed in `test_notes.md`.
 
@@ -48,56 +49,61 @@ The seven FAIL rows describe seven Finding Candidates. They are not bug reports 
 
 No referenced screenshot file is missing. Interaction-dependent results for browser navigation, offline behavior, and real-time refresh behavior additionally rely on the tester observations recorded in `test_notes.md`.
 
-## Finding Candidate Report
+## Promoted Findings Report
 
 ### GUI-B2-FC-001 - Countdown Text Uses Placeholder-Style Plural Grammar
 
 - Checkpoint: 1.07
 - Observation: English countdowns display `Event starts in 12 day(s)` and `Registration opens in 6 day(s)`.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_02_full_page.png` and `screenshots/ScreenB2/evidences/ScreenB2_live_03_tablet_768x1024.png`
-- Classification: Finding Candidate only
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-002 - Accessibility Semantics Are Incomplete
 
 - Checkpoint: 1.14
 - Observation: The user menu is a focusable `SPAN` without a semantic role, and the document language remains `en` in Vietnamese mode.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_05_vietnamese.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_08_keyboard_focus.png`, and live DOM observation
-- Classification: Finding Candidate only
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-003 - Keyboard Focus Does Not Advance Beyond the Language Switcher
 
 - Checkpoint: 2.12
 - Observation: Repeated Tab and Shift+Tab actions remain on the language switcher despite additional focusable controls being present.
-- Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_08_keyboard_focus.png` and keyboard notes
-- Classification: Finding Candidate only
+- Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_08_keyboard_focus.png`, keyboard notes, and completed human re-execution
+- Validation status: Valid Candidate after human review
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-004 - User Guide Link Lacks Visual Hover Feedback
 
 - Checkpoint: 3.07
 - Observation: User Guide points to `/manual`, but its color and underline do not change on hover.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_10_link_hover_baseline.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_11_link_hover_user_guide.png`, and live computed-style observation
-- Classification: Finding Candidate only
+- Duplicate decision: Keep separate from GUI-B2-FC-005 because it covers hyperlink feedback in the event navigation/content context.
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-005 - Tested Buttons Lack Visual Hover Feedback
 
 - Checkpoint: 4.01
 - Observation: Save Event and Back to Events show no observed color, border, shadow, opacity, or transform change on hover.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_06_hover_baseline.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_07_hover_save_event.png`, and live computed-style observation
-- Classification: Finding Candidate only
+- Duplicate decision: Keep separate from GUI-B2-FC-004 because it covers button controls and different user interactions.
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-006 - Offline State Falls Back to the Browser Error Page
 
 - Checkpoint: 4.08
 - Observation: Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
-- Evidence: tester observation recorded in `test_notes.md`
-- Classification: Finding Candidate only
+- Evidence: Chrome DevTools Offline-mode re-execution recorded in `test_notes.md`
+- Validation status: Valid Candidate after human review
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ### GUI-B2-FC-007 - Event Updates Require a Manual Reload
 
 - Checkpoint: 4.14
-- Observation: The tester observed that event updates appeared only after a manual reload rather than updating automatically.
-- Evidence: tester observation recorded in `test_notes.md`
-- Classification: Finding Candidate only
+- Observation: The tester previously observed updates only after a manual reload, but no reliable real-time update could be triggered during re-execution.
+- Evidence: tester observation recorded in `test_notes.md`; controlled update evidence is pending
+- Validation status: Promoted by explicit human approval without additional evidence
+- Promotion status: Promoted to findings log - Pending Type and Severity Review
 
 ## Verification Completion
 

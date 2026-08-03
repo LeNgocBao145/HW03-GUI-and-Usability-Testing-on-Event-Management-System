@@ -42,7 +42,7 @@ Live evidence screenshots are saved under `screenshots/ScreenB2/evidences/`. The
 
 | GUI | Result | Evidence | Notes |
 |---|---|---|---|
-| 2.12 | FAIL | ScreenB2_live_08_keyboard_focus.png; keyboard notes | Repeated Tab and Shift+Tab actions remained on the language button although additional focusable controls were present. See GUI-B2-FC-003. |
+| 2.12 | FAIL | ScreenB2_live_08_keyboard_focus.png; keyboard notes; human re-execution | Repeated Tab and Shift+Tab actions remained on the language button although additional focusable controls were present. See GUI-B2-FC-003. |
 
 ## IA-03 Navigation and Layout
 
@@ -63,9 +63,9 @@ Live evidence screenshots are saved under `screenshots/ScreenB2/evidences/`. The
 | 4.01 | FAIL | ScreenB2_live_06_hover_baseline.png; ScreenB2_live_07_hover_save_event.png; live computed-style observation | Save Event and Back to Events showed no observed color, border, shadow, opacity, or transform change on hover. See GUI-B2-FC-005. |
 | 4.02 | PASS | ScreenB2_live_08_keyboard_focus.png | The focused language button displayed a distinct orange outline. |
 | 4.04 | PASS | ScreenB2_live_12_loading_state.png | A visible loading spinner appeared while Event Detail content was pending. |
-| 4.08 | FAIL | Live interaction; tester observation | Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B2-FC-006. |
+| 4.08 | FAIL | Chrome DevTools Offline mode; tester observation | Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B2-FC-006. |
 | 4.13 | PASS | ScreenB2_live_01_desktop_loaded.png | The Upcoming badge used consistent status styling on the listing and detail flow observed during navigation. |
-| 4.14 | FAIL | Live interaction; tester observation | Event updates appeared only after a manual reload rather than updating automatically. See GUI-B2-FC-007. |
+| 4.14 | FAIL | Tester observation; explicit human promotion approval | Event updates previously appeared only after a manual reload. Re-execution could not trigger a reliable real-time update, and the human reviewer explicitly approved GUI-B2-FC-007 for promotion without additional evidence. |
 
 ## N/A Checkpoints
 
@@ -84,4 +84,4 @@ The coverage matrix marks these checkpoints as not applicable to B2:
 | N/A | 33 |
 | Not Executed | 0 |
 
-The seven FAIL rows map to seven Finding Candidates: GUI-B2-FC-001 through GUI-B2-FC-007.
+The seven FAIL rows map to GUI-B2-FC-001 through GUI-B2-FC-007, all explicitly approved by the human reviewer for promotion to the findings log. Type and severity remain pending.

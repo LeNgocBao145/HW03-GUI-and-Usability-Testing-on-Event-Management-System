@@ -139,6 +139,7 @@ B2
 - scenario_b/b2_event_detail/checklist_execution.md
 - scenario_b/b2_event_detail/test_notes.md
 - scenario_b/b2_event_detail/execution_summary.md
+- screenshots/ScreenB2/evidences/
 
 B3
 

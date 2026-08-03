@@ -57,7 +57,7 @@ For each checkpoint, this document identifies:
 |1.11|B1 B2 B3|OBS|SS|gui-checklist-execution|Checklist|
 |1.12|N/A|-|-|-|
 |1.13|B1 B2 B3|INT|EN + VI SS|gui-checklist-execution|Checklist|
-|1.14|INT|Developer Tools|-|Manual Verification|
+|1.14|B1 B2 B3|INT|Developer Tools|Manual Verification|Checklist|
 |1.15|B1 B2|OBS|SS|gui-checklist-execution|Checklist|
 
 ---
@@ -101,7 +101,7 @@ For each checkpoint, this document identifies:
 |3.11|B3|INT|Dialog SS|gui-checklist-execution|Checklist|
 |3.12|B1|INT|Status Tabs|gui-checklist-execution|Checklist|
 |3.13|N/A|-|-|-|
-|3.14|INT|Browser Reload|Manual Verification|
+|3.14|B1 B2 B3|INT|Browser Reload|Manual Verification|Checklist|
 |3.15|B1|OBS|SS|gui-checklist-execution|Checklist|
 |3.16|N/A|-|-|-|
 
@@ -114,17 +114,17 @@ For each checkpoint, this document identifies:
 |4.01|B1 B2 B3|INT|Hover SS|gui-checklist-execution|Checklist|
 |4.02|B1 B2 B3|INT|Keyboard Notes|gui-checklist-execution|Checklist|
 |4.03|B3|OBS|SS|gui-checklist-execution|Checklist|
-|4.04|INT|Network Simulation|Manual Verification|
+|4.04|B1 B2 B3|INT|Network Simulation|Manual Verification|Checklist|
 |4.05|B3|INT|Toast SS|gui-checklist-execution|Finding Candidate|
 |4.06|B3|INT|Validation SS|gui-checklist-execution|Finding Candidate|
-|4.07|INT|Search No Result|gui-checklist-execution|Checklist|
-|4.08|INT|Offline Simulation|Manual Verification|
+|4.07|B1|INT|Search No Result|gui-checklist-execution|Checklist|
+|4.08|B1 B2 B3|INT|Offline Simulation|Manual Verification|Checklist|
 |4.09|B3|INT|Dialog SS|gui-checklist-execution|Checklist|
 |4.10|B3|INT|Interaction Notes|gui-checklist-execution|Checklist|
 |4.11|N/A|-|-|-|
 |4.12|B3|INT|Before/After SS|gui-checklist-execution|Checklist|
 |4.13|B1 B2 B3|OBS|SS|gui-checklist-execution|Checklist|
-|4.14|INT|Refresh Observation|Manual Verification|
+|4.14|B1 B2 B3|INT|Refresh Observation|Manual Verification|Checklist|
 |4.15|B3|INT|Cancellation Flow|Finding Candidate|
 
 ---

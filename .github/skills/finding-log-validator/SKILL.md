@@ -138,7 +138,7 @@ Optional:
 - `scenario_b/b3_registration_form/execution_summary.md`
 - `screenshots/ScreenB1/`
 - `screenshots/ScreenB1/evidences/`
-- `screenshots/ScreenB2/`
+- `screenshots/ScreenB2/evidences/`
 - `screenshots/ScreenB3/`
 - `gui_checklist.md`
 - `docs/checklist_coverage_matrix.md`
