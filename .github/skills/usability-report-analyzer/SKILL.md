@@ -87,6 +87,9 @@ python scripts/generate_usability_report.py --session agent_artifacts/usability-
 is missing a required field or has an invalid severity/type, rather than
 rendering an incomplete report silently.
 
+- **IMPORTANT**: Ensure the generated `Usability_Report.md` includes a section detailing the individual **SUS / UEQ-S responses** (including individual item answers, score, and grade for each participant). If `generate_usability_report.py` does not generate this automatically, you MUST append it manually to the markdown file.
+
+
 ## Step 5 — Review, confirm, and log findings
 
 1. The script outputs agent_artifacts/usability-report-analyzer/findings_for_log.json

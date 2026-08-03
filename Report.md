@@ -2,14 +2,14 @@
 
 ## Task 1 — GUI Checklist
 
+## Checklist Execution — ScreenA1
+
 **Scenario A** — **Admin creates and manages events**. Function group: the event lifecycle on 
 the admin side.
 
 - (A1) Events list with status filters and notification dots.
 
     ![alt text](screens/ScreenA1.png)
-
-## Checklist Execution — ScreenA1
 
 Totals: Evaluated 61 | Pass 52 | Fail 9 | N/A 0
 
@@ -76,12 +76,11 @@ Totals: Evaluated 61 | Pass 52 | Fail 9 | N/A 0
 | 4.14 | Do real-time updates (WebSocket/polling) reflect on screen without requiring a manual page refresh? | PASS |  |
 | 4.15 | Is an "Undo" option available for a short grace period after reversible destructive actions (Shneiderman: easy reversal of actions)? | PASS |  |
 
+## Checklist Execution — ScreenA3
 
 - (A3) Registration & Roles configuration panel — Max Slots / Waitlist / additional role.
 
     ![alt text](screens/ScreenA3.png)   
-
-## Checklist Execution — ScreenA3
 
 Totals: Evaluated 59 | Pass 52 | Fail 7 | N/A 0
 
@@ -147,12 +146,11 @@ Totals: Evaluated 59 | Pass 52 | Fail 7 | N/A 0
 | 4.14 | Do real-time updates (WebSocket/polling) reflect on screen without requiring a manual page refresh? | PASS |  |
 | 4.15 | Is an "Undo" option available for a short grace period after reversible destructive actions (Shneiderman: easy reversal of actions)? | PASS |  |
  
+## Checklist Execution — ScreenA4
 
 - (A4) Review Students approval — status colours.
 
     ![alt text](screens/ScreenA4.png)
-
-## Checklist Execution — ScreenA4
 
 Totals: Evaluated 59 | Pass 50 | Fail 9 | N/A 0
 
@@ -251,38 +249,141 @@ The AI inspection prompt focused on evaluating individual, visible-on-load UI el
 **Why AI missed it:**
 Column sorting is a *missing feature* — there are no broken elements, error states, or visual anomalies to trigger detection. AI models performing visual screenshot analysis default to checking what **is present** rather than auditing for **absent-but-expected interactive affordances**. Sorting was also not listed in the original 59-item shared checklist, so the model received no explicit prompt signal to look for it. This reflects a characteristic blind spot: AI tends to overlook interactions that should exist but don't (sorting, drag-to-reorder, keyboard shortcuts, right-click context menus) unless the evaluation prompt explicitly enumerates them.
 
-## Task 2 — User Testing with 5 Real Users
+---
+
+#### 2.16 — Date and time picker scroll mechanism causes friction
+
+**Principle mapping:**
+- **Nielsen #7 (Flexibility and efficiency of use):** Allowing manual typing is faster for power users than clicking and dragging through long scroll wheels.
+- **Norman — Constraints / Affordance:** The scroll picker forces an interaction model that is overly constrained when simple text input would suffice.
+
+**IA dimension: IA-04 Forms & Data Entry** — The date picker is an input control mechanism affecting the efficiency of data entry.
+
+**Why AI missed it:**
+The AI analyzes static screenshots. A scroll-wheel picker looks like a perfectly standard, functional UI component in a static image. The AI cannot "feel" the friction of scrolling through 60 minute increments versus simply typing a number, which is an interaction-over-time usability issue that only becomes apparent during live use or video session analysis.
+
+---
+
+#### 3.17 — Event table rows are not clickable
+
+**Principle mapping:**
+- **Fitts's Law:** A tiny 'eye' icon has a much smaller target area than an entire table row, increasing the time and precision required to click it.
+- **Nielsen #7 (Flexibility and efficiency of use):** Users expect standard modern data tables to allow row clicks for viewing details, accelerating the navigation flow.
+
+**IA dimension: IA-03 Navigation & Layout** — Navigating from a master list to a detail view is a fundamental navigational pattern.
+
+**Why AI missed it:**
+The AI evaluated the visual presence of the action button (the 'eye' icon) and marked the requirement as satisfied because a path to the detail view existed. It lacks the UX intuition to realize that in modern web applications, the *entire row* should ideally be the hit target. Furthermore, it cannot execute hover/click states across the entire table body to verify if row-level click events are bound, so it only audits explicit buttons.
+
+---
+
+#### 1.16 — Built-in language toggle is undiscoverable or ignored
+
+**Principle mapping:**
+- **Nielsen #6 (Recognition rather than recall):** The language switcher must be visible and recognizable without requiring users to hunt for it.
+- **Norman — Discoverability:** Important global controls must be placed in expected locations (like the top right of the navigation bar).
+
+**IA dimension: IA-01 Global Navigation & Header** — Language toggles are global context switches that affect the entire application interface.
+
+**Why AI missed it:**
+The AI likely saw the language toggle icon in the DOM or screenshot and checked it off as "present." However, visual presence does not equal discoverability. Real users suffer from "banner blindness" or may overlook a toggle if its icon is non-standard, too small, or poorly placed relative to their visual flow. The AI cannot simulate the human cognitive process of scanning the screen for a localization feature, so it misses when a feature is technically there but practically invisible to the user.
+
+## Task 2 — Usability Report of User Testing with 5 Real Users
+
+### Scenario
+Admin creates and manages an event, including configuring roles, waitlists, and reviewing student registrations.
+
+### Metrics
+| Metric | Value |
+| --- | --- |
+| Task success rate | 100.0% |
+| Mean time on task | 457.5 s |
+| Mean errors/hesitations | 2.2 |
+| Mean SUS score | 38.75 (D/F (Poor)) |
+
+### Findings (ranked by severity)
+#### F2 — The 'max role' field lacks inline validation, allowing negative values and causing a 500 error with excessively large values. (Severity 3, Bug)
+
+**Affected participants:** P1, P2, P6
+
+**Evidence:** Inputting negative values shows no immediate error but blocks publishing silently. Inputting excessively large values allows form submission but results in a 500 internal server error.
+
+**Recommendation:** Implement strict client-side min/max validation for the 'max role' field. Display clear inline error messages and ensure the backend returns graceful 400 validation errors instead of 500 server crashes.
+
+![BUG-ScreenA3-2.06](failed_gui_checklist_screenshots/ScreenA3_2.06_no_maxslots_validation.png)
+
+#### F3 — Event table rows are not clickable, and it is difficult to identify events requiring review. (Severity 3, Usability)
+
+**Affected participants:** P1, P2
+
+**Evidence:** Users attempted to click the event table row directly and wasted time locating the small 'eye' icon. They also struggled to identify which events had pending students/lecturers awaiting review.
+
+**Recommendation:** Make the entire table row clickable to open the event details. Add clear status badges or notification counters on the event list view to explicitly indicate pending review tasks.
+
+![BUG-ScreenA1-3.17](failed_gui_checklist_screenshots/ScreenA1_3.17_row_not_clickable.png)
+
+#### F1 — Date and time picker is difficult to use; scroll mechanism causes friction. (Severity 2, Usability)
+
+**Affected participants:** P1, P2
+
+**Evidence:** Users struggled with the hour/minute scroll wheels when creating an event and expressed a strong preference for typing the date/time manually.
+
+**Recommendation:** Allow direct manual keyboard input for date and time fields, rather than forcing the use of the scroll picker.
+
+![BUG-ScreenA3-2.16](failed_gui_checklist_screenshots/ScreenA3_2.16_date_time_picker.png)
+
+#### F4 — Built-in language toggle is undiscoverable or ignored. (Severity 1, Usability)
+
+**Affected participants:** P1
+
+**Evidence:** User used a browser translation extension to switch the application to Vietnamese rather than utilizing the web app's native language switcher.
+
+**Recommendation:** Make the language selector more prominent in the navigation bar or automatically detect the user's browser locale on their first visit.
+
+![BUG-Global-1.16](failed_gui_checklist_screenshots/Global_1.16_language_toggle.png)
+
+
+### Prioritised Recommendations
+1. **[F2, Sev 3]** Implement strict client-side min/max validation for the 'max role' field. Display clear inline error messages and ensure the backend returns graceful 400 validation errors instead of 500 server crashes.
+2. **[F3, Sev 3]** Make the entire table row clickable to open the event details. Add clear status badges or notification counters on the event list view to explicitly indicate pending review tasks.
+3. **[F1, Sev 2]** Allow direct manual keyboard input for date and time fields, rather than forcing the use of the scroll picker.
+4. **[F4, Sev 1]** Make the language selector more prominent in the navigation bar or automatically detect the user's browser locale on their first visit.
 
 ## Task 3 — Cross-Browser / Cross-Platform
 
+### Screen A1
+
+Totals: evaluated 5, pass 4, fail 1
+
 | ID | Device Type | OS | Browser | Result | Notes | Screenshot |
-| :---: | :---: | :---: | :---: | :--- | :--- | :---: |
-| **C1** | Desktop | Windows 11 | Google Chrome | | | |
-| **C2** | Desktop | macOS | Safari | | | |
-| **C3** | Desktop | Windows 10 | Microsoft Edge | | | |
-| **C4** | Tablet | iOS (iPadOS) | Firefox | | | |
-| **C5** | Phone | Android | Samsung Browser | | | |
+| --- | --- | --- | --- | --- | --- | --- |
+| **C1** | Desktop | Windows 11 | Google Chrome | Pass |  | ![](cross_platform_screenshots/desktop_win11_chrome_screenA1.png) |
+| **C2** | Desktop | macOS | Safari | Pass |  | ![](cross_platform_screenshots/desktop_macos_safari_screenA1.png) |
+| **C3** | Desktop | Windows 10 | Microsoft Edge | Pass |  | ![](cross_platform_screenshots/desktop_win10_edge_screenA1.png) |
+| **C4** | Tablet | iOS (iPadOS) | Firefox | Pass |  | ![](cross_platform_screenshots/tablet_ios_firefox_screenA1.png) |
+| **C5** | Phone | Android | Samsung Browser | Fail | Phone: event table collapsed — only a narrow slice of the EVENT column is visible, all other columns (EVENT TYPES, TIME, REGISTRATION, CHECK-IN, TYPE, PUBLIC) are hidden off-screen; search bar is reduced to an icon with no input field. [broken_layout] | ![](cross_platform_screenshots/phone_android_samsungbrowser_screenA1_1.png) |
 
-## Why this skill exists
-Task 1B requires marking **every** item of a >40-item shared checklist as Passed/Failed
-for **each** of ≥3 screens. Re-printing the full checklist (with reasoning) every time
-is expensive and repetitive. This skill evaluates every item internally but only
-**emits the FAILs** as a small JSON diff; a script then merges that diff onto a full
-checklist template so nothing required by the grading rubric is lost.
+### Screen A3
 
-Two optimizations are combined here — they are complementary, not alternatives:
-- **Output-side (diff-only JSON):** cuts what the model has to *write* — this is the
-  80–90% token saving, and it's fully under this skill's control.
-- **Input-side (structural context):** the checklist text itself is parsed into
-  `checklist_master.json` **once** and referenced by ID afterward, instead of being
-  re-pasted into every prompt. Note: this is *not* the same thing as Anthropic API
-  prompt caching (`cache_control` breakpoints) — that's a server-side API feature you
-  cannot invoke from inside a chat/agent tool like Copilot. What you *can* control from
-  here is simply "don't re-send text you already have on disk," which gets you most of
-  the same benefit for free.
+Totals: evaluated 5, pass 4, fail 1
 
-## REFERENCE
+| ID | Device Type | OS | Browser | Result | Notes | Screenshot |
+| --- | --- | --- | --- | --- | --- | --- |
+| **C1** | Desktop | Windows 11 | Google Chrome | Pass |  | ![](cross_platform_screenshots/desktop_win11_chrome_screenA3.png) |
+| **C2** | Desktop | macOS | Safari | Pass |  | ![](cross_platform_screenshots/desktop_macos_safari_screenA3.png) |
+| **C3** | Desktop | Windows 10 | Microsoft Edge | Pass |  | ![](cross_platform_screenshots/desktop_win10_edge_screenA3.png) |
+| **C4** | Tablet | iOS (iPadOS) | Firefox | Pass |  | ![](cross_platform_screenshots/tablet_ios_firefox_screenA3.png) |
+| **C5** | Phone | Android | Samsung Browser | Fail | Phone: toggle labels (Allow Student/Lecturer/Guest Registration, Allow Waitlist, Public Event) wrap into abnormally short 1-2 word lines due to narrow viewport; form remains functional but readability is severely degraded. [broken_layout] | ![](cross_platform_screenshots/phone_android_samsungbrowser_screenA3_1.png) |
 
-https://usabilitygeek.com/how-to-use-the-system-usability-scale-sus-to-evaluate-the-usability-of-your-website/
 
-https://blog.uxtweak.com/user-experience-questionnaire/
+### Screen A4
+
+Totals: evaluated 5, pass 3, fail 2
+
+| ID | Device Type | OS | Browser | Result | Notes | Screenshot |
+| --- | --- | --- | --- | --- | --- | --- |
+| **C1** | Desktop | Windows 11 | Google Chrome | Pass |  | ![](cross_platform_screenshots/desktop_win11_chrome_screenA4.png) |
+| **C2** | Desktop | macOS | Safari | Pass |  | ![](cross_platform_screenshots/desktop_macos_safari_screenA4.png) |
+| **C3** | Desktop | Windows 10 | Microsoft Edge | Pass |  | ![](cross_platform_screenshots/desktop_win10_edge_screenA4.png) |
+| **C4** | Tablet | iOS (iPadOS) | Firefox | Fail | iPad: long event title wraps over multiple lines and overlaps header button row (PUBLISHED badge, Edit Event, Important Update); ACTION column (per-row Rejected/Pending Review/Approved buttons) is hidden off viewport on tablet width. [broken_layout] | ![](cross_platform_screenshots/tablet_ios_firefox_screenA4.png) |
+| **C5** | Phone | Android | Samsung Browser | Fail | Phone: only STUDENT and REGISTERED AT columns fit in viewport; ROLE and ACTION (Rejected/Pending Review/Approved per-row buttons) are completely hidden off-screen. [broken_layout] | ![](cross_platform_screenshots/phone_android_samsungbrowser_screenA4_1.png) |
