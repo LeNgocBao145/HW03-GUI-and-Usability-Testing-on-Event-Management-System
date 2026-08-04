@@ -195,7 +195,7 @@
 | IA04-08 | Không chỉ dùng màu — kèm text/icon cho người mù màu | P | Mọi chỉ báo trạng thái đều kèm nhãn chữ, không có chấm màu trần nào thiếu chữ/`aria-label` |
 | IA04-09 | Cập nhật real-time đúng và kịp thời, không cần F5 | NA | Export không thay đổi dữ liệu nên không có state nào cần cập nhật real-time |
 | IA04-10 | Lỗi hệ thống (mất mạng/timeout/500) hiển thị thân thiện, gợi ý bước tiếp | F | Bật Network → Offline rồi bấm Export: app KHÔNG xuất file và cũng KHÔNG hiện bất kỳ thông báo lỗi nào — thất bại im lặng, người dùng không biết export đã lỗi hay đang chạy, không có gợi ý thử lại |
-| IA04-11 | State sau hành động phản ánh đúng dữ liệu (VD sau đổi role, list cập nhật) | F | File `.xlsx` không chứa toàn bộ user đúng theo dữ liệu đang hiển thị/lọc trên màn hình — tập dữ liệu xuất ra không khớp với những gì người dùng thấy |
+| IA04-11 | State sau hành động phản ánh đúng dữ liệu (VD sau đổi role, list cập nhật) | P | Mở file `.xlsx` đối chiếu với bảng trên màn hình: tập dữ liệu xuất ra khớp với dữ liệu đang hiển thị/lọc — đủ user, đúng giá trị các cột |
 
 ---
 
@@ -204,8 +204,8 @@
 | --- | --- | --- | --- | --- |
 | C1 | 50 | 31 | 4 | 15 |
 | C2 | 50 | 22 | 7 | 21 |
-| C4 | 44 | 4 | 3 | 37 |
-| **Tổng** | **144** | **57** | **14** | **73** |
+| C4 | 44 | 5 | 2 | 37 |
+| **Tổng** | **144** | **58** | **13** | **73** |
 
 > C4 còn **6 mục chưa quan sát** (IA01-09, IA01-10, IA02-11, IA03-08, IA03-09, IA03-11) nên chưa tính vào "Số mục chạy" — để trống theo §12, không đoán verdict.
 

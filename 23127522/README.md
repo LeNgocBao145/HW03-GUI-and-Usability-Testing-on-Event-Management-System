@@ -17,8 +17,8 @@
 ## Test summary
 - Scenario chosen: **C**
 - Screens tested: **C1, C2, C4**
-- Checklist items: designed **50** / run **144** (3 màn × 50, trừ 6 mục C4 chưa quan sát) / passed **57** / failed **14**
-- Bugs found: **13** (C1: 3 · C2: 7 · C4: 3 — chi tiết ở `Bug_Usability_Findings_Log.md`)
+- Checklist items: designed **50** / run **144** (3 màn × 50, trừ 6 mục C4 chưa quan sát) / passed **58** / failed **13**
+- Bugs found: **12** (C1: 3 · C2: 7 · C4: 2 — chi tiết ở `Bug_Usability_Findings_Log.md`)
 - User-testing participants: **5** — usability issues by severity: sev4 __ / sev3 __ / sev2 __ / sev1 __
 - Compatibility cells covered: **__**
 - Demo video: **__**
