@@ -71,11 +71,11 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 - [x] Google Form submissions
 - [x] Aggregated findings log
 - [ ] AI Audit Report
-- [ ] AI Critique
+- [x] AI Critique
 - [ ] Git commit log
 - [x] Agent Skills
 - [ ] YouTube demo links
-- [ ] Main Report Markdown
+- [x] Main Report Markdown
 - [ ] Main Report PDF
 - [ ] AI Audit Report PDF
 - [ ] AI Critique PDF

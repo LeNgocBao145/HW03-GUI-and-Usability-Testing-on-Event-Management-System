@@ -1,39 +1,27 @@
 <center>
 
-# Faculty of Information Technology – Ho Chi Minh City University of Science
+# Faculty of Information Technology - Ho Chi Minh City University of Science
 
-# CS423 / CSC15003 – Software Testing (AI-augmented · 2026)
+# CS423 / CSC15003 - Software Testing (AI-augmented, 2026)
 
 </center>
 
 # AI Critique
 
-TODO: Describe the main limitation, mistake, or weakness observed when using AI.
+OpenAI Codex was useful for organizing a large testing repository, maintaining consistent Markdown structures, reconciling statistics, and repeatedly checking evidence paths. Its main weakness was that it could turn an incomplete observation into a conclusion that sounded more certain than the evidence allowed. A concrete example occurred during compatibility execution for CP-B3-02. The AI initially interpreted the registration-dialog presentation as a compatibility problem, but the human reviewer inspected the supplied screenshot and confirmed that the dialog rendered correctly. The result was corrected to Pass. This showed that visual context, transient cloud-browser states, and session timing can cause an AI agent to misread a valid interface.
 
-TODO: Explain a concrete example from the assignment and what the AI did incorrectly or incompletely.
+A similar risk appeared in real-time-update findings. When a controlled update could not be triggered, the AI could organize the tester's observation, but it could not independently prove the expected polling or WebSocket behavior. Human approval was therefore recorded explicitly instead of presenting automation as definitive verification. Cloud-browser limitations also demonstrated that an unavailable trial, authentication block, blank device screen, or missing provider metadata must not be converted into invented environment facts.
 
-TODO: Describe how the human reviewer detected, corrected, or mitigated the issue.
-
-TODO: Discuss what the experience shows about the limits of AI-assisted GUI, usability, automation, or evidence-based testing.
-
-TODO: Conclude with lessons learned and how AI should be used more responsibly or effectively in future testing work.
-
-<!--
-Optional evidence image:
-
-![Evidence description](path/to/evidence.png)
-
-Only include real evidence. Do not fabricate screenshots or observations.
--->
+The usability phase reinforced the same lesson. AI could calculate SUS and aggregate the two completed summaries, but it could not create the missing participants, recordings, timelines, or consent evidence. The responsible response was to preserve the smaller sample and disclose its limits. I learned that AI is most effective as a structured assistant for consistency, traceability, and calculation. It should not be treated as the source of truth for visual evidence, human behavior, or live execution. Final results require human review, reproducible observations, and transparent uncertainty.
 
 ## Signature
 
 | Field | Value |
 | --- | --- |
-| Student name: | TODO |
-| Student ID: | TODO |
-| Class / Cohort: | TODO |
-| Course: | CS423 / CSC13003 – Software Testing |
-| Instructor: | TODO |
-| Date: | TODO |
-| Signature: | TODO |
+| Student name | Nguyen Minh Khoi |
+| Student ID | 23127070 |
+| Class / Cohort | 23KTPM1 |
+| Course | CS423 / CSC15003 - Software Testing |
+| Instructor | Mr. Lam Quang Vu |
+| Date | 04/08/2026 |
+| Signature | Khoi |

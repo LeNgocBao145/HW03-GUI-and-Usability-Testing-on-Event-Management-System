@@ -1,187 +1,252 @@
-# Cover Information
+# HW03 - GUI and Usability Testing on EMS
 
-TODO
+## Cover Information
 
-# Assignment Information
+| Field | Value |
+| --- | --- |
+| Student | Nguyen Minh Khoi |
+| Student ID | 23127070 |
+| Class / Cohort | 23KTPM1 |
+| Course | CS423 / CSC15003 - Software Testing |
+| Assignment | HW03 - GUI and Usability Testing on Event Management System |
+| Scenario | Scenario B - User registers to attend an event |
+| Assignment date | 04/08/2026 |
+| AI tool | OpenAI Codex |
 
-TODO
+## Executive Summary
 
-# Student and Group Information
+This report documents GUI checklist execution, usability testing, compatibility testing, findings reconciliation, and AI-assisted testing for Scenario B of the EMS application. The selected end-to-end flow was B1 Home / Events Listing, B2 Event Detail, and B3 Registration Form.
 
-TODO
+The shared checklist contains 61 checkpoints across all four required interface aspects. Across B1-B3, 99 checkpoints were applicable: 72 Passed and 27 Failed. The remaining 84 assessments were recorded as N/A in the per-screen summaries. Twenty GUI findings were promoted after human review. Task 2 contains one pilot and two main participant summaries, with a mean SUS score of 70.0. Task 3 contains 15 matrix rows with 7 Pass, 3 Fail, and 5 Not Executed results. The findings log contains 25 records: 23 unique findings submitted through Google Forms and two cross-method support records not submitted separately.
 
-# Scenario B and Screen Selection
+The report preserves the accepted project tradeoffs. The usability sample remains below the required five main participants and is summary only. Compatibility execution used three browsers rather than five, and the available cloud evidence used the authenticated Gmail identity instead of the requested student-ID overlay. These limitations are disclosed rather than reconstructed or hidden.
 
-Reference [scope_and_screen_selection.md](../scenario_b/scope_and_screen_selection.md).
+## 1. Assignment and SUT
 
-# B1-B3 End-to-End Flow
+The objective was to apply an AI-assisted but human-controlled testing workflow to a live Event Management System. The work covers checklist-based GUI testing, moderated usability testing, compatibility testing, finding submission, reusable Agent Skills, and an AI audit.
 
-`B1 -> B2 -> B3`
+### SUT Environment History
 
-# Account and Test Preconditions
+| Environment | URL | Status | Notes |
+| --- | --- | --- | --- |
+| Previous ngrok endpoint | `https://promoter-starboard-prude.ngrok-free.dev/` | Offline | Historical assignment endpoint; returned `ERR_NGROK_3200` |
+| Current EMS endpoint | `https://prod-dev.ems-fitus.cloud/` | Used | Manually reached during the recorded GUI, usability, and compatibility sessions |
 
-- Use the tester's own EMS account.
-- Do not share the account across group members.
-- Do not commit passwords or credentials.
-- Do not use the shared Admin account for B1-B3 user-side testing.
-- Current SUT for new test executions: `https://prod-dev.ems-fitus.cloud/`
-- All test evidence must record the exact SUT URL used at the time of execution.
-- Do not claim the current SUT is operational unless it has been manually verified.
+All new execution artifacts record the exact route used when known. Credentials were stored only in `.local/ems_credentials.txt`, which is ignored by Git, and were not reproduced in reports.
 
-# Task 1A - Shared GUI Checklist
+## 2. Scenario and Screen Selection
 
-## Checklist Overview
+### Scenario Objective
 
-Reference [Shared GUI Checklist](../gui_checklist.md).
+The user discovers an event, reviews its details, selects an attendee role, submits registration, and identifies the resulting registration status.
 
-## Checklist Design Process
+### Selected Screens
 
-TODO
+| Screen | Purpose | Selection rationale |
+| --- | --- | --- |
+| B1 - Home / Events Listing | Discovery and filtering | Covers featured content, search, filters, categories, status tabs, event cards, pagination, and navigation. |
+| B2 - Event Detail | Information and decision support | Covers the event banner, schedule, organizer, registration period, location, save/share actions, and navigation. |
+| B3 - Registration Form | Registration and feedback | Covers role selection, validation, counters, registration state, cancellation, confirmation dialog, and status feedback. |
 
-## Interface Aspect Coverage
+Together, B1-B3 form the flow `B1 -> B2 -> B3` and cover visual consistency, navigation, forms, state changes, error recovery, and user feedback. The detailed selection record is in [scope_and_screen_selection.md](../scenario_b/scope_and_screen_selection.md).
 
-TODO
+## 3. Task 1A - Shared GUI Checklist
 
-## Reference Sources
+### Checklist Structure
 
-Reference the "Reference Sources" section in [gui_checklist.md](../gui_checklist.md).
+The final [GUI checklist](../gui_checklist.md) contains 61 unique checkpoints.
 
-## AI Prompts
+| Interface aspect | Checkpoints |
+| --- | ---: |
+| IA-01 General UI Standards | 15 |
+| IA-02 Forms and Inputs | 15 |
+| IA-03 Navigation and Layout | 16 |
+| IA-04 Feedback and State | 15 |
+| **Total** | **61** |
 
-Reference the "AI Prompts Used to Generate and Refine the Checklist" section in [gui_checklist.md](../gui_checklist.md).
+The checklist includes layout, typography, contrast, responsive behavior, EN/VI internationalization, semantic accessibility, form validation, keyboard navigation, deep links, hover/focus states, loading, offline recovery, confirmation, duplicate-submit protection, real-time updates, and reversible actions.
 
-## Human Review
+### Design and Review Process
 
-TODO
+AI was used to organize reusable checklist-execution and validation workflows. Human review adapted the checklist to the EMS interface and retained checks that automated visual inspection can miss, including keyboard navigation, language metadata, responsive overlap, offline behavior, state persistence, and real-time updates. The coverage matrix maps applicable checkpoints to B1-B3 and records whether observation, interaction, developer tools, or screenshots were required.
 
-## Human-Added Items and AI Gaps
+The retained conversation does not contain the exact original prompt that first generated the checklist or item-level authorship for every human addition. Therefore, this report does not invent that provenance. The available AI workflow prompts and subsequent refinement instructions are retained in [prompt_log.md](prompt_log.md), and the complete sources used by the checklist are listed in `gui_checklist.md`.
 
-Reference the corresponding section in [gui_checklist.md](../gui_checklist.md).
+### Reference Basis
 
-# Task 1B - Checklist Execution
+- Nielsen's 10 Usability Heuristics.
+- Norman's principles from *The Design of Everyday Things*.
+- Shneiderman's Eight Golden Rules.
+- HCMUS GUI and Usability Testing lecture material.
+- WCAG-oriented contrast and semantic accessibility checks.
 
-## B1 Execution
+## 4. Task 1B - GUI Checklist Execution
 
-Reference [scenario_b/b1_home_events_listing/checklist_execution.md](../scenario_b/b1_home_events_listing/checklist_execution.md).
+### Execution Environment
 
-## B2 Execution
+The primary live verification used the Codex in-app browser on Windows 11 Home, a Lenovo 82S0 x64 laptop, and a 2560 x 1600 primary display. Responsive checks used desktop, 768 x 1024 tablet, and 390 x 844 mobile viewports. The authenticated EMS account displayed Lecturer access.
 
-Reference [scenario_b/b2_event_detail/checklist_execution.md](../scenario_b/b2_event_detail/checklist_execution.md).
+### Result Summary
 
-## B3 Execution
+| Screen | PASS | FAIL | N/A | Not Executed | Total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| B1 - Home / Events Listing | 25 | 12 | 24 | 0 | 61 |
+| B2 - Event Detail | 21 | 7 | 33 | 0 | 61 |
+| B3 - Registration Form | 26 | 8 | 27 | 0 | 61 |
+| **Total** | **72** | **27** | **84** | **0** | **183** |
 
-Reference [scenario_b/b3_registration_form/checklist_execution.md](../scenario_b/b3_registration_form/checklist_execution.md).
+The execution files list all applicable checkpoints and the summaries account for N/A checkpoints. Detailed results are available in:
 
-## Failed Evidence
+- [B1 checklist execution](../scenario_b/b1_home_events_listing/checklist_execution.md)
+- [B2 checklist execution](../scenario_b/b2_event_detail/checklist_execution.md)
+- [B3 checklist execution](../scenario_b/b3_registration_form/checklist_execution.md)
 
-TODO
+### Key GUI Results
 
-## Bug Reports
+| Screen | Promoted findings | Representative observations |
+| --- | ---: | --- |
+| B1 | 5 | Pagination summary ambiguity, mobile filter overlap, state loss after reload, empty-state recovery, and generic offline fallback. |
+| B2 | 7 | Placeholder plural grammar, semantic accessibility, keyboard focus trapping, absent hover feedback, generic offline fallback, and manual-refresh behavior. |
+| B3 | 8 | Placeholder plural grammar, semantic accessibility, keyboard focus trapping, absent hover/success feedback, generic offline fallback, manual-refresh behavior, and no Undo after cancellation. |
 
-Reference [bug_and_usability_findings_log.md](../findings/bug_and_usability_findings_log.md).
+All explicit screenshot paths referenced by the GUI execution artifacts exist. Some dynamic checks additionally rely on tester notes or explicit human review because a single screenshot cannot demonstrate a sequence. In particular, B2/B3 offline and real-time-update conclusions have weaker screen-specific evidence than the other promoted findings; the human reviewer accepted the available support as sufficient for this submission.
 
-# Task 2 - User Testing
+## 5. Task 2 - User Testing
 
-## Test Plan
+### Method
 
-Reference [usability_test_plan.md](../usability_testing/usability_test_plan.md).
+The goal-based task asked participants to find an upcoming event, review its information, register using an appropriate attendee role, and state when they believed registration had been recorded. Sessions used a think-aloud protocol, SUS, and eight post-task probe questions.
 
-## Pilot Session
+The available dataset contains one pilot and two main sessions. The pilot was excluded from the main metrics. Consent was confirmed and retained privately. Three profile/account screenshots have masked email addresses and support account/environment traceability only.
 
-Reference [pilot_session.md](../usability_testing/pilot_session.md).
+### Participant Summary
 
-## Participants
+| ID | Session | Profile | Outcome | SUS |
+| --- | --- | --- | --- | ---: |
+| PILOT | Pilot | First-time EMS user | Partially Completed | 67.5 summary |
+| P01 | Main | Student event-goer | Completed | 77.5 |
+| P02 | Main | Infrequent web user | Partially Completed after task-directed help | 62.5 |
 
-Reference [participant_table.md](../usability_testing/participant_table.md).
+### Main-Session Metrics
 
-## Moderated Sessions
+| Metric | Result |
+| --- | --- |
+| Strict full task success | 1/2 - 50.0% |
+| Assisted completion | 2/2 - 100% |
+| Mean and median task time | 8:02.5 |
+| Errors | 3 total; 1.50 mean |
+| Hesitations | 8 total; 4.00 mean |
+| Help requests | 1 total |
+| Moderator interventions | 1 total |
+| Recoveries | 2 total |
+| Mean and median SUS | 70.0 |
 
-The current Task 2 draft contains one pilot summary and two main-session summaries (P01-P02). Consent is confirmed and stored privately for all three people. No screen or audio recordings were captured, and detailed session notes are not retained; behavioural values are therefore summary only / not independently verifiable. The repository retains participant responses and three profile/account screenshots with masked emails indexed in [private_evidence_manifest.md](../usability_testing/private_evidence_manifest.md). Profile screenshots support account/environment traceability only.
+### Usability Findings
 
-## Metrics
+Four analysis records were retained at severity 2:
 
-Across the P01-P02 summaries, reported strict full task success was 50.0% (1/2); both summaries reach the final status, while P02 records task-directed help. Mean and median summary time were 8:02.5. The summaries contain 3 errors, 8 hesitations, 1 help request, 1 intervention, and 2 recoveries. The aggregate arithmetic is reproducible, but the source events are not independently verifiable. Detailed calculations are in [analysis_calculations.md](../usability_testing/analysis_calculations.md).
+1. Registration submission lacks a salient immediate acknowledgement.
+2. Specialized attendee-role terminology increases interpretation effort.
+3. The no-results state lacks a direct recovery action.
+4. Save Event competes with Register in the action hierarchy.
 
-## SUS or UEQ-S
+The acknowledgement and no-results observations support existing GUI findings and were not submitted as duplicate form records. The role-terminology and action-hierarchy findings were submitted separately.
 
-Reference [sus_questionnaire.md](../usability_testing/sus_questionnaire.md).
+### Accepted Task 2 Limitation
 
-## Usability Findings
+The assignment specifies five main participants. This repository contains two main participants plus one pilot. No screen/audio recording or detailed event timeline was retained, so the behavioral counts are human-confirmed summaries and are not independently verifiable. The reviewer explicitly accepted this tradeoff and instructed that missing participants or raw data must not be fabricated. Detailed calculations and limitations are recorded in [analysis_calculations.md](../usability_testing/analysis_calculations.md) and [usability_report.md](../usability_testing/usability_report.md).
 
-Reference [usability_report.md](../usability_testing/usability_report.md).
+## 6. Task 3 - Cross-Browser and Cross-Platform Testing
 
-## Severity Analysis
+### Environment Summary
 
-Four usability-analysis records were human-reviewed at severity 2: weak post-submit acknowledgement (P01-P02 responses), specialised role terminology (P01-P02 responses), absent no-results recovery action (P02 response), and competition between Save Event and Register (P01 response). The acknowledgement and no-results records are cross-method support for existing GUI findings and will not be submitted separately.
+| Environment | Configuration | Outcome |
+| --- | --- | --- |
+| ENV-01 | BrowserStack, Windows 11, Chrome 150, Desktop | Session executed; trial minutes ended before SUT load |
+| ENV-02 | TestingBot, Windows 10, Chrome 150, 1024 x 768 tablet-sized viewport | B1-B3 Pass |
+| ENV-03 | TestingBot Galaxy S10, Android 10, Chrome, Phone | Blank SUT login screen; B1-B3 Fail |
+| ENV-04 | TestingBot iPhone 14, iOS 17.6, Safari, Phone | B1/B2 Pass; B3 state blocked |
+| ENV-05 | TestingBot Galaxy S20, Android 10, Firefox, Phone | B1/B2 Pass; B3 state blocked |
 
-## Recommendations
+### Matrix Results
 
-Priorities are to add accessible registration-success feedback, clarify attendee-role names, provide a direct reset action in the empty-results state, and make Register visually primary over Save Event.
+| Screen | Pass | Fail | Not Executed |
+| --- | ---: | ---: | ---: |
+| B1 | 3 | 1 | 1 |
+| B2 | 3 | 1 | 1 |
+| B3 | 1 | 1 | 3 |
+| **Total** | **7** | **3** | **5** |
 
-# Task 3 - Cross-Browser / Cross-Platform
+The confirmed compatibility finding `CP-ENV03-FC-001` records a blank EMS login page on the Galaxy S10 / Android 10 / Chrome environment. It was classified as a Low bug and submitted through Google Forms.
 
-## Test Plan
+### Accepted Task 3 Tradeoffs
 
-Reference [compatibility_test_plan.md](../compatibility_testing/compatibility_test_plan.md).
+- The executed matrix contains Chrome, Safari, and Firefox; Edge and Samsung Internet were not completed.
+- ENV-02 represents tablet-sized desktop viewport emulation rather than a physical tablet.
+- ENV-01 did not reach the SUT, and B3 ENV-04/ENV-05 did not expose an actionable registration state.
+- The screenshots show the EMS URL and TestingBot environment identity. The human reviewer accepted the visible authenticated Gmail identity as sufficient session attribution even though the assignment requested a student-ID email overlay.
+- The ENV-03 images preserve the same blocked white-screen state for B1-B3 because none of the target screens could be reached.
 
-## Compatibility Matrix
+The reviewer accepted these limitations and chose not to re-execute Task 3. The complete matrix, environment metadata, evidence references, and limitations remain available in [compatibility_matrix.md](../compatibility_testing/compatibility_matrix.md), [environment_log.md](../compatibility_testing/environment_log.md), and [compatibility_report.md](../compatibility_testing/compatibility_report.md).
 
-Reference [compatibility_matrix.md](../compatibility_testing/compatibility_matrix.md).
+## 7. Findings and Google Form Reconciliation
 
-## Environment Log
+| Metric | Count |
+| --- | ---: |
+| Findings-log rows | 25 |
+| Unique findings submitted | 23 |
+| Cross-method support records not submitted separately | 2 |
+| Bug findings submitted | 12 |
+| Unique usability findings submitted | 11 |
 
-Reference [environment_log.md](../compatibility_testing/environment_log.md).
+The aggregated [Bug and Usability Findings Log](../findings/bug_and_usability_findings_log.md) and [Google Form Submission Log](../findings/google_form_submission_log.md) contain matching IDs and timestamps for all 23 unique submitted findings. The form was submitted using a human-approved faculty-account equivalent. Submission timestamps were recorded only after Google Forms displayed confirmation.
 
-## Results for B1
+## 8. Agent Skills and Demonstration
 
-All five environment sessions were executed for B1: 3 Pass, 1 Fail, and 1 state-blocked Not Executed outcome. ENV-02 (Windows 10 / Chrome tablet-sized viewport), ENV-04 (iPhone 14 / Safari), and ENV-05 (Galaxy S20 / Firefox) passed. ENV-03 failed because the Android device rendered the EMS login route blank. ENV-01 ran but was blocked before the SUT loaded.
+Nine reusable Agent Skills are included:
 
-## Results for B2
+- `ai-audit-logger`
+- `compatibility-matrix-validator`
+- `finding-log-validator`
+- `gui-checklist-execution`
+- `participant-session-processor`
+- `submission-readiness-audit`
+- `usability-analysis`
+- `usability-report-generator`
+- `usability-session-processor`
 
-All five environment sessions were executed for B2: 3 Pass, 1 Fail, and 1 state-blocked Not Executed outcome. Event Detail layout, controls, navigation, and scrolling passed in ENV-02, ENV-04, and ENV-05. ENV-03 failed when the Android device rendered the login route blank before B2 could be reached, and ENV-01 ran but was blocked before SUT load.
+The demonstration video is recorded in [agent_skill_demo_links.md](../demo_videos/agent_skill_demo_links.md): <https://youtu.be/pESRmsptyIo>.
 
-## Results for B3
+## 9. AI Usage and Human Oversight
 
-All five environment sessions were executed for B3: 1 Pass, 1 Fail, and 3 state-blocked Not Executed outcomes. ENV-02 passed the registration-state and cancel-dialog checks. ENV-03 failed when the Android device rendered the login route blank. ENV-04 and ENV-05 rendered the registration area but did not expose an actionable registration state, while ENV-01 ran but was blocked before SUT load.
+OpenAI Codex was used to structure the repository, create and refine Agent Skills, prepare draft execution records, validate finding candidates, reconcile counts and paths, assist browser-based workflows, and maintain the reports. The [AI Audit Report](ai_audit_report.md) groups 49 retained prompts, while [prompt_log.md](prompt_log.md) contains the chronological condensed prompt register.
 
-## Compatibility Findings
+Human review remained authoritative. Draft files were not applied until confirmation; finding candidates were not promoted automatically; severity and classification decisions were human-controlled; and unsupported participant, environment, or evidence data was not generated. A notable correction occurred when the human reviewer rejected an AI interpretation of CP-B3-02 and confirmed that the B3 dialog rendered correctly, so the result was retained as Pass.
 
-`CP-ENV03-FC-001` is a confirmed Low Bug for the blank EMS login screen observed on TestingBot Galaxy S10 / Android 10 / Chrome. It was submitted to Google Forms on 2026-08-04 at 23:01:37 +07:00. Across all 15 rows, the reconciled totals are 7 Pass, 3 Fail, and 5 Not Executed. Edge and Samsung Internet coverage remains missing after environment substitutions; ENV-02 is viewport emulation rather than a physical tablet.
+## 10. Limitations and Accepted Decisions
 
-# Bug & Usability Findings Submission
+- Task 2 includes two main participants rather than five and has no detailed timelines or recordings.
+- Task 3 includes three browsers rather than five and retains five Not Executed rows.
+- The compatibility screenshots use a human-approved Gmail identity witness instead of the requested student-ID overlay.
+- Some dynamic GUI findings rely on human review rather than screen-specific sequence evidence.
+- The exact original checklist-generation prompt and per-message AI timestamps were not retained; the repository uses a condensed prompt audit without inventing missing metadata.
 
-Reference [google_form_submission_log.md](../findings/google_form_submission_log.md).
+These limitations affect strict requirement compliance but are deliberately disclosed. The report does not claim that skipped work was completed.
 
-All 23 unique confirmed findings were submitted through Google Forms on 2026-08-04. The aggregated log contains 12 Bug findings and 11 unique Usability findings. `UT-B3-001` and `UT-B1-001` remain cross-method support records and are not submitted separately because their canonical GUI findings were already submitted.
+## 11. Conclusion
 
-# Agent Skills
+The repository provides a traceable Scenario B testing package covering B1-B3, a 61-item shared GUI checklist, 183 per-screen assessments, 25 consolidated finding records, two main usability-session summaries plus a pilot, a 15-row compatibility matrix, nine Agent Skills, a demonstration video, and an AI audit. Within the accepted limitations, the strongest outcomes are the evidence-linked GUI execution, human-controlled finding workflow, reproducible two-session SUS arithmetic, and transparent compatibility reconciliation.
 
-Reference `.github/skills/`.
+The main risks are the reduced usability sample, incomplete browser coverage, blocked compatibility rows, and evidence exceptions. These are retained as explicit limitations rather than being concealed or filled with unsupported data.
 
-# Demo Videos
+## References
 
-Reference [agent_skill_demo_links.md](../demo_videos/agent_skill_demo_links.md).
-
-# AI Usage Declaration
-
-TODO
-
-# AI Audit Report Appendix
-
-Reference [ai_audit_report.md](./ai_audit_report.md).
-
-# AI Critique Appendix
-
-Reference [ai_critique.md](./ai_critique.md).
-
-# Git Commit Log
-
-Reference [git_commit_log.txt](./git_commit_log.txt).
-
-# Self-Assessment
-
-Reference the self-assessment table in [README.md](../README.md).
-
-# References
-
-Reference [gui_checklist.md](../gui_checklist.md) and the supplied `req/` materials.
+- [GUI checklist and source list](../gui_checklist.md)
+- [Checklist coverage matrix](checklist_coverage_matrix.md)
+- [Scenario B scope](../scenario_b/scope_and_screen_selection.md)
+- [Usability Report](../usability_testing/usability_report.md)
+- [Compatibility Report](../compatibility_testing/compatibility_report.md)
+- [Bug and Usability Findings Log](../findings/bug_and_usability_findings_log.md)
+- [AI Audit Report](ai_audit_report.md)
+- [AI Critique](ai_critique.md)
+- Supplied assignment materials under `req/`
