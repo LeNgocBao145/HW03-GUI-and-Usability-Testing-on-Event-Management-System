@@ -79,4 +79,4 @@ Evidence files are stored under `screenshots/ScreenB2/evidences/`. Dynamic check
 - All screenshot filenames referenced by the B2 execution documents are present.
 - No missing screenshot file was used to support a FAIL result.
 
-All seven B2 candidates received explicit human approval for promotion to the findings log. Type and severity remain unassigned pending human classification, and no Google Form metadata has been created.
+All seven B2 candidates received explicit human approval for promotion. Type classification and Low/1 severity are recorded in the findings log, and no Google Form metadata has been created.

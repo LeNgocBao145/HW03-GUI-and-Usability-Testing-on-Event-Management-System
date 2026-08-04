@@ -84,4 +84,4 @@ The coverage matrix marks these checkpoints as not applicable to B2:
 | N/A | 33 |
 | Not Executed | 0 |
 
-The seven FAIL rows map to GUI-B2-FC-001 through GUI-B2-FC-007, all explicitly approved by the human reviewer for promotion to the findings log. Type and severity remain pending.
+The seven FAIL rows map to GUI-B2-FC-001 through GUI-B2-FC-007, all explicitly approved for promotion. Bug findings use severity Low, Usability findings use severity 1, and Google Form submission remains pending.

@@ -1,9 +1,9 @@
-# Session Observation Template
+# Pilot Session Record
 
 ## Session Information
 
-- Participant ID:
-- Session type:
+- Participant ID: PILOT
+- Session type: Pilot
 - Date:
 - Start time:
 - End time:
@@ -34,25 +34,11 @@ An action that moves away from the goal, produces an incorrect state, or require
 
 ### Hesitation
 
-A visible or verbal uncertainty such as:
-
-- a pause of approximately five seconds or longer
-- repeated scanning
-- moving between alternatives
-- reopening the same control
-- verbalised confusion
+A visible or verbal uncertainty such as a pause of approximately five seconds or longer, repeated scanning, moving between alternatives, reopening the same control, or verbalised confusion.
 
 ### Technical Interruption
 
-Examples include:
-
-- network failure
-- OAuth issue
-- server unavailable
-- event data reset
-- recording failure
-
-A technical interruption must not automatically count as participant error.
+A network, OAuth, server, event-data, or recording problem. A technical interruption must not automatically count as participant error.
 
 ## Timeline
 
@@ -67,3 +53,5 @@ A technical interruption must not automatically count as participant error.
 - Potential usability issue:
 - Technical interruptions:
 - Follow-up needed:
+
+The pilot is excluded from P01-P05 metrics. No pilot results have been fabricated.

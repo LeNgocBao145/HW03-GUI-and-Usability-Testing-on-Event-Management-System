@@ -1,9 +1,9 @@
-# Session Observation Template
+# Session Observation - P05
 
 ## Session Information
 
-- Participant ID:
-- Session type:
+- Participant ID: P05
+- Session type: Main
 - Date:
 - Start time:
 - End time:
@@ -34,25 +34,11 @@ An action that moves away from the goal, produces an incorrect state, or require
 
 ### Hesitation
 
-A visible or verbal uncertainty such as:
-
-- a pause of approximately five seconds or longer
-- repeated scanning
-- moving between alternatives
-- reopening the same control
-- verbalised confusion
+A visible or verbal uncertainty, including a pause of approximately five seconds or longer, repeated scanning, moving between alternatives, reopening the same control, or verbalised confusion.
 
 ### Technical Interruption
 
-Examples include:
-
-- network failure
-- OAuth issue
-- server unavailable
-- event data reset
-- recording failure
-
-A technical interruption must not automatically count as participant error.
+A network, OAuth, server, event-data, or recording problem. A technical interruption must not automatically count as participant error.
 
 ## Timeline
 

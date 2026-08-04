@@ -1,6 +1,14 @@
-# SUS Questionnaire
+# System Usability Scale (SUS)
 
-Response scale: 1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly agree
+## Instructions
+
+Use a 1-5 scale:
+
+- 1 - Strongly disagree
+- 2 - Disagree
+- 3 - Neutral
+- 4 - Agree
+- 5 - Strongly agree
 
 1. I think that I would like to use this system frequently.
 2. I found the system unnecessarily complex.
@@ -15,16 +23,29 @@ Response scale: 1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 =
 
 ## Response Table
 
-| Participant ID | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Raw Total | SUS Score |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Item | Response 1-5 |
+|---|---:|
+| SUS-01 | |
+| SUS-02 | |
+| SUS-03 | |
+| SUS-04 | |
+| SUS-05 | |
+| SUS-06 | |
+| SUS-07 | |
+| SUS-08 | |
+| SUS-09 | |
+| SUS-10 | |
 
-## Scoring Instructions
+## Scoring
 
-- For odd-numbered questions, subtract 1 from the response.
-- For even-numbered questions, subtract the response from 5.
-- Sum the adjusted values.
-- Multiply the sum by 2.5 to get the SUS score out of 100.
+- Odd-numbered items: response minus 1.
+- Even-numbered items: 5 minus response.
+- Sum the adjusted scores.
+- Multiply the adjusted total by 2.5.
 
-## Calculation Placeholder
+Do not calculate a score when any required answer is missing.
 
-TODO
+## Score Placeholder
+
+- Adjusted total: TODO
+- SUS score: TODO / 100

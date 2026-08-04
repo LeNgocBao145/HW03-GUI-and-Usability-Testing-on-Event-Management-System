@@ -29,7 +29,7 @@
 | Not Executed | 0 |
 | Total checkpoints | 61 |
 
-The seven FAIL rows received explicit human approval for promotion to the findings log. Type and severity remain pending human review.
+The seven FAIL rows received explicit human approval for promotion. Type classification and Low/1 severity are recorded in the findings log; Google Form submission remains pending.
 
 ## Live Verification Summary
 
@@ -56,14 +56,14 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Checkpoint: 1.07
 - Observation: English countdowns display `Event starts in 12 day(s)` and `Registration opens in 6 day(s)`.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_02_full_page.png` and `screenshots/ScreenB2/evidences/ScreenB2_live_03_tablet_768x1024.png`
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Bug Severity Low - Pending Google Form Submission
 
 ### GUI-B2-FC-002 - Accessibility Semantics Are Incomplete
 
 - Checkpoint: 1.14
 - Observation: The user menu is a focusable `SPAN` without a semantic role, and the document language remains `en` in Vietnamese mode.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_05_vietnamese.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_08_keyboard_focus.png`, and live DOM observation
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Bug Severity Low - Pending Google Form Submission
 
 ### GUI-B2-FC-003 - Keyboard Focus Does Not Advance Beyond the Language Switcher
 
@@ -71,7 +71,7 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Observation: Repeated Tab and Shift+Tab actions remain on the language switcher despite additional focusable controls being present.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_08_keyboard_focus.png`, keyboard notes, and completed human re-execution
 - Validation status: Valid Candidate after human review
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Bug Severity Low - Pending Google Form Submission
 
 ### GUI-B2-FC-004 - User Guide Link Lacks Visual Hover Feedback
 
@@ -79,7 +79,7 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Observation: User Guide points to `/manual`, but its color and underline do not change on hover.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_10_link_hover_baseline.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_11_link_hover_user_guide.png`, and live computed-style observation
 - Duplicate decision: Keep separate from GUI-B2-FC-005 because it covers hyperlink feedback in the event navigation/content context.
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Usability Severity 1 - Pending Google Form Submission
 
 ### GUI-B2-FC-005 - Tested Buttons Lack Visual Hover Feedback
 
@@ -87,7 +87,7 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Observation: Save Event and Back to Events show no observed color, border, shadow, opacity, or transform change on hover.
 - Evidence: `screenshots/ScreenB2/evidences/ScreenB2_live_06_hover_baseline.png`, `screenshots/ScreenB2/evidences/ScreenB2_live_07_hover_save_event.png`, and live computed-style observation
 - Duplicate decision: Keep separate from GUI-B2-FC-004 because it covers button controls and different user interactions.
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Usability Severity 1 - Pending Google Form Submission
 
 ### GUI-B2-FC-006 - Offline State Falls Back to the Browser Error Page
 
@@ -95,7 +95,7 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Observation: Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
 - Evidence: Chrome DevTools Offline-mode re-execution recorded in `test_notes.md`
 - Validation status: Valid Candidate after human review
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Usability Severity 1 - Pending Google Form Submission
 
 ### GUI-B2-FC-007 - Event Updates Require a Manual Reload
 
@@ -103,7 +103,7 @@ No referenced screenshot file is missing. Interaction-dependent results for brow
 - Observation: The tester previously observed updates only after a manual reload, but no reliable real-time update could be triggered during re-execution.
 - Evidence: tester observation recorded in `test_notes.md`; controlled update evidence is pending
 - Validation status: Promoted by explicit human approval without additional evidence
-- Promotion status: Promoted to findings log - Pending Type and Severity Review
+- Promotion status: Promoted - Bug Severity Low - Pending Google Form Submission
 
 ## Verification Completion
 

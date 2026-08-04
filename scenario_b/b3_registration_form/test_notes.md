@@ -90,4 +90,20 @@ Evidence files are stored under `screenshots/ScreenB3/evidences/`. Dynamic check
 - All eight FAIL rows have live screenshot, DOM/interaction, or explicit Human Review support.
 - No failed checkpoint is being confirmed from missing evidence.
 
-The eight observations requiring later candidate review are recorded as GUI-B3-FC-001 through GUI-B3-FC-008. They remain Finding Candidates only; no bugs, severity, or Google Form metadata were created.
+## Candidate Review Outcome
+
+- Human Review accepted the existing evidence as sufficient; no additional evidence is required.
+- GUI-B3-FC-001 and GUI-B3-FC-006 are Validated Duplicates. Their cross-screen relationships were accepted because they describe the same system-level problems, and the B3 IDs are retained for traceability.
+- GUI-B3-FC-002, GUI-B3-FC-003, GUI-B3-FC-004, GUI-B3-FC-005, GUI-B3-FC-007, and GUI-B3-FC-008 are Valid Candidates after Human Review.
+- The cross-screen overlap in GUI-B3-FC-002 is accepted while preserving its B3-specific role-card semantics.
+- The cross-screen relationship for GUI-B3-FC-007 is accepted while preserving its B3 registration-state traceability.
+- No candidate was rejected, and no candidate remains Needs More Evidence.
+
+## Promotion Outcome
+
+- Human Review approved promotion of all eight B3 IDs to `findings/bug_and_usability_findings_log.md`.
+- Bug classification: GUI-B3-FC-001, GUI-B3-FC-002, GUI-B3-FC-003, and GUI-B3-FC-007.
+- Usability classification: GUI-B3-FC-004, GUI-B3-FC-005, GUI-B3-FC-006, and GUI-B3-FC-008.
+- GUI-B3-FC-001 and GUI-B3-FC-006 retain their accepted duplicate relationships for cross-screen traceability.
+- Human Review assigned Bug Severity Low and Usability Severity 1 to every promoted B3 finding.
+- Google Form submission was intentionally not performed; no timestamp, student email, or form-entry metadata was created.
