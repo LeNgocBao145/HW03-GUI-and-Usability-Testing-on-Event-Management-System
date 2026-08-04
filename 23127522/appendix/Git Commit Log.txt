@@ -1,9 +1,61 @@
 ﻿Git Commit Log — HW04 GUI & Usability Testing on EMS
 Student: Ong Khánh Vinh
 MSSV: 23127522
-Generated: 2026-08-05 01:33:14 +07:00
+Generated: 2026-08-05 01:33:48 +07:00
 
 Recent commits:
+
+commit 7afe0944a27046cd04de8bd923459e581d64b802
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-08-05 01:33:38 +0700
+Subject: Finalize Pool C HW04 report
+
+ 23127522/AI_Audit_Report.md                        |  24 -
+ 23127522/Main_Report.md                            | 152 +++++++
+ 23127522/Main_Report.pdf                           | Bin 0 -> 167043 bytes
+ 23127522/README.md                                 |  61 +--
+ 23127522/Task2_Usability_Report_ScenarioC.md       |  86 ----
+ 23127522/Task3_CrossPlatform_Matrix_ScenarioC.md   |  54 ---
+ 23127522/appendix/AI Audit Report.md               |  51 +++
+ 23127522/appendix/AI Audit Report.pdf              | Bin 0 -> 137215 bytes
+ 23127522/appendix/AI Critique.md                   |   7 +
+ 23127522/appendix/AI Critique.pdf                  | Bin 0 -> 66782 bytes
+ 23127522/appendix/Git Commit Log.txt               |  95 ++++
+ 23127522/{ => appendix}/prompt_logs.md             |  10 +-
+ 23127522/bugs/{C01_IA04-10.png => C02_IA04-10.png} | Bin
+ 23127522/bugs/C04_IA04-11.png                      | Bin 0 -> 29033 bytes
+ .../C1_01_Windows_Chrome_Desktop.png               | Bin 0 -> 373144 bytes
+ .../cross_platform/C1_02_macOS_Safari_Desktop.png  | Bin 0 -> 653149 bytes
+ .../cross_platform/C1_03_iOS_Safari_iPhone.png     | Bin 0 -> 504201 bytes
+ .../C1_04_Windows_Brave_Desktop.png.png            | Bin 0 -> 519760 bytes
+ .../cross_platform/C1_05_Windows_Edge_Desktop.png  | Bin 0 -> 241413 bytes
+ .../C2_01_Windows_Chrome_Desktop.png               | Bin 0 -> 629900 bytes
+ .../cross_platform/C2_02_macOS_Safari_Desktop.png  | Bin 0 -> 519510 bytes
+ .../cross_platform/C2_03_iOS_Safari_iPhone.png     | Bin 0 -> 460714 bytes
+ .../C2_04_Windows_Brave_Desktop.png.png            | Bin 0 -> 845632 bytes
+ .../cross_platform/C2_05_Windows_Edge_Desktop.png  | Bin 0 -> 609879 bytes
+ .../cross_platform/C4_01_Windows_Edge_Desktop.png  | Bin 0 -> 405801 bytes
+ .../cross_platform/C4_02_macOS_Safari_Desktop.png  | Bin 0 -> 1817149 bytes
+ .../cross_platform/C4_03_iOS_Safari_iPhone.png     | Bin 0 -> 393377 bytes
+ .../cross_platform/C4_04_Windows_Brave_Desktop.png | Bin 0 -> 384282 bytes
+ .../cross_platform/C4_05_Windows_Edge_Desktop.png  | Bin 0 -> 679651 bytes
+ 23127522/skills/gui-checklist/SKILL.md             | 105 +++++
+ .../gui-checklist/references/applicability.md      |  89 ++++
+ .../gui-checklist/references/modal-extra-checks.md |  25 ++
+ .../gui-checklist/references/output-format.md      |  63 +++
+ .../skills/gui-checklist/references/scripts.md     | 494 +++++++++++++++++++++
+ .../gui-checklist/references/test-recipes.md       | 224 ++++++++++
+ 23127522/skills/gui-checklist/scripts/c02.js       | 216 +++++++++
+ 23127522/skills/gui-checklist/scripts/ia01.js      | 148 ++++++
+ 23127522/skills/gui-checklist/scripts/ia02.js      | 131 ++++++
+ 23127522/skills/gui-checklist/scripts/ia03.js      | 178 ++++++++
+ 23127522/skills/gui-checklist/scripts/ia04.js      | 279 ++++++++++++
+ 23127522/{ => tasks}/Bug_Usability_Findings_Log.md |  33 +-
+ 23127522/tasks/Checklist_GUI_EMS_IA01-IA04.md      | 140 ++++++
+ .../{ => tasks}/Task1B_Checklist_Run_ScenarioC.md  |  23 +-
+ 23127522/tasks/Task2_Usability_Report_ScenarioC.md | 140 ++++++
+ .../tasks/Task3_CrossPlatform_Matrix_ScenarioC.md  | 125 ++++++
+ 45 files changed, 2729 insertions(+), 224 deletions(-)
 
 commit 30ba80b9461f527e879491d162b05a396e4c2f7a
 Author: Khanh Vinh <ongkhanhv2005@gmail.com>
