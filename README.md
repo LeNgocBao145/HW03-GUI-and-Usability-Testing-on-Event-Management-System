@@ -94,12 +94,12 @@ All test evidence must record the exact SUT URL used at the time of execution. T
 - [x] Main Report Markdown
 - [x] Nine Agent Skills
 - [x] YouTube Agent Skill demonstration link
-- [ ] Text Git commit log export - real Git history exists; export pending
-- [ ] Main Report PDF
-- [ ] AI Audit Report PDF
-- [ ] AI Critique PDF
-- [ ] Self-assessed grade
-- [ ] Final ZIP package
+- [x] Text Git commit log export through commit `4592766`
+- [x] Main Report PDF
+- [x] AI Audit Report PDF
+- [x] AI Critique PDF
+- [x] Self-assessed grade - `070`
+- [x] Final ZIP package - `exports/final_submission/23127070_HW03_AI_GUIUsability_EMS_070.zip`
 
 ## Test Summary
 
@@ -175,24 +175,26 @@ All test evidence must record the exact SUT URL used at the time of execution. T
 - [Compatibility Report](compatibility_testing/compatibility_report.md)
 - [Findings Log](findings/bug_and_usability_findings_log.md)
 - [Google Form Submission Log](findings/google_form_submission_log.md)
+- [Git Commit Log](docs/git_commit_log.txt)
+- [Final Submission Manifest](docs/submission_manifest.md)
 - [Agent Skill Demo](demo_videos/agent_skill_demo_links.md)
 
 ## Self-Assessment Table
 
 | No. | Criteria | Maximum | Self-Assessed Grade |
 | --- | --- | ---: | ---: |
-| 1a | Shared checklist (>40 items) + sources + AI prompts | 15 | |
-| 1b | Checklist execution on >=3 screens + bug reports | 15 | |
-| 2 | User testing with 5 real users + Usability Report | 25 | |
-| 3 | Cross-browser / cross-platform matrix | 25 | |
-| 4 | Google Form submissions + aggregated findings log | 10 | |
-| 5 | Agent Skills + demo videos | 10 | |
-|  | **Total** | **100** | |
+| 1a | Shared checklist (>40 items) + sources + AI prompts | 15 | 10 |
+| 1b | Checklist execution on >=3 screens + bug reports | 15 | 15 |
+| 2 | User testing with 5 real users + Usability Report | 25 | 10 |
+| 3 | Cross-browser / cross-platform matrix | 25 | 15 |
+| 4 | Google Form submissions + aggregated findings log | 10 | 10 |
+| 5 | Agent Skills + demo videos | 10 | 10 |
+|  | **Total** | **100** | **70** |
 
-Complete the self-assessment values before packaging the final submission.
+The conservative self-assessment reflects the documented Task 1A provenance gap, reduced Task 2 sample, and accepted Task 3 coverage/evidence tradeoffs.
 
 ## Final Submission Filename
 
-`23127070_HW03_AI_GUIUsability_EMS_<SelfAssessedGrade>.zip`
+`23127070_HW03_AI_GUIUsability_EMS_070.zip`
 
 The self-assessed grade must be a three-digit value from `000` to `100`.
