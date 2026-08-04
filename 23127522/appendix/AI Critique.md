@@ -1,0 +1,7 @@
+# AI Critique — HW04 GUI & Usability Testing on EMS
+
+AI hỗ trợ rất tốt ở phần tạo cấu trúc tài liệu, biến yêu cầu bài thành checklist có hệ thống, viết script kiểm tra bán tự động và phát hiện một số vấn đề khó thấy bằng mắt thường như thiếu accessible name, thiếu focus trap hoặc xử lý lỗi mạng chưa thân thiện. Tuy nhiên, AI không thể thay thế việc kiểm thử thật trên EMS. Nhiều mục Pass/Fail chỉ có giá trị khi sinh viên trực tiếp thao tác, chụp ảnh và xác nhận trên môi trường live. Nếu để AI tự suy đoán, báo cáo rất dễ biến thành dữ liệu bịa.
+
+Điểm yếu rõ nhất là AI từng tạo script IA-04 chưa đầy đủ và đọc sai một số hành vi kỹ thuật của `fetch`, đặc biệt khi app dùng `fetch(new Request(...))`. Nếu chỉ tin kết quả script, có thể bỏ sót hoặc hiểu sai request thật. AI cũng có xu hướng muốn "lấp đầy" bảng cho đẹp, trong khi với bài này ô trống hoặc NA có lý do còn trung thực hơn một verdict chưa quan sát. Ở Task 3, AI ban đầu tối ưu ma trận theo lý thuyết 5 browser nhưng chưa khớp ngay với ảnh thật sinh viên đang có, nên phải chỉnh lại theo bằng chứng thực tế.
+
+Nguyên tắc rút ra là dùng AI như người hỗ trợ phân tích và chuẩn hóa, không dùng như nguồn sự thật cuối cùng. Mỗi kết luận cần có một trong ba thứ: quan sát live, ảnh chụp, hoặc log/script đã được kiểm tra lại. Khi AI đề xuất kết quả, sinh viên phải phản biện, sửa phạm vi và đối chiếu với bằng chứng trước khi đưa vào báo cáo.

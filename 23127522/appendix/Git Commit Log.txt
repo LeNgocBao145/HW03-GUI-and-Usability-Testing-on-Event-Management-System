@@ -1,0 +1,95 @@
+﻿Git Commit Log — HW04 GUI & Usability Testing on EMS
+Student: Ong Khánh Vinh
+MSSV: 23127522
+Generated: 2026-08-05 01:33:14 +07:00
+
+Recent commits:
+
+commit 30ba80b9461f527e879491d162b05a396e4c2f7a
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-08-04 22:13:59 +0700
+Subject: docs(hw04): add prompt log; close 4 more C4 items
+
+ 23127522/Bug_Usability_Findings_Log.md     |  2 +-
+ 23127522/README.md                         |  3 +-
+ 23127522/Task1B_Checklist_Run_ScenarioC.md | 14 ++++----
+ 23127522/prompt_logs.md                    | 56 ++++++++++++++++++++++++++++++
+ 4 files changed, 66 insertions(+), 9 deletions(-)
+
+commit 091695c3545397bb883b58fe4553aed4e1ea6d29
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-08-04 20:59:41 +0700
+Subject: fix(hw04): C4 IA04-11 is Pass — exported .xlsx matches on-screen data
+
+ 23127522/Bug_Usability_Findings_Log.md     |   2 --
+ 23127522/README.md                         |   4 ++--
+ 23127522/Task1B_Checklist_Run_ScenarioC.md |   6 +++---
+ 23127522/bugs/C04_IA04-01.png              | Bin 0 -> 236291 bytes
+ 23127522/bugs/C04_IA04-10.png              | Bin 0 -> 212442 bytes
+ 5 files changed, 5 insertions(+), 7 deletions(-)
+
+commit 12cd8795e4808f37ec53249dba2070731b0892a4
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-08-04 20:16:04 +0700
+Subject: feat(hw04): complete C4 export-flow checklist run + action-flow skill profile
+
+ .claude/skills/gui-checklist/SKILL.md              | 105 +++++
+ .../gui-checklist/references/applicability.md      |  89 ++++
+ .../gui-checklist/references/modal-extra-checks.md |  25 ++
+ .../gui-checklist/references/output-format.md      |  63 +++
+ .claude/skills/gui-checklist/references/scripts.md | 494 +++++++++++++++++++++
+ .../gui-checklist/references/test-recipes.md       | 224 ++++++++++
+ .claude/skills/gui-checklist/scripts/c02.js        | 216 +++++++++
+ .claude/skills/gui-checklist/scripts/ia01.js       | 148 ++++++
+ .claude/skills/gui-checklist/scripts/ia02.js       | 131 ++++++
+ .claude/skills/gui-checklist/scripts/ia03.js       | 178 ++++++++
+ .claude/skills/gui-checklist/scripts/ia04.js       | 279 ++++++++++++
+ 23127522/AI_Audit_Report.md                        |  24 +
+ 23127522/Bug_Usability_Findings_Log.md             |  28 ++
+ 23127522/README.md                                 |  38 ++
+ 23127522/Task1B_Checklist_Run_ScenarioC.md         | 213 +++++++++
+ 23127522/Task2_Usability_Report_ScenarioC.md       |  86 ++++
+ 23127522/Task3_CrossPlatform_Matrix_ScenarioC.md   |  54 +++
+ 23127522/bugs/C01_IA01-15.png                      | Bin 0 -> 26837 bytes
+ 23127522/bugs/C01_IA03-09.png                      | Bin 0 -> 1154462 bytes
+ 23127522/bugs/C01_IA04-10.png                      | Bin 0 -> 83653 bytes
+ 23127522/bugs/C02_IA01-15.png                      | Bin 0 -> 342002 bytes
+ 23127522/bugs/C02_IA02-02.png                      | Bin 0 -> 70820 bytes
+ 23127522/bugs/C02_IA02-10-CHANGED_NOT_SAVED.png    | Bin 0 -> 80847 bytes
+ 23127522/bugs/C02_IA02-10-EXIT.png                 | Bin 0 -> 10135 bytes
+ 23127522/screenshots/C01.png                       | Bin 0 -> 328523 bytes
+ 23127522/screenshots/C02.png                       | Bin 0 -> 93749 bytes
+ 23127522/screenshots/C04.png                       | Bin 0 -> 446253 bytes
+ Checklist_GUI_EMS_IA01-IA04.md                     |  64 ++-
+ 28 files changed, 2441 insertions(+), 18 deletions(-)
+
+commit 8374bb4bc8e2fb50205cfc6cd0641b67ba984c2f
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-07-29 07:59:47 +0700
+Subject: merge: integrate remote history; init Checklist GUI
+
+commit 0dbba0fc383e6f71043a068f9f0fa0dab423cb63
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-07-29 07:56:15 +0700
+Subject: feat: init HW03 and create Checklist GUI
+
+ Checklist_GUI_EMS_IA01-IA04.md | 155 ++++++++++++++++++++---------------------
+ 1 file changed, 77 insertions(+), 78 deletions(-)
+
+commit 54e28bfbe33d4aa0ce01f8c6bf20af66c0701401
+Author: LeNgocBao145 <23127155@student.hcmus.edu.vn>
+Date: 2026-07-28 17:39:09 +0700
+Subject: init
+
+ README.md | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 04ea6918a9eec5f6d913b357db6cae3b16940dbe
+Author: Khanh Vinh <ongkhanhv2005@gmail.com>
+Date: 2026-07-28 14:08:27 +0700
+Subject: feat: init HW04 and create Checklist GUI
+
+ .gitignore                        |   1 +
+ 2026.HW03.GUI Usability EMS_Vi.md | 239 ++++++++++++++++++++++++++++++++++++++
+ Checklist_GUI_EMS_IA01-IA04.md    | 113 ++++++++++++++++++
+ 3 files changed, 353 insertions(+)

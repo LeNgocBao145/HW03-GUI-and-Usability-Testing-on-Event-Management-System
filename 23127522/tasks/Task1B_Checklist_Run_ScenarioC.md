@@ -1,4 +1,4 @@
-# Task 1B — Chạy Checklist (Kịch bản C — Admin quản lý người dùng)
+﻿# Task 1B — Chạy Checklist (Kịch bản C — Admin quản lý người dùng)
 
 **MSSV:** 23127522
 **Kịch bản:** C — Admin quản lý người dùng
@@ -20,7 +20,7 @@
 
 ## C1 — Danh sách Users
 
-![C1 — Danh sách Users](screenshots/C01.png)
+![C1 — Danh sách Users](../screenshots/C01.png)
 
 | Mã | Mục kiểm (tiếng Việt) | P/F/NA | Note (bắt buộc nếu F) |
 | --- | --- | --- | --- |
@@ -79,7 +79,7 @@
 
 ## C2 — Assign Role / sửa user
 
-![C2 — Assign Role / sửa user](screenshots/C02.png)
+![C2 — Assign Role / sửa user](../screenshots/C02.png)
 
 | Mã | Mục kiểm (tiếng Việt) | P/F/NA | Note (bắt buộc nếu F) |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@
 | IA01-12 | Ảnh (avatar) đúng tỉ lệ, không méo/vỡ; ảnh nội dung có alt text | NA | Modal không có thẻ `<img>` nào |
 | IA01-13 | Responsive: bố cục co giãn hợp lý desktop/tablet/phone | P |  |
 | IA01-14 | Bảng dữ liệu: cột sort được, header sticky khi cuộn, nghĩa cột rõ | NA | Modal form không phải data-table |
-| IA01-15 | Bảng xử lý dữ liệu nặng: text dài truncate/wrap, chọn nhiều dòng rõ, bảng rỗng có empty state | F | Nhập nội dung rất dài vào field thì bị tràn, không truncate/wrap gọn. Ảnh: bugs/C02_IA01-15.png |
+| IA01-15 | Bảng xử lý dữ liệu nặng: text dài truncate/wrap, chọn nhiều dòng rõ, bảng rỗng có empty state | F | Nhập nội dung rất dài vào field thì bị tràn, không truncate/wrap gọn. Ảnh: ../bugs/C02_IA01-15.png |
 | IA02-01 | Mỗi ô nhập có label rõ, gắn đúng input (không dùng placeholder thay label) | P | Cả 7 field đều có label gắn đúng qua aria-label/label bao ngoài |
 | IA02-02 | Trường bắt buộc đánh dấu rõ (* hoặc "bắt buộc") | F | 3 field bắt buộc (First Name, Last Name, Email) đều KHÔNG có dấu `*` hay chữ "bắt buộc"; người dùng chỉ biết thiếu gì sau khi bấm Save |
 | IA02-03 | Validation đúng ràng buộc (email, số, độ dài, ngày hợp lệ) | P |  |
@@ -131,14 +131,14 @@
 | IA04-07 | Màu trạng thái nhất quán và có nghĩa (xanh/đỏ/vàng) | P | Màu trạng thái nhất quán với màn C1, cùng một nghĩa (xanh = Active, xám = Inactive) |
 | IA04-08 | Không chỉ dùng màu — kèm text/icon cho người mù màu | P | Trạng thái luôn kèm nhãn chữ (Active/Inactive) chứ không chỉ dựa vào màu |
 | IA04-09 | Cập nhật real-time đúng và kịp thời, không cần F5 | P | Sau khi lưu, danh sách/hàng user cập nhật ngay, không cần F5 |
-| IA04-10 | Lỗi hệ thống (mất mạng/timeout/500) hiển thị thân thiện, gợi ý bước tiếp | F | Mất mạng lúc bấm "Lưu thay đổi" thì form hiện lỗi thô "Failed to fetch" — không phải ngôn ngữ người dùng, không nêu lý do mất kết nối, không có nút Thử lại. Ảnh: bugs/C01_IA04-10.png |
+| IA04-10 | Lỗi hệ thống (mất mạng/timeout/500) hiển thị thân thiện, gợi ý bước tiếp | F | Mất mạng lúc bấm "Lưu thay đổi" thì form hiện lỗi thô "Failed to fetch" — không phải ngôn ngữ người dùng, không nêu lý do mất kết nối, không có nút Thử lại. Ảnh: ../bugs/C02_IA04-10.png |
 | IA04-11 | State sau hành động phản ánh đúng dữ liệu (VD sau đổi role, list cập nhật) | P | Sau khi đổi role/thông tin và lưu, hàng trong bảng hiển thị đúng dữ liệu mới |
 
 ---
 
 ## C4 — Export ra Excel
 
-![C4 — Export ra Excel](screenshots/C04.png)
+![C4 — Export ra Excel](../screenshots/C04.png)
 
 **Phạm vi C4**: C4 không phải một màn hình riêng mà là **luồng hành động Export** nằm trên trang Users. Phạm vi gồm: (a) nút Export và trạng thái của nó, (b) phản hồi UI trong và sau khi export, (c) tính khớp giữa nội dung file `.xlsx` và dữ liệu đang hiển thị trên màn hình. Các mục về layout/điều hướng chung của trang Users **đã đánh giá ở C1** nên ghi NA với lý do phạm vi, tránh chấm trùng và tránh sao chép verdict của C1 sang C4.
 
@@ -171,7 +171,7 @@
 | IA02-08 | Rich-text editor hoạt động đúng (bold/list/link có hiệu lực, lưu/hiển thị đúng) | NA | Luồng Export không có rich-text editor |
 | IA02-09 | Nhập liệu được giữ khi validation fail, không xóa trắng form | NA | Luồng Export không có form nhập liệu |
 | IA02-10 | Có xác nhận/hoàn tác khi rời form dở hoặc thao tác phá dữ liệu | NA | Export chỉ đọc dữ liệu, không phá dữ liệu; không có form dở để mất |
-| IA02-11 | Nút submit disable/loading khi đang gửi để tránh double-submit |  |  |
+| IA02-11 | Nút submit disable/loading khi đang gửi để tránh double-submit | F | Bấm nút Export hai lần liên tiếp thì nút KHÔNG bị disable và cũng không có trạng thái loading — hệ thống xuất ra 2 file trùng nhau, mỗi lần bấm là một request/file mới. Xem finding 013 |
 | IA02-12 | Điều hướng bàn phím trong form đúng thứ tự Tab, Enter submit, focus rõ | NA | Không có form; điều hướng bàn phím của trang đã đánh giá ở C1 |
 | IA02-13 | Công tắc cấu hình có mặc định rõ và ràng buộc hợp lệ (Max Slots > 0) | NA | Luồng Export không có công tắc cấu hình nào |
 | IA03-01 | Menu/sidebar đủ mục, nhãn dễ hiểu, mục đang chọn highlight rõ | NA | Đã đánh giá ở C1 — Export không đổi route nên không ảnh hưởng sidebar |
@@ -184,7 +184,7 @@
 | IA03-08 | Có lối thoát rõ: đóng dialog, hủy thao tác, thoát luồng nhiều bước | NA | Export chạy tức thì, không phải luồng nhiều bước và không có dialog nào để thoát; không có gì để hủy giữa chừng |
 | IA03-09 | Nút/link có affordance rõ (trông bấm được), có hover/focus | F | Nút Export không đổi con trỏ thành bàn tay khi hover (thiếu `cursor: pointer`) — lặp lại đúng lỗi hệ thống ở C1 và C2, xem finding 002 |
 | IA03-10 | Phân trang/cuộn danh sách đúng, giữ ngữ cảnh khi quay lại từ chi tiết | NA | Đã đánh giá ở C1 — Export không có phân trang riêng |
-| IA03-11 | Điều hướng bàn phím xuyên suốt menu/tab/link, focus order logic |  |  |
+| IA03-11 | Điều hướng bàn phím xuyên suốt menu/tab/link, focus order logic | P | Tab tới được nút Export và kích hoạt được bằng bàn phím — nút nằm trong thứ tự Tab tự nhiên của trang, không bị bỏ qua |
 | IA04-01 | Sau mỗi hành động có feedback rõ (toast) báo thành công/thất bại | F | Bấm Export xong file tải xuống nhưng KHÔNG có toast/thông báo nào báo đã xuất thành công — người dùng chỉ biết nhờ thanh download của trình duyệt, không phải phản hồi của app. Lỗi lặp lại ở cả 3 màn C1/C2/C4 |
 | IA04-02 | Toast tồn tại đủ lâu để đọc hoặc cho đóng chủ động | NA | Không có toast nào xuất hiện nên không đánh giá được thời lượng — xem IA04-01 |
 | IA04-03 | Thao tác phá hủy (Delete/Block/Reset Password) có dialog xác nhận nêu hậu quả | NA | Export là thao tác chỉ-đọc, không phá hủy dữ liệu; Delete user thuộc phạm vi C1 |
@@ -204,10 +204,11 @@
 | --- | --- | --- | --- | --- |
 | C1 | 50 | 31 | 4 | 15 |
 | C2 | 50 | 22 | 7 | 21 |
-| C4 | 48 | 5 | 3 | 40 |
-| **Tổng** | **148** | **58** | **14** | **76** |
+| C4 | 50 | 6 | 4 | 40 |
+| **Tổng** | **150** | **59** | **15** | **76** |
 
-> C4 còn **2 mục chưa quan sát** (IA02-11 chống double-submit khi bấm Export 2 lần liên tiếp, IA03-11 điều hướng bàn phím tới nút Export) nên chưa tính vào "Số mục chạy" — để trống theo §12, không đoán verdict.
+> Cả 3 màn đã chạy đủ 50/50 mục. Mỗi mục F đều có Note nêu lý do và một finding tương ứng trong `Bug_Usability_Findings_Log.md`.
 
 > **Lưu ý (§12):** Cột P/F/Note phải do chính bạn điền sau khi retest live trên EMS — đây là bằng chứng thực thi, TA xác minh. Với mỗi mục Failed, đính kèm ảnh chụp trạng thái lỗi (ngoài ảnh tổng thể ở đầu mỗi phần).
+
 

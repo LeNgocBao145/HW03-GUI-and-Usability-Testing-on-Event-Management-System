@@ -23,7 +23,7 @@ Every P/F/NA verdict in `Task1B_Checklist_Run_ScenarioC.md` was observed and sta
 | 1 | 2026-07-28 14:08 | Initialise the HW04 working folder and start the shared GUI checklist. | Scaffolded the folder structure and the deliverable stubs for Scenario C. | commit `04ea691` |
 | 2 | 2026-07-29 07:56 | Build the shared IA-01…IA-04 GUI checklist covering general UI, forms, navigation, and feedback/state. | Produced the 50-item checklist (IA-01: 15, IA-02: 13, IA-03: 11, IA-04: 11) mapped to Nielsen N1–N10, Norman No1–No6, Shneiderman S1–S8, and WCAG 2.1 AA. | `Checklist_GUI_EMS_IA01-IA04.md`, commit `0dbba0f` |
 | 3 | 2026-07-29, session order | Package the checklist run as a reusable skill instead of re-deriving the procedure per screen. | Created the `gui-checklist` skill: `SKILL.md` (run procedure, §12 guardrail, target-type profiles) plus `applicability.md`, `test-recipes.md`, `scripts.md`, `modal-extra-checks.md`, `output-format.md`. | `.claude/skills/gui-checklist/` |
-| 4 | 2026-08-04, session order | Run the checklist on C1 (Users list) and record findings. | Walked all 50 items with DevTools/console evidence; student's verdicts recorded as 31 P / 4 F / 15 NA. Logged findings 001 (avatar deformed), 002 (missing `cursor:pointer`), 003 (no success toast). | `Task1B_Checklist_Run_ScenarioC.md` C1 section; `bugs/C01_IA01-15.png` (01:21), `bugs/C01_IA03-09.png` (15:14), `bugs/C01_IA04-10.png` (15:55) |
+| 4 | 2026-08-04, session order | Run the checklist on C1 (Users list) and record findings. | Walked all 50 items with DevTools/console evidence; student's verdicts recorded as 31 P / 4 F / 15 NA. Logged findings 001 (avatar deformed), 002 (missing `cursor:pointer`), 003 (no success toast). | `Task1B_Checklist_Run_ScenarioC.md` C1 section; `bugs/C01_IA01-15.png` (01:21), `bugs/C01_IA03-09.png` (15:14), `bugs/C02_IA04-10.png` (15:55) |
 | 5 | 2026-08-04, session order | Make the batch scripts emit a per-item verdict line instead of raw dumps, so a run is faster to read. | Rewrote `ia01.js`, `ia02.js`, `ia03.js` to print `=> IA0X-YY : P/F/NA/? — reason`, a `console.table` summary, an F list, and ready-to-paste Task1B rows. `?` explicitly means "the script cannot decide — the tester must observe". | `scripts/ia01.js`, `ia02.js`, `ia03.js` (mtime 18:49) |
 | 6 | 2026-08-04, session order | Run the checklist on C2 (Assign Role / edit-user modal). | Built `c02.js`, a composite runner tuned for the modal; student's verdicts recorded as 22 P / 7 F / 21 NA. Logged findings 004–009: raw "Failed to fetch", long-text overflow, unmarked required fields, silent data loss on close, swapped placeholders, modal missing accessible name. | `Task1B` C2 section; `scripts/c02.js` (17:17); `bugs/C02_*.png` (17:54–18:43) |
 | 7 | 2026-08-04, session order | Finish the last two blank C2 items and log the focus-trap defect. | IA02-12 = P (no positive `tabindex`, Enter submits correctly). IA03-11 = F: Tab past "Lưu thay đổi" escapes to the sidebar; background not covered by `inert`/`aria-hidden`, 37 focusable elements still exposed. Added finding 010 (sev 3). | `Bug_Usability_Findings_Log.md` finding 010 |
@@ -36,6 +36,8 @@ Every P/F/NA verdict in `Task1B_Checklist_Run_ScenarioC.md` was observed and sta
 | 14 | 2026-08-04 20:59 | "11 --> Đổi thành Pass" — IA04-11 is a Pass after retest. | Flipped C4 IA04-11 from F to P (exported file does match the on-screen/filtered data), withdrew finding 013 (incomplete export), and recomputed every affected count. | commit `091695c` |
 | 15 | 2026-08-04, session order | "IA01 có gì để test đâu, nó chỉ là một button thôi và IA03-09 thì là F thì là không có pointer" — there is nothing to test for IA01, and IA03-09 fails on the missing pointer. | Set IA01-09/10 and IA03-08 = NA with scope reasons (a single instant-action button has no list region, no loading phase, and no multi-step flow to exit). Set IA03-09 = F, and rather than opening a new finding, widened finding 002 to cover C1 + C2 + C4 since it is one systemic defect at the shared component layer. | `Task1B` C4 section; `Bug_Usability_Findings_Log.md` finding 002 |
 | 16 | 2026-08-04, session order | Create this prompt log. | Reconstructed the session from the transcript, the compaction summary, Git history, and file mtimes. | `prompt_logs.md` |
+| 17 | 2026-08-04, session order | "ttf" (renamed a mislabeled screenshot after an audit request) — check for undeclared bugs and unfilled Task1B rows. | Audit found: `bugs/C01_IA04-10.png` was mislabeled — its finding (004) is a C2 defect, so the file was renamed to `C02_IA04-10.png` and every reference updated. Confirmed no NA row was missing a reason and no P/F row was missing a Note. | `bugs/C02_IA04-10.png` (renamed) |
+| 18 | 2026-08-04, session order | "IA02-11: Không disable, xuất ra 2 file luôn / IA03-11: Tab được" — the last two C4 items observed. | IA02-11 = F: clicking Export twice does not disable the button and produces two duplicate files — logged as finding 013. IA03-11 = P: the Export button is reachable and activatable by keyboard. Task1B is now 150/150 items filled across all three screens, 0 blank. | `Task1B` C4 section; `Bug_Usability_Findings_Log.md` finding 013 |
 
 ## Result at the End of This Log
 
@@ -43,10 +45,10 @@ Every P/F/NA verdict in `Task1B_Checklist_Run_ScenarioC.md` was observed and sta
 | --- | ---: | ---: | ---: | ---: |
 | C1 — Users list | 50 | 31 | 4 | 15 |
 | C2 — Assign Role / edit user modal | 50 | 22 | 7 | 21 |
-| C4 — Export to Excel (action flow) | 48 | 5 | 3 | 40 |
-| **Total** | **148** | **58** | **14** | **76** |
+| C4 — Export to Excel (action flow) | 50 | 6 | 4 | 40 |
+| **Total** | **150** | **59** | **15** | **76** |
 
-12 findings logged (C1: 3, C2: 7, C4: 2). Two C4 items remain deliberately blank pending observation: IA02-11 (double-click the Export button — does it produce two files?) and IA03-11 (keyboard reach and activation of the Export button).
+13 findings logged (C1: 3, C2: 7, C4: 3). All 150 checklist items across the three screens are filled — no item was left blank or guessed.
 
 ## Notes on AI Reliability Observed During This Session
 
