@@ -48,7 +48,7 @@ Validate cross-browser and cross-platform coverage for B1, B2, and B3 without in
    - OS identified
    - browser identified
    - device or resolution identified
-   - student-ID email overlay visible
+   - assignment identity witness visible or absence accurately explained
 7. Check whether screenshot references exist.
 8. Compare matrix rows with the environment log.
 9. Flag rows that require manual review.
@@ -58,6 +58,8 @@ Validate cross-browser and cross-platform coverage for B1, B2, and B3 without in
 - Do not infer environment information from filenames alone.
 - Do not mark a row executed without evidence.
 - Do not modify `Pass` or `Fail` automatically.
+- An environment session may be executed while an individual row remains `Not Executed` because the SUT or required state was blocked; report these separately.
+- Provider metadata not shown during execution must be labeled `Not exposed by platform`, not inferred.
 - Coverage is incomplete until OS, browser, device class, and evidence are all verified.
 
 ## Evidence rules

@@ -134,25 +134,25 @@ Reference [environment_log.md](../compatibility_testing/environment_log.md).
 
 ## Results for B1
 
-TODO
+All five environment sessions were executed for B1: 3 Pass, 1 Fail, and 1 state-blocked Not Executed outcome. ENV-02 (Windows 10 / Chrome tablet-sized viewport), ENV-04 (iPhone 14 / Safari), and ENV-05 (Galaxy S20 / Firefox) passed. ENV-03 failed because the Android device rendered the EMS login route blank. ENV-01 ran but was blocked before the SUT loaded.
 
 ## Results for B2
 
-TODO
+All five environment sessions were executed for B2: 3 Pass, 1 Fail, and 1 state-blocked Not Executed outcome. Event Detail layout, controls, navigation, and scrolling passed in ENV-02, ENV-04, and ENV-05. ENV-03 failed when the Android device rendered the login route blank before B2 could be reached, and ENV-01 ran but was blocked before SUT load.
 
 ## Results for B3
 
-TODO
+All five environment sessions were executed for B3: 1 Pass, 1 Fail, and 3 state-blocked Not Executed outcomes. ENV-02 passed the registration-state and cancel-dialog checks. ENV-03 failed when the Android device rendered the login route blank. ENV-04 and ENV-05 rendered the registration area but did not expose an actionable registration state, while ENV-01 ran but was blocked before SUT load.
 
 ## Compatibility Findings
 
-TODO
+`CP-ENV03-FC-001` is a confirmed Low Bug for the blank EMS login screen observed on TestingBot Galaxy S10 / Android 10 / Chrome. It was submitted to Google Forms on 2026-08-04 at 23:01:37 +07:00. Across all 15 rows, the reconciled totals are 7 Pass, 3 Fail, and 5 Not Executed. Edge and Samsung Internet coverage remains missing after environment substitutions; ENV-02 is viewport emulation rather than a physical tablet.
 
 # Bug & Usability Findings Submission
 
 Reference [google_form_submission_log.md](../findings/google_form_submission_log.md).
 
-All 22 unique confirmed findings were submitted through Google Forms on 2026-08-04. The aggregated log contains 11 Bug findings and 11 unique Usability findings. `UT-B3-001` and `UT-B1-001` remain cross-method support records and were not submitted separately because their canonical GUI findings were already submitted.
+All 23 unique confirmed findings were submitted through Google Forms on 2026-08-04. The aggregated log contains 12 Bug findings and 11 unique Usability findings. `UT-B3-001` and `UT-B1-001` remain cross-method support records and are not submitted separately because their canonical GUI findings were already submitted.
 
 # Agent Skills
 

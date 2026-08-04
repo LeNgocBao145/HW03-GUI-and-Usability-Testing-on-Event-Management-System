@@ -91,7 +91,7 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 | Passed | 72 |
 | Failed | 27 |
 | Not Executed | 0 |
-| Bugs found | 11 confirmed findings |
+| Bugs found | 12 confirmed findings |
 | Usability findings | 11 unique: 9 GUI + 2 unique Task 2; 2 additional cross-method support records |
 | Severity 0 findings | 0 |
 | Severity 1 findings | 7 unique GUI findings |
@@ -99,8 +99,8 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 | Severity 3 findings | 0 |
 | Severity 4 findings | 0 |
 | Real participants | 3 total: 1 pilot + 2/5 required main participants |
-| Google Form submissions | 22 unique findings; 2 cross-method duplicates not submitted separately |
-| Compatibility cells covered | 0 |
+| Google Form submissions | 23/23 unique findings submitted; 2 cross-method duplicates not submitted separately |
+| Compatibility execution | 5/5 environment sessions executed; 7 Pass, 3 Fail, 5 state-blocked Not Executed rows |
 | Demo videos | 0/7 |
 
 ## Self-Assessment Table

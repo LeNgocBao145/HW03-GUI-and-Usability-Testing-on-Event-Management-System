@@ -32,3 +32,20 @@ Rules:
 | GUI-B3-FC-008 | Yes | 2026-08-04 14:48:57 +07:00 | Faculty account equivalent (address not stored) | Google Forms confirmation page; no entry reference provided | Submitted once with `ScreenB3_live_17_cancellation_processing.png`; Google Forms displayed `Your response has been recorded.` |
 | UT-B3-002 | Yes | 2026-08-04 14:49:16 +07:00 | Faculty account equivalent (address not stored) | Google Forms confirmation page; no entry reference provided | Submitted once with `ScreenB3_live_03_role_selected.png`; Google Forms displayed `Your response has been recorded.` |
 | UT-B2-001 | Yes | 2026-08-04 14:49:30 +07:00 | Faculty account equivalent (address not stored) | Google Forms confirmation page; no entry reference provided | Submitted once with `ScreenB3_live_02_registration_form_desktop.png`; Google Forms displayed `Your response has been recorded.` |
+| CP-ENV03-FC-001 | Yes | 2026-08-04 23:01:37 +07:00 | Faculty account equivalent (address not stored) | Google Forms confirmation page; no entry reference provided | Submitted once with `B1_CP-B1-03_ANDROID_CHROME_PHONE_FAIL_01.png`; Google Forms displayed `Your response has been recorded.` |
+
+## Task 3 Submission Record
+
+Internal traceability ID: `CP-ENV03-FC-001` (do not add the ID to the form unless a field requests it).
+
+- Type: Bug
+- Bug Severity: Low
+- Scenario / Screen: Task 3 compatibility - ENV-03, B1-B3 access
+- Description: On TestingBot Galaxy S10 with Android 10 and Chrome, opening the EMS login URL renders a completely blank white page. The page remains blank after one reload, preventing authentication and access to B1, B2, and B3.
+- Steps: Launch the Galaxy S10 / Android 10 / Chrome environment; open `https://prod-dev.ems-fitus.cloud/login`; wait for rendering; reload once; observe the page.
+- Expected: The EMS login page renders and allows authentication.
+- Actual: A blank white page remains visible and all tested screens are blocked.
+- Suggested Fix: Investigate Android Chrome runtime, asset-loading, and API/CORS failures for this device profile, and show an application error fallback instead of an empty page.
+- Attachment: `compatibility_testing/evidence/b1_home_events_listing/failed/B1_CP-B1-03_ANDROID_CHROME_PHONE_FAIL_01.png`
+- Submission status: Submitted once; Google Forms displayed `Your response has been recorded.`
+- Submission timestamp: 2026-08-04 23:01:37 +07:00
