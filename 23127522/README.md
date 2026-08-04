@@ -17,7 +17,7 @@
 ## Test summary
 - Scenario chosen: **C**
 - Screens tested: **C1, C2, C4**
-- Checklist items: designed **50** / run **144** (3 màn × 50, trừ 6 mục C4 chưa quan sát) / passed **58** / failed **13**
+- Checklist items: designed **50** / run **148** (3 màn × 50, trừ 2 mục C4 chưa quan sát) / passed **58** / failed **14**
 - Bugs found: **12** (C1: 3 · C2: 7 · C4: 2 — chi tiết ở `Bug_Usability_Findings_Log.md`)
 - User-testing participants: **5** — usability issues by severity: sev4 __ / sev3 __ / sev2 __ / sev1 __
 - Compatibility cells covered: **__**
@@ -29,6 +29,7 @@
 - `Task3_CrossPlatform_Matrix_ScenarioC.md`
 - `Bug_Usability_Findings_Log.md`
 - `AI_Audit_Report.md` (+ AI Critique)
+- `prompt_logs.md` — chronological AI prompt log for this assignment
 - Cross-platform screenshots (MSSV overlay)
 - Git commit log (text)
 - Agent Skill + demo video link

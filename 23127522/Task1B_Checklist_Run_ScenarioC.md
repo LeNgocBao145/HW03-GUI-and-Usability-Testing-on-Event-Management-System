@@ -154,8 +154,8 @@
 | IA01-06 | Icon/nút cùng chức năng trông giống nhau khắp các màn hình | NA | Nút Export chỉ xuất hiện ở màn Users, không có màn thứ hai để đối chiếu tính nhất quán |
 | IA01-07 | Đổi ngôn ngữ EN/VI hoạt động, không lẫn ngôn ngữ hay lộ khóa dịch | P | Tiêu đề cột trong file `.xlsx` là chữ người đọc được, không lộ khóa dịch thô (kiểu `users.table.email`); tiếng Việt có dấu đọc được, không bị mojibake — encoding UTF-8 đúng |
 | IA01-08 | Sau khi sang VI layout không vỡ do chuỗi dài (không cắt/tràn) | NA | Đã đánh giá ở C1 — file Excel không có layout co giãn theo ngôn ngữ |
-| IA01-09 | Trạng thái rỗng có thông báo + gợi ý hành động, không phải màn trắng |  |  |
-| IA01-10 | Trạng thái loading có chỉ báo (skeleton/spinner) |  |  |
+| IA01-09 | Trạng thái rỗng có thông báo + gợi ý hành động, không phải màn trắng | NA | Luồng Export chỉ có một nút, không có vùng danh sách/collection riêng để hiện trạng thái rỗng; empty state của bảng Users đã đánh giá ở C1 |
+| IA01-10 | Trạng thái loading có chỉ báo (skeleton/spinner) | NA | Nút Export không có trạng thái loading nào để quan sát — bấm là file tải xuống ngay, không có giai đoạn chờ; thiếu chỉ báo xử lý đã ghi ở finding 011 (IA04-01/06) |
 | IA01-11 | Ngày/số/tiền hiển thị đúng định dạng locale (dd/mm/yyyy) | P | Ngày trong file khớp định dạng đang hiển thị trên UI, không bị đảo tháng/ngày kiểu mm/dd |
 | IA01-12 | Ảnh (avatar) đúng tỉ lệ, không méo/vỡ; ảnh nội dung có alt text | NA | File Excel không chứa ảnh; avatar trên bảng đã đánh giá ở C1 |
 | IA01-13 | Responsive: bố cục co giãn hợp lý desktop/tablet/phone | NA | Đã đánh giá ở C1 — file Excel không có responsive |
@@ -181,8 +181,8 @@
 | IA03-05 | Kéo-thả reorder mượt, có gợi ý vị trí thả, lưu đúng thứ tự | NA | Luồng Export không có kéo-thả |
 | IA03-06 | Deep link: mở URL trực tiếp trả đúng nội dung (không ép về trang chủ) | NA | Export không có URL riêng (không đổi route khi bấm) |
 | IA03-07 | Điều hướng nhất quán giữa các trang (menu/header/nút không đổi chỗ) | NA | Đã đánh giá ở C1 — Export không đổi trang |
-| IA03-08 | Có lối thoát rõ: đóng dialog, hủy thao tác, thoát luồng nhiều bước |  |  |
-| IA03-09 | Nút/link có affordance rõ (trông bấm được), có hover/focus |  |  |
+| IA03-08 | Có lối thoát rõ: đóng dialog, hủy thao tác, thoát luồng nhiều bước | NA | Export chạy tức thì, không phải luồng nhiều bước và không có dialog nào để thoát; không có gì để hủy giữa chừng |
+| IA03-09 | Nút/link có affordance rõ (trông bấm được), có hover/focus | F | Nút Export không đổi con trỏ thành bàn tay khi hover (thiếu `cursor: pointer`) — lặp lại đúng lỗi hệ thống ở C1 và C2, xem finding 002 |
 | IA03-10 | Phân trang/cuộn danh sách đúng, giữ ngữ cảnh khi quay lại từ chi tiết | NA | Đã đánh giá ở C1 — Export không có phân trang riêng |
 | IA03-11 | Điều hướng bàn phím xuyên suốt menu/tab/link, focus order logic |  |  |
 | IA04-01 | Sau mỗi hành động có feedback rõ (toast) báo thành công/thất bại | F | Bấm Export xong file tải xuống nhưng KHÔNG có toast/thông báo nào báo đã xuất thành công — người dùng chỉ biết nhờ thanh download của trình duyệt, không phải phản hồi của app. Lỗi lặp lại ở cả 3 màn C1/C2/C4 |
@@ -204,10 +204,10 @@
 | --- | --- | --- | --- | --- |
 | C1 | 50 | 31 | 4 | 15 |
 | C2 | 50 | 22 | 7 | 21 |
-| C4 | 44 | 5 | 2 | 37 |
-| **Tổng** | **144** | **58** | **13** | **73** |
+| C4 | 48 | 5 | 3 | 40 |
+| **Tổng** | **148** | **58** | **14** | **76** |
 
-> C4 còn **6 mục chưa quan sát** (IA01-09, IA01-10, IA02-11, IA03-08, IA03-09, IA03-11) nên chưa tính vào "Số mục chạy" — để trống theo §12, không đoán verdict.
+> C4 còn **2 mục chưa quan sát** (IA02-11 chống double-submit khi bấm Export 2 lần liên tiếp, IA03-11 điều hướng bàn phím tới nút Export) nên chưa tính vào "Số mục chạy" — để trống theo §12, không đoán verdict.
 
 > **Lưu ý (§12):** Cột P/F/Note phải do chính bạn điền sau khi retest live trên EMS — đây là bằng chứng thực thi, TA xác minh. Với mỗi mục Failed, đính kèm ảnh chụp trạng thái lỗi (ngoài ảnh tổng thể ở đầu mỗi phần).
 
