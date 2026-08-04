@@ -23,7 +23,7 @@ Participants must:
 - 1 pilot participant
 - 5 main participants
 
-The pilot must not be counted among P01-P05.
+The pilot must not be counted among the required main participants.
 
 ## Privacy Rules
 
@@ -39,11 +39,6 @@ Example masked phone or Zalo number: `090****789`.
 
 | ID | Target Role | Contact Type | Masked Contact | Pilot / Main | Consent | Status | Notes |
 |---|---|---|---|---|---|---|---|
-| PILOT | TODO | TODO | TODO | Pilot | Pending | Not recruited | |
-| P01 | TODO | TODO | TODO | Main | Pending | Not recruited | |
-| P02 | TODO | TODO | TODO | Main | Pending | Not recruited | |
-| P03 | TODO | TODO | TODO | Main | Pending | Not recruited | |
-| P04 | TODO | TODO | TODO | Main | Pending | Not recruited | |
-| P05 | TODO | TODO | TODO | Main | Pending | Not recruited | |
-
-Do not invent participants or recruitment results.
+| PILOT | First-time EMS user | Private | Masked | Pilot | Confirmed (private record) | Summary only | Pilot summary retained; not independently verifiable |
+| P01 | Student event-goer | Private | Masked | Main | Confirmed (private record) | Summary only | SUS and probe responses retained; no raw session notes |
+| P02 | Infrequent web user | Private | Masked | Main | Confirmed (private record) | Summary only | SUS and probe responses retained; no raw session notes |

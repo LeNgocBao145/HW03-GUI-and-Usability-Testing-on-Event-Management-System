@@ -63,7 +63,7 @@ Live evidence screenshots are saved under `screenshots/ScreenB2/evidences/`. The
 | 4.01 | FAIL | ScreenB2_live_06_hover_baseline.png; ScreenB2_live_07_hover_save_event.png; live computed-style observation | Save Event and Back to Events showed no observed color, border, shadow, opacity, or transform change on hover. See GUI-B2-FC-005. |
 | 4.02 | PASS | ScreenB2_live_08_keyboard_focus.png | The focused language button displayed a distinct orange outline. |
 | 4.04 | PASS | ScreenB2_live_12_loading_state.png | A visible loading spinner appeared while Event Detail content was pending. |
-| 4.08 | FAIL | Chrome DevTools Offline mode; tester observation | Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B2-FC-006. |
+| 4.08 | FAIL | Chrome DevTools Offline mode; tester observation | The Offline Mode test displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B2-FC-006. |
 | 4.13 | PASS | ScreenB2_live_01_desktop_loaded.png | The Upcoming badge used consistent status styling on the listing and detail flow observed during navigation. |
 | 4.14 | FAIL | Tester observation; explicit human promotion approval | Event updates previously appeared only after a manual reload. Re-execution could not trigger a reliable real-time update, and the human reviewer explicitly approved GUI-B2-FC-007 for promotion without additional evidence. |
 
@@ -84,4 +84,4 @@ The coverage matrix marks these checkpoints as not applicable to B2:
 | N/A | 33 |
 | Not Executed | 0 |
 
-The seven FAIL rows map to GUI-B2-FC-001 through GUI-B2-FC-007, all explicitly approved for promotion. Bug findings use severity Low, Usability findings use severity 1, and Google Form submission remains pending.
+The seven FAIL rows map to GUI-B2-FC-001 through GUI-B2-FC-007, all explicitly approved for promotion. Bug findings use severity Low, Usability findings use severity 1, and all seven findings were submitted through Google Forms on 2026-08-04.

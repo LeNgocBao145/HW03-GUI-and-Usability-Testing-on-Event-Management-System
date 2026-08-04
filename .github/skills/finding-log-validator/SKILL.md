@@ -103,7 +103,7 @@ Optional:
 - reproduction notes
 - browser console observations
 - additional screenshots
-- screen recording
+- screenshot evidence
 
 ### Submission Reconciliation Mode
 

@@ -2,12 +2,12 @@
 
 ## Purpose
 
-Process one real usability-testing session for Scenario B and prepare a confirmed update for the matching participant record.
+Process one real usability-testing session for Scenario B and prepare a confirmed update for the matching participant response summary.
 
 ## When to use
 
 - When one pilot or main participant session has been completed
-- When raw notes, timestamps, responses, and evidence references are available
+- When supported metrics, responses, and evidence references are available
 - When preparing a clean participant-session summary from real observed data
 
 ## When not to use
@@ -36,11 +36,10 @@ Process one real usability-testing session for Scenario B and prepare a confirme
 
 - `usability_testing/participant_table.md`
 - `usability_testing/observation_template.md`
-- `usability_testing/session_notes_masked/participant_01.md`
-- `usability_testing/session_notes_masked/participant_02.md`
-- `usability_testing/session_notes_masked/participant_03.md`
-- `usability_testing/session_notes_masked/participant_04.md`
-- `usability_testing/session_notes_masked/participant_05.md`
+- `usability_testing/participants/P01/questionnaire_raw.md`
+- `usability_testing/participants/P01/probe_answers.md`
+- `usability_testing/participants/P02/questionnaire_raw.md`
+- `usability_testing/participants/P02/probe_answers.md`
 - `usability_testing/pilot_session.md`
 - `usability_testing/sus_questionnaire.md`
 

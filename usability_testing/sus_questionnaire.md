@@ -45,7 +45,8 @@ Use a 1-5 scale:
 
 Do not calculate a score when any required answer is missing.
 
-## Score Placeholder
+## Per-Session Calculation Worksheet
 
-- Adjusted total: TODO
-- SUS score: TODO / 100
+- Adjusted total: sum the ten adjusted contributions after confirming all answers are present.
+- SUS score: adjusted total x 2.5.
+- Record the final calculation in the matching participant questionnaire file; do not reuse a score across sessions.

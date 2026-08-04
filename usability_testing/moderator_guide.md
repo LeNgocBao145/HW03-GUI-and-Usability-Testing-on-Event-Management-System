@@ -6,13 +6,13 @@
 - Verify the participant test account and keep its credentials private.
 - Verify that an upcoming event with open registration exists.
 - Reset the participant starting state.
-- Verify the recording tool and timer.
+- Verify the timer and screenshot evidence setup.
 - Prepare the observation notes.
-- Confirm consent before recording or collecting session data.
+- Confirm consent before collecting session data.
 
 ## Introduction Script
 
-"Thank you for taking part. We are testing the product, not you, so there are no right or wrong answers. Please think aloud by telling me what you expect, notice, and find confusing. You may pause or stop the session at any time. We will record the session only if you have provided consent."
+"Thank you for taking part. We are testing the product, not you, so there are no right or wrong answers. Please think aloud by telling me what you expect, notice, and find confusing. You may pause or stop the session at any time."
 
 ## Think-Aloud Guidance
 
@@ -58,5 +58,4 @@ Any task-directed help that reveals where to act, what to select, or how to reco
 
 ### Technical Assistance
 
-Help used only to restore the planned test condition after a network, authentication, server, data, device, or recording problem. Log it as a technical interruption, not automatically as participant error. Mark the session invalid if the interruption prevents reliable observation.
-
+Help used only to restore the planned test condition after a network, authentication, server, data, device, or screenshot-capture problem. Log it as a technical interruption, not automatically as participant error. Mark the session invalid if the interruption prevents reliable observation.

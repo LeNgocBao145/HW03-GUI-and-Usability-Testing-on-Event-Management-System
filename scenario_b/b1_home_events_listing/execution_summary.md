@@ -29,11 +29,11 @@
 | Not Executed | 0 |
 | Total checkpoints | 61 |
 
-The twelve FAIL rows describe nine consolidated Finding Candidates. They are not bug reports and have no severity classification.
+The twelve FAIL rows describe nine consolidated Finding Candidates. Human Review promoted five candidates to confirmed findings; those five were classified, assigned severity, and submitted through Google Forms. The remaining four observations retain Finding Candidate status only.
 
 ## Live Verification Summary
 
-- Authentication and the active test account were verified without recording credentials.
+- Authentication and the active test account were verified without storing credentials.
 - B1 loaded fully and displayed a real loading state before event data appeared.
 - Filters, campus options, search, empty results, status tabs, pagination, scrolling, back-to-top, language switching, external-link configuration, and responsive layouts were exercised.
 - The previously deferred design, contrast, capitalization, keyboard, hover, browser-navigation, offline, and real-time-update checks were re-verified by the tester.
@@ -51,14 +51,14 @@ No referenced screenshot file is missing. Interaction-dependent checks such as b
 - Checkpoints: 1.07, 3.06
 - Observation: Page 1 displays eight cards with `Showing 1 of 44 events`; page 2 displays eight cards with `Showing 9 of 44 events`.
 - Evidence: `screenshots/ScreenB1/evidences/ScreenB1_live_05_pagination_page_2.png` and live DOM observation
-- Classification: Finding Candidate only
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B1-FC-002 - Mobile Filter Control Overlaps Event Content
 
 - Checkpoints: 1.04, 1.10
 - Observation: At 390 x 844, a floating Filters control overlaps the first event card/status area.
 - Evidence: `screenshots/ScreenB1/evidences/ScreenB1_live_10_mobile_390x844.png`
-- Classification: Finding Candidate only
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B1-FC-003 - Accessibility Semantics Are Incomplete
 
@@ -79,14 +79,14 @@ No referenced screenshot file is missing. Interaction-dependent checks such as b
 - Checkpoints: 3.12, 3.14
 - Observation: Status switching works, but selecting Ongoing and reloading `/dashboard` resets the state and leaves no clearly active status indicator.
 - Evidence: `screenshots/ScreenB1/evidences/ScreenB1_live_06_ongoing_before_reload.png` and `screenshots/ScreenB1/evidences/ScreenB1_live_07_after_reload.png`
-- Classification: Finding Candidate only
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B1-FC-006 - Empty Results Provide No Actionable CTA
 
 - Checkpoint: 4.07
 - Observation: The no-results state provides a graphic and explanatory message but no action for clearing the search or restoring the event list.
 - Evidence: `screenshots/ScreenB1/evidences/ScreenB1_live_04_empty_results.png`
-- Classification: Finding Candidate only
+- Status: Submitted to Google Form - Usability Severity 2
 
 ### GUI-B1-FC-007 - Hover Feedback Is Not Visually Distinct
 
@@ -98,9 +98,9 @@ No referenced screenshot file is missing. Interaction-dependent checks such as b
 ### GUI-B1-FC-008 - Offline State Falls Back to the Browser Error Page
 
 - Checkpoint: 4.08
-- Observation: Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
+- Observation: The Offline Mode test displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option.
 - Evidence: `screenshots/ScreenB1/evidences/ScreenB1_live_15_offline.png`
-- Classification: Finding Candidate only
+- Status: Submitted to Google Form - Usability Severity 1
 
 ### GUI-B1-FC-009 - Event Updates Require a Manual Reload
 
@@ -112,3 +112,5 @@ No referenced screenshot file is missing. Interaction-dependent checks such as b
 ## Verification Completion
 
 All 37 applicable B1 checkpoints now have a PASS or FAIL result. No applicable checkpoint remains Not Executed.
+
+Google Form reconciliation is complete for GUI-B1-FC-001, GUI-B1-FC-002, GUI-B1-FC-005, GUI-B1-FC-006, and GUI-B1-FC-008. GUI-B1-FC-003, GUI-B1-FC-004, GUI-B1-FC-007, and GUI-B1-FC-009 remain unpromoted Finding Candidates.

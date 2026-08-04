@@ -109,7 +109,7 @@ One of:
 
 - screenshot references
 
-- screen recordings
+- screenshot evidence
 
 - browser version
 

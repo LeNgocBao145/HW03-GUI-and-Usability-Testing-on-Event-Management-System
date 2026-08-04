@@ -96,11 +96,11 @@ Reference [participant_table.md](../usability_testing/participant_table.md).
 
 ## Moderated Sessions
 
-TODO
+The current Task 2 draft contains one pilot summary and two main-session summaries (P01-P02). Consent is confirmed and stored privately for all three people. No screen or audio recordings were captured, and detailed session notes are not retained; behavioural values are therefore summary only / not independently verifiable. The repository retains participant responses and three profile/account screenshots with masked emails indexed in [private_evidence_manifest.md](../usability_testing/private_evidence_manifest.md). Profile screenshots support account/environment traceability only.
 
 ## Metrics
 
-TODO
+Across the P01-P02 summaries, reported strict full task success was 50.0% (1/2); both summaries reach the final status, while P02 records task-directed help. Mean and median summary time were 8:02.5. The summaries contain 3 errors, 8 hesitations, 1 help request, 1 intervention, and 2 recoveries. The aggregate arithmetic is reproducible, but the source events are not independently verifiable. Detailed calculations are in [analysis_calculations.md](../usability_testing/analysis_calculations.md).
 
 ## SUS or UEQ-S
 
@@ -112,11 +112,11 @@ Reference [usability_report.md](../usability_testing/usability_report.md).
 
 ## Severity Analysis
 
-TODO
+Four usability-analysis records were human-reviewed at severity 2: weak post-submit acknowledgement (P01-P02 responses), specialised role terminology (P01-P02 responses), absent no-results recovery action (P02 response), and competition between Save Event and Register (P01 response). The acknowledgement and no-results records are cross-method support for existing GUI findings and will not be submitted separately.
 
 ## Recommendations
 
-TODO
+Priorities are to add accessible registration-success feedback, clarify attendee-role names, provide a direct reset action in the empty-results state, and make Register visually primary over Save Event.
 
 # Task 3 - Cross-Browser / Cross-Platform
 
@@ -151,6 +151,8 @@ TODO
 # Bug & Usability Findings Submission
 
 Reference [google_form_submission_log.md](../findings/google_form_submission_log.md).
+
+All 22 unique confirmed findings were submitted through Google Forms on 2026-08-04. The aggregated log contains 11 Bug findings and 11 unique Usability findings. `UT-B3-001` and `UT-B1-001` remain cross-method support records and were not submitted separately because their canonical GUI findings were already submitted.
 
 # Agent Skills
 

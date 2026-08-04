@@ -30,7 +30,7 @@
 | Not Executed | 0 |
 | Total checkpoints | 61 |
 
-All eight B3 candidates were explicitly approved for promotion to the findings log. Type classification and Low/1 severity are recorded there, while Google Form submission remains pending.
+All eight B3 candidates were explicitly approved for promotion to the findings log. Type classification and Low/1 severity are recorded there, and all eight were submitted through Google Forms on 2026-08-04.
 
 ## Live Verification Summary
 
@@ -60,7 +60,7 @@ No applicable B3 checkpoint remains Not Executed, and every referenced evidence 
 - Observation: The English countdown displayed `Event starts in 8 day(s)`.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_02_registration_form_desktop.png` and live DOM observation
 - Duplicate status: Confirmed cross-screen duplicate of GUI-B2-FC-001; accepted as the same system problem and retained for B3 traceability
-- Status: Promoted Duplicate - Bug Severity Low - Pending Google Form Submission
+- Status: Submitted to Google Form - Validated Duplicate - Bug Severity Low
 
 ### GUI-B3-FC-002 - Accessibility Semantics and Language Metadata Are Incomplete
 
@@ -68,28 +68,28 @@ No applicable B3 checkpoint remains Not Executed, and every referenced evidence 
 - Observation: The document `lang` value lagged behind the displayed locale, the user menu was a focusable `SPAN` without a semantic role, and the role card nested a checkbox within `div[role="button"]`.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_04_keyboard_focus.png`, `screenshots/ScreenB3/evidences/ScreenB3_live_09_vietnamese.png`, and live DOM observation
 - Duplicate status: The shared header and language observations overlap GUI-B1-FC-003 and GUI-B2-FC-002; the B3 role-card semantics remain screen-specific
-- Status: Promoted - Bug Severity Low - Pending Google Form Submission
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B3-FC-003 - Keyboard Focus Does Not Advance Beyond the Role Checkbox
 
 - Checkpoint: 2.12
 - Observation: Repeated Tab actions remained on `Select commander` instead of advancing to the next available control.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_04_keyboard_focus.png` and repeated keyboard observations
-- Status: Promoted - Bug Severity Low - Pending Google Form Submission
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B3-FC-004 - Registration Role Card Lacks Visual Hover Feedback
 
 - Checkpoint: 4.01
 - Observation: The role card produced no observed color, border, shadow, opacity, or transform change on hover.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_05_validation_disabled.png`, `screenshots/ScreenB3/evidences/ScreenB3_live_06_role_card_hover.png`, and live computed-style observation
-- Status: Promoted - Usability Severity 1 - Pending Google Form Submission
+- Status: Submitted to Google Form - Usability Severity 1
 
 ### GUI-B3-FC-005 - Registration Completes Without a Success Notification
 
 - Checkpoint: 4.05
 - Observation: Registration reached `Pending review`, but no success toast, alert, status message, or live-region notification appeared.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_13_registration_pending_after_double_click.png` and live DOM observation
-- Status: Promoted - Usability Severity 1 - Pending Google Form Submission
+- Status: Submitted to Google Form - Usability Severity 1
 
 ### GUI-B3-FC-006 - Offline State Falls Back to the Browser Error Page
 
@@ -97,7 +97,7 @@ No applicable B3 checkpoint remains Not Executed, and every referenced evidence 
 - Observation: Human Review confirmed that B3 displays the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with Retry.
 - Evidence: Human Review reconciled with the B1/B2 offline verification record
 - Duplicate status: Confirmed cross-screen duplicate of GUI-B1-FC-008 and GUI-B2-FC-006; accepted as the same system problem and retained for B3 traceability
-- Status: Promoted Duplicate - Usability Severity 1 - Pending Google Form Submission
+- Status: Submitted to Google Form - Validated Duplicate - Usability Severity 1
 
 ### GUI-B3-FC-007 - Registration Updates Require a Manual Reload
 
@@ -105,14 +105,14 @@ No applicable B3 checkpoint remains Not Executed, and every referenced evidence 
 - Observation: Human Review confirmed that B3 updates require manual reload rather than appearing automatically.
 - Evidence: Human Review reconciled with the B1/B2 real-time update verification record
 - Cross-screen relationship: Accepted as related to GUI-B1-FC-009 and GUI-B2-FC-007 while retaining B3 registration-state traceability
-- Status: Promoted - Bug Severity Low - Pending Google Form Submission
+- Status: Submitted to Google Form - Bug Severity Low
 
 ### GUI-B3-FC-008 - Cancellation Provides No Undo Action
 
 - Checkpoint: 4.15
 - Observation: Cancellation restored the unregistered form, but no Undo button or link appeared immediately or after the state settled.
 - Evidence: `screenshots/ScreenB3/evidences/ScreenB3_live_17_cancellation_processing.png`, `screenshots/ScreenB3/evidences/ScreenB3_live_18_cancellation_completed_no_undo.png`, and live DOM observation
-- Status: Promoted - Usability Severity 1 - Pending Google Form Submission
+- Status: Submitted to Google Form - Usability Severity 1
 
 ## Candidate Review Decision Summary
 
@@ -135,8 +135,8 @@ Duplicate relationships were explicitly accepted because they describe the same 
 - Promotion status: All eight B3 IDs are present in `findings/bug_and_usability_findings_log.md`.
 - Duplicate handling: GUI-B3-FC-001 and GUI-B3-FC-006 remain separate B3 traceability rows linked to the same system-level problems recorded for B1/B2.
 - Severity: All Bug findings are Low; all Usability findings are 1, as explicitly confirmed by Human Review.
-- Google Form: Not submitted; timestamps and metadata remain blank.
+- Google Form: All eight B3 findings submitted on 2026-08-04; timestamps and reconciliation metadata are recorded in `findings/bug_and_usability_findings_log.md` and `findings/google_form_submission_log.md`.
 
 ## Verification Completion
 
-All 34 applicable B3 checkpoints now have a PASS or FAIL result. No applicable checkpoint remains Not Executed. Candidate Review, promotion, classification, and severity assignment are complete for all eight B3 IDs; Google Form reconciliation remains pending. The authorized registration was cancelled after verification, restoring the initial unregistered state.
+All 34 applicable B3 checkpoints now have a PASS or FAIL result. No applicable checkpoint remains Not Executed. Candidate Review, promotion, classification, severity assignment, and Google Form reconciliation are complete for all eight B3 IDs. The authorized registration was cancelled after verification, restoring the initial unregistered state.

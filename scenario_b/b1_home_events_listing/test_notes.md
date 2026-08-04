@@ -42,7 +42,7 @@ Evidence files are stored under `screenshots/ScreenB1/evidences/`. Dynamic check
 | LIVE-B1-12 | `ScreenB1_live_12.png` | Keyboard focus ring and Tab-order verification |
 | LIVE-B1-13 | `ScreenB1_live_13.png` | Hyperlink navigation to the expected external destination |
 | LIVE-B1-14 | `ScreenB1_live_14_pointer_style_not_change_on_hovering_button.png` | Observed control without a clear hover-style change |
-| LIVE-B1-15 | `ScreenB1_live_15_offline.png` | Offline simulation showing the browser's generic error page |
+| LIVE-B1-15 | `ScreenB1_live_15_offline.png` | Offline Mode test showing the browser's generic error page |
 
 ## Live Observations
 
@@ -72,7 +72,7 @@ Evidence files are stored under `screenshots/ScreenB1/evidences/`. Dynamic check
 - Hyperlink navigation reached the expected destination, and the tester recorded hover identification as verified with `LIVE-B1-13`.
 - Browser Back/Forward behavior was re-verified as working through tester interaction, with `LIVE-B1-11` showing the resulting Dashboard state.
 - The observed category control did not show a clear visual change on hover in `LIVE-B1-14`.
-- Offline simulation showed the browser's generic `ERR_INTERNET_DISCONNECTED` page instead of an EMS-friendly error message with a Retry option in `LIVE-B1-15`.
+- The Offline Mode test showed the browser's generic `ERR_INTERNET_DISCONNECTED` page instead of an EMS-friendly error message with a Retry option in `LIVE-B1-15`.
 - The tester observed that event data updated only after a manual reload rather than automatically; `LIVE-B1-11` shows the resulting Dashboard state.
 
 ## Re-verification Status
@@ -81,4 +81,4 @@ Evidence files are stored under `screenshots/ScreenB1/evidences/`. Dynamic check
 - No applicable B1 checkpoint remains Not Executed.
 - All screenshot filenames referenced by the B1 execution documents are present.
 
-No bugs or severity classifications were created. Nine observations are recorded only as Finding Candidates.
+Five observations were promoted, classified, assigned severity, and submitted through Google Forms: GUI-B1-FC-001, GUI-B1-FC-002, GUI-B1-FC-005, GUI-B1-FC-006, and GUI-B1-FC-008. The other four observations remain Finding Candidates only.

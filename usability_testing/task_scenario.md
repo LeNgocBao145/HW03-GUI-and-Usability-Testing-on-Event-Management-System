@@ -12,7 +12,7 @@ Evaluate whether target users can:
 
 ## Participant-Facing Scenario
 
-"Imagine that you want to attend an upcoming technology or professional-skills event. Use EMS to find a suitable event, review its information, register using the role that best represents you, and verify that your registration has been recorded."
+"Imagine that you want to attend an upcoming technology or professional-skills event. Use EMS to find a suitable event, review its information, register using the attendee role you would actually use, and verify that your registration has been recorded."
 
 The moderator must not provide click-by-click instructions.
 
@@ -31,6 +31,8 @@ The moderator must not provide click-by-click instructions.
 3. An appropriate registration role is selected.
 4. The registration is submitted.
 5. The resulting registration status is identified.
+
+Stop timing when the participant identifies the resulting registration status, or when the participant abandons the task. Post-task questions are outside time on task.
 
 ## Task Outcome Definitions
 

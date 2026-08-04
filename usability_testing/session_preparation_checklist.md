@@ -17,7 +17,7 @@
 - [ ] Upcoming event with open registration exists
 - [ ] Participant starting state reset
 - [ ] Timer ready
-- [ ] Recording ready
+- [ ] Screenshot evidence ready
 - [ ] Observation notes ready
 - [ ] Consent confirmed
 - [ ] Participant contact masked in repository

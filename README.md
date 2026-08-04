@@ -41,7 +41,7 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 
 - `docs/`: main report, AI documentation, prompt log, self-assessment notes, and commit log placeholder.
 - `scenario_b/`: scope definition plus per-screen description, checklist execution, and screen test notes.
-- `usability_testing/`: test plan, recruitment, scripts, participant templates, masked notes, evidence manifest, and usability report.
+- `usability_testing/`: test plan, recruitment, scripts, participant responses, evidence manifest, and usability report.
 - `compatibility_testing/`: compatibility plan, matrix, environment log, naming rules, and screenshot evidence folders.
 - `findings/`: aggregated bug/usability logs and Google Form tracking.
 - `.github/skills/`: Agent Skill scaffolds for repeatable, non-fabricating workflows.
@@ -52,28 +52,28 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 
 ## Deliverables Checklist
 
-- [ ] Consolidated shared GUI checklist in `gui_checklist.md`
-- [ ] More than 40 reviewed checklist items
-- [ ] Reference sources included in `gui_checklist.md`
+- [x] Consolidated shared GUI checklist in `gui_checklist.md`
+- [x] More than 40 reviewed checklist items
+- [x] Reference sources included in `gui_checklist.md`
 - [ ] AI prompts included in `gui_checklist.md`
 - [ ] Human-added items and AI-gap explanations included in `gui_checklist.md`
-- [ ] Checklist execution on B1
-- [ ] Checklist execution on B2
-- [ ] Checklist execution on B3
-- [ ] Failed-item screenshots
-- [ ] Bug reports
-- [ ] Pilot usability session
+- [x] Checklist execution on B1
+- [x] Checklist execution on B2
+- [x] Checklist execution on B3
+- [x] Failed-item screenshots
+- [x] Bug reports
+- [x] Pilot usability session
 - [ ] Five real user sessions
-- [ ] SUS or UEQ-S responses
-- [ ] Usability Report
+- [x] SUS or UEQ-S responses
+- [x] Usability Report
 - [ ] Compatibility matrix
 - [ ] Screenshot for every executed compatibility cell
-- [ ] Google Form submissions
-- [ ] Aggregated findings log
+- [x] Google Form submissions
+- [x] Aggregated findings log
 - [ ] AI Audit Report
 - [ ] AI Critique
 - [ ] Git commit log
-- [ ] Agent Skills
+- [x] Agent Skills
 - [ ] YouTube demo links
 - [ ] Main Report Markdown
 - [ ] Main Report PDF
@@ -85,21 +85,23 @@ The current EMS endpoint has been updated for repository guidance, but it must n
 
 | Metric | Value |
 |---|---:|
-| Checklist items designed | TODO |
-| Checklist items reviewed | TODO |
-| Checklist items executed | TODO |
-| Passed | TODO |
-| Failed | TODO |
-| Bugs found | TODO |
-| Usability findings | TODO |
-| Severity 0 findings | TODO |
-| Severity 1 findings | TODO |
-| Severity 2 findings | TODO |
-| Severity 3 findings | TODO |
-| Severity 4 findings | TODO |
-| Real participants | TODO |
-| Compatibility cells covered | TODO |
-| Demo videos | TODO |
+| Checklist items designed | 61 |
+| Checklist items reviewed | 61 |
+| Checklist items executed | 99 applicable across B1-B3; 183 total assessments including 84 N/A |
+| Passed | 72 |
+| Failed | 27 |
+| Not Executed | 0 |
+| Bugs found | 11 confirmed findings |
+| Usability findings | 11 unique: 9 GUI + 2 unique Task 2; 2 additional cross-method support records |
+| Severity 0 findings | 0 |
+| Severity 1 findings | 7 unique GUI findings |
+| Severity 2 findings | 4 unique findings: 2 GUI with Task 2 support + 2 unique Task 2; 2 additional cross-method support records |
+| Severity 3 findings | 0 |
+| Severity 4 findings | 0 |
+| Real participants | 3 total: 1 pilot + 2/5 required main participants |
+| Google Form submissions | 22 unique findings; 2 cross-method duplicates not submitted separately |
+| Compatibility cells covered | 0 |
+| Demo videos | 0/7 |
 
 ## Self-Assessment Table
 

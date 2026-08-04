@@ -19,7 +19,7 @@ Read:
 - `usability_testing/task_scenario.md`
 - `usability_testing/participant_list.md`
 - `usability_testing/participant_recruitment.md`
-- `usability_testing/pilot/session_record.md`
+- `usability_testing/pilot_session.md`
 - `usability_testing/pilot/pilot_findings.md`
 - `usability_testing/pilot/recommended_revisions.md`
 - `usability_testing/participants/P01/`

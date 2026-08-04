@@ -26,7 +26,6 @@ For each checkpoint, this document identifies:
 | OBS | Observation only |
 | INT | Interaction required |
 | SS | Screenshot |
-| VID | Screen recording |
 
 ---
 
@@ -114,11 +113,11 @@ For each checkpoint, this document identifies:
 |4.01|B1 B2 B3|INT|Hover SS|gui-checklist-execution|Checklist|
 |4.02|B1 B2 B3|INT|Keyboard Notes|gui-checklist-execution|Checklist|
 |4.03|B3|OBS|SS|gui-checklist-execution|Checklist|
-|4.04|B1 B2 B3|INT|Network Simulation|Manual Verification|Checklist|
+|4.04|B1 B2 B3|INT|Network Condition Test|Manual Verification|Checklist|
 |4.05|B3|INT|Toast SS|gui-checklist-execution|Finding Candidate|
 |4.06|B3|INT|Validation SS|gui-checklist-execution|Finding Candidate|
 |4.07|B1|INT|Search No Result|gui-checklist-execution|Checklist|
-|4.08|B1 B2 B3|INT|Offline Simulation|Manual Verification|Checklist|
+|4.08|B1 B2 B3|INT|Offline Mode Test|Manual Verification|Checklist|
 |4.09|B3|INT|Dialog SS|gui-checklist-execution|Checklist|
 |4.10|B3|INT|Interaction Notes|gui-checklist-execution|Checklist|
 |4.11|N/A|-|-|-|

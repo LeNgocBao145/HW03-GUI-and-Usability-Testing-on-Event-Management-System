@@ -13,7 +13,7 @@
 - Operating system:
 - Device:
 - Resolution:
-- Recording reference:
+- Screenshot evidence:
 - Consent confirmed:
 
 ## Task Result
@@ -50,7 +50,7 @@ Examples include:
 - OAuth issue
 - server unavailable
 - event data reset
-- recording failure
+- screenshot-capture failure
 
 A technical interruption must not automatically count as participant error.
 

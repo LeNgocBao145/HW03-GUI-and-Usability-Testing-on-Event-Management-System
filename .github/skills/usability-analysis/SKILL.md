@@ -6,7 +6,7 @@ Aggregate five real main usability sessions for Scenario B into a proposed updat
 
 ## When to use
 
-- When five main participant session records exist
+- When five main participant datasets exist
 - When preparing aggregate metrics and recurring findings
 - When synthesizing usability evidence into the report
 
@@ -29,11 +29,11 @@ Aggregate five real main usability sessions for Scenario B into a proposed updat
 
 - `usability_testing/usability_report.md`
 - `usability_testing/pilot_session.md`
-- `usability_testing/session_notes_masked/participant_01.md`
-- `usability_testing/session_notes_masked/participant_02.md`
-- `usability_testing/session_notes_masked/participant_03.md`
-- `usability_testing/session_notes_masked/participant_04.md`
-- `usability_testing/session_notes_masked/participant_05.md`
+- `usability_testing/participants/P01/questionnaire_raw.md`
+- `usability_testing/participants/P01/probe_answers.md`
+- `usability_testing/participants/P02/questionnaire_raw.md`
+- `usability_testing/participants/P02/probe_answers.md`
+- `usability_testing/analysis_calculations.md`
 - `usability_testing/participant_table.md`
 - `usability_testing/sus_questionnaire.md`
 - `findings/bug_and_usability_findings_log.md`

@@ -106,4 +106,4 @@ Evidence files are stored under `screenshots/ScreenB3/evidences/`. Dynamic check
 - Usability classification: GUI-B3-FC-004, GUI-B3-FC-005, GUI-B3-FC-006, and GUI-B3-FC-008.
 - GUI-B3-FC-001 and GUI-B3-FC-006 retain their accepted duplicate relationships for cross-screen traceability.
 - Human Review assigned Bug Severity Low and Usability Severity 1 to every promoted B3 finding.
-- Google Form submission was intentionally not performed; no timestamp, student email, or form-entry metadata was created.
+- All eight promoted B3 findings were submitted through Google Forms on 2026-08-04. Timestamps and reconciliation details are recorded in the findings and submission logs; the approved faculty-account equivalent was used without storing its address.

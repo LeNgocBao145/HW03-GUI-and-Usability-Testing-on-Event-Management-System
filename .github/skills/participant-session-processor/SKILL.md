@@ -7,7 +7,7 @@ description: Process one completed HW03 usability session for PILOT or P01-P05 f
 
 ## Objective
 
-Convert one real moderated usability session into a consistent, privacy-safe processed session record. Keep raw observations distinct from calculated values and analyst interpretations.
+Convert one real moderated usability session into a consistent, privacy-safe processed session summary. Keep raw observations distinct from calculated values and analyst interpretations.
 
 Do not aggregate participants or generate the final usability report with this skill.
 
@@ -23,13 +23,12 @@ Read the study rules before processing a session:
 - `usability_testing/participant_list.md`
 - `usability_testing/private_evidence_manifest.md`
 
-For a main participant, read only the selected participant's raw files:
+For a main participant, read only the selected participant's response files:
 
-- `usability_testing/participants/<P01-P05>/raw_notes.md`
 - `usability_testing/participants/<P01-P05>/questionnaire_raw.md`
 - `usability_testing/participants/<P01-P05>/probe_answers.md`
 
-For the pilot, use `usability_testing/pilot/session_record.md` and any real pilot evidence. Never count the pilot as P01-P05.
+For the pilot, use `usability_testing/pilot_session.md` and the available pilot evidence. Never count the pilot as P01-P05.
 
 ## Readiness Check
 
@@ -47,7 +46,7 @@ If consent is absent or cannot be verified, stop processing and request human re
 
 ### 1. Preserve Source Meaning
 
-- Preserve participant quotes verbatim only when present in the raw session record.
+- Preserve participant statements verbatim only when present in the supplied source evidence.
 - Do not turn moderator notes into participant quotes.
 - Do not silently resolve conflicting timestamps, counts, outcomes, or evidence references.
 - Label content as `Direct Observation`, `Participant Statement`, `Calculated Metric`, or `Analyst Interpretation`.
@@ -84,7 +83,7 @@ If any response is missing or invalid, set the adjusted total and SUS score to `
 
 - Verify that each referenced repository file exists.
 - Verify evidence relevance from content when it can be inspected; a filename alone is not proof.
-- Preserve private recording references without copying raw recordings or identities into Git.
+- Preserve the screenshot evidence reference without copying private identities into Git.
 - Record the exact SUT URL used at execution time.
 - Mark unavailable or unverifiable evidence explicitly.
 
@@ -136,14 +135,14 @@ After explicit confirmation:
 
 1. Re-read every target file to detect intervening edits.
 2. Apply only the approved draft.
-3. Preserve raw notes and raw questionnaire answers.
+3. Preserve raw questionnaire and probe answers.
 4. Do not overwrite unrelated user-authored content.
 5. Recalculate metrics from source values and verify the written result.
 6. Report files changed and unresolved gaps.
 
 ## Safety Rules
 
-- Never fabricate a participant, contact, consent record, timestamp, outcome, metric, quote, response, observation, screenshot, recording, or finding.
+- Never fabricate a participant, contact, consent record, timestamp, outcome, metric, quote, response, observation, screenshot, or finding.
 - Never print or store credentials.
 - Never expose unmasked participant data in repository-visible files.
 - Never treat placeholders as evidence.
@@ -153,5 +152,4 @@ After explicit confirmation:
 
 ## Example Invocation
 
-`Run participant-session-processor for P03 using the current raw notes, SUS responses, probe answers, and evidence references. Prepare draft updates only and pause for confirmation.`
-
+`Run participant-session-processor for P02 using the current SUS responses, probe answers, and screenshot evidence reference. Prepare draft updates only and pause for confirmation.`

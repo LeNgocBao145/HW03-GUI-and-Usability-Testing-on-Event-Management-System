@@ -72,7 +72,7 @@ Live evidence screenshots are saved under `screenshots/ScreenB1/evidences/`. The
 | 4.02 | PASS | ScreenB1_live_12.png | Focus-ring behavior confirmed. |
 | 4.04 | PASS | ScreenB1_live_00_loading.png; live interaction | A loading overlay, skeleton state, and spinner appeared immediately while Dashboard event data was fetched. |
 | 4.07 | FAIL | ScreenB1_live_04_empty_results.png; live DOM observation | The no-results state displays a graphic and explanatory text but no actionable CTA to clear the search or restore events. See GUI-B1-FC-006. |
-| 4.08 | FAIL | ScreenB1_live_15_offline.png | Offline simulation displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B1-FC-008. |
+| 4.08 | FAIL | ScreenB1_live_15_offline.png | The Offline Mode test displayed the browser's generic `ERR_INTERNET_DISCONNECTED` page rather than an EMS-friendly message with a Retry option. See GUI-B1-FC-008. |
 | 4.13 | PASS | ScreenB1_live_01_desktop_loaded.png; ScreenB1_live_06_ongoing_before_reload.png | Upcoming, ongoing, ended, registration, and opening-soon states use distinct and consistent visible colors. |
 | 4.14 | FAIL | ScreenB1_live_11.png; tester observation | Event updates appeared only after a manual reload rather than updating automatically. See GUI-B1-FC-009. |
 

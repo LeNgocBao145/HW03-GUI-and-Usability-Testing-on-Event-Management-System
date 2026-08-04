@@ -68,7 +68,7 @@ Evidence files are stored under `screenshots/ScreenB2/evidences/`. Dynamic check
 ## Candidate Review Re-execution
 
 - GUI-B2-FC-003 was re-executed. The tester confirmed the keyboard-navigation observation and completed human review without requiring another repository evidence file.
-- GUI-B2-FC-006 was re-executed using Chrome DevTools Offline mode. The observed browser error state and exact simulation method are recorded in these notes.
+- GUI-B2-FC-006 was re-executed using Chrome DevTools Offline mode. The observed browser error state and exact test method are recorded in these notes.
 - GUI-B2-FC-007 was re-executed, but no reliable real-time update could be triggered. The human reviewer explicitly approved promotion without additional evidence.
 - GUI-B2-FC-004 and GUI-B2-FC-005 remain separate candidates because they cover different component groups and checkpoints.
 
@@ -79,4 +79,4 @@ Evidence files are stored under `screenshots/ScreenB2/evidences/`. Dynamic check
 - All screenshot filenames referenced by the B2 execution documents are present.
 - No missing screenshot file was used to support a FAIL result.
 
-All seven B2 candidates received explicit human approval for promotion. Type classification and Low/1 severity are recorded in the findings log, and no Google Form metadata has been created.
+All seven B2 candidates received explicit human approval for promotion. Type classification, Low/1 severity, Google Form timestamps, and submission status are recorded in the findings and submission logs.
